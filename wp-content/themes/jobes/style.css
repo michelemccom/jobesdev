@@ -199,7 +199,7 @@ html {
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
-  line-height: 1.428571429;
+  line-height: 1.4em;
   color: #333333;
   background-color: #ffffff;
 }
@@ -327,11 +327,11 @@ h5 { font-size:14px; margin: 0 0 8px 0;}
 
 	}	
 
-#footer { clear:both; font-size:10px; background: #474747; color: #D2D0D0; padding:12px; position:relative; height: 100px; margin: 0 auto; }
+#footer { clear:both; font-size:10px;  padding:12px; position:relative; height: 100px; margin: 0 auto; }
 
 /* ================================ Header ================================ */
 
-#header { position:relative; padding: 0; background: #333; }
+#header { position:relative; padding: 0; background: rgba(255,255,255,.8); }
 
 #logo { margin:0 0 0 0; padding:24px 0 0 0; width:200px; height:70px; cursor:pointer; }
 #logo a { margin: 0 0 0 0; padding: 0; position:relative; width:174px; height:41px; overflow:hidden; text-indent:-10000px; display:block; cursor:pointer;}
