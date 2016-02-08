@@ -331,7 +331,7 @@ h5 { font-size:14px; margin: 0 0 8px 0;}
 
 /* ================================ Header ================================ */
 
-#header { position:relative; padding: 0; background: rgba(255,255,255,.8); }
+#header { position:relative; padding: 0; background: rgba(255,255,255,1); }
 
 #logo { margin:0 0 0 0; padding:24px 0 0 0; width:200px; height:70px; cursor:pointer; }
 #logo a { margin: 0 0 0 0; padding: 0; position:relative; width:174px; height:41px; overflow:hidden; text-indent:-10000px; display:block; cursor:pointer;}
