@@ -32,18 +32,18 @@
 <div id="page">
 
     <div id="header">
-        <div class="top">
+        <div class="shell">
              <?php if(is_front_page() ) { ?>
             <h1 id="logo"><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?><span></span></a></h1>
                 <?php } else { ?>        
             <div id="logo"><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?><span></span></a></div>
-            <?php } ?>       
-        </div>
-   
-        <div class="nav">     
-		<?php wp_nav_menu( array( 'theme_location' => 'navigation' ) ); ?>  
-        </div>              
+            <?php } ?>    
+            <div class="nav">     
+    		<?php wp_nav_menu( array( 'theme_location' => 'navigation' ) ); ?>  
+            </div>     
+            <div class="search">
+                <?php get_search_form(); ?>
+            </div>   
+        </div>      
     </div> <!-- /header -->
-
-    <div id="container">
     	<div id="content"> 

@@ -5,8 +5,8 @@
  */
 ?>
 
-	</div> <!-- /content -->
-</div> <!-- /container -->
+
+</div> <!-- /content -->
 <div id="footer">
 	<div class="shell">
 		<?php wp_nav_menu( array( 'theme_location' => 'footer' ) ); ?>           

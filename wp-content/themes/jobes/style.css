@@ -280,20 +280,23 @@ h5 { font-size:14px; margin: 0 0 8px 0;}
     visibility: hidden;
     }
 
-#page {display: inline-block;}  /* for IE/Mac */
-
 #content {
 	width:100%;
 	margin: 0 auto;
 	position:relative;
 	}
-
+.shell {
+  max-width: 980px;
+  width: 96%;
+  margin-right: auto;
+  margin-left: auto;
+}
 #copy {
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
-  width: 980px;
+  width: 100%;
 }
 
 #copy:before,
@@ -339,14 +342,16 @@ h5 { font-size:14px; margin: 0 0 8px 0;}
 
 #header .nav { position: relative; margin: 20px 0;}
 #header .nav ul { list-style-type:none; margin: 0; padding: 0; text-align: left; }	
-#header .nav ul li { display:inline-block; margin-right:65px;}	
+#header .nav ul li { display:inline-block; margin-right:65px; position: relative;}	
 #header .nav ul li a { text-transform:lowercase; color: #205131; font-size:15px; padding:3px; }
+#header .nav ul li ul {display: none;}
+#header .nav ul li:hover ul {display: block; position: absolute; bottom: 0;}
 #header .nav ul li a:hover, #header nav ul li.current_page_item a { text-decoration:none; color: #205131; }
 
 /* ================================ Footer ================================ */
 
 #footer ul { list-style-type:none; display:block; margin: 0 0 10px 0; height:10px; }
-#footer ul li { float:left; margin-right:12px; padding-right:12px; border-right: 1px solid #205131; line-height:10px; height:10px; }
+#footer ul li { float:left; margin-right:12px; padding-right:12px;}
 #footer ul li a { color: #205131; text-transform:uppercase; }
 
 #footer p.copyright { clear:both; width: 200px; float:left; }
@@ -466,8 +471,7 @@ form input.submit {	display:block; margin-bottom:1.0em; position:relative; width
 
 /* ================================ Responsive ================================ */
 /* All Mobile Sizes (devices and browser) */
-@media only screen 
-and (max-width: 768px) {
+@media only screen and (max-width: 768px) {
 	#page {
 	width:100%;
 	}
@@ -480,9 +484,7 @@ and (max-width: 768px) {
 
 } 
 /* Smartphones (portrait and landscape) ----------- */
-@media only screen 
-and (min-device-width : 320px) 
-and (max-device-width : 480px) {
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
 	.nav {
 		position: relative;
 		min-height: 40px;
@@ -539,78 +541,4 @@ and (max-device-width : 480px) {
 		margin-left: -90px;
 	}
 	
-}
-/* Styles */
-}
-
-/* Smartphones (landscape) ----------- */
-@media only screen 
-and (min-width : 321px) {
-/* Styles */
-}
-
-/* Smartphones (portrait) ----------- */
-@media only screen 
-and (max-width : 320px) {
-/* Styles */
-}
-/* iPhone 5  (portrait and landscape)   ----------- */
-@media only screen 
-and (min-device-width : 320px) 
-and (max-device-width : 568px) { 
-/* STYLES GO HERE */
-} 
-/* iPhone 5  (landscape)   ----------- */
-@media only screen 
-and (min-device-width : 320px) 
-and (max-device-width : 568px) 
-and (orientation : landscape) { 
-/* STYLES GO HERE */
-}
-/* iPhone 5  (portrait)   ----------- */
-@media only screen 
-and (min-device-width : 320px) 
-and (max-device-width : 568px) 
-and (orientation : portrait) { 
-/* STYLES GO HERE */ 
-}
-/* iPhone 4 ----------- */
-@media
-only screen and (-webkit-min-device-pixel-ratio : 1.5),
-only screen and (min-device-pixel-ratio : 1.5) {
-/* Styles */
-}
-/* Galaxy S3 ----------- */
-@media only screen and (min-device-width : 719px) 
-and (max-device-width : 721px) 
-and (-webkit-min-device-pixel-ratio : 2) 
-and (orientation : portrait)  {
-}
-/* Galaxy S2 ----------- */
-
-@media screen and (device-width: 320px) 
-and (device-height: 533px) 
-and (-webkit-device-pixel-ratio: 1.5) {
-}
-/* iPads (portrait and landscape) ----------- */
-@media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px) {
-/* Styles */
-}
-
-/* iPads (landscape) ----------- */
-@media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px) 
-and (orientation : landscape) {
-/* Styles */
-}
-
-/* iPads (portrait) ----------- */
-@media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px) 
-and (orientation : portrait) {
-/* Styles */
 }
