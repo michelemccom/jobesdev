@@ -197,7 +197,7 @@ html {
 }
 
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 14px;
   line-height: 1.4em;
   color: #333333;
@@ -250,7 +250,7 @@ ol ol {
 */
 	
 h1,h2,h3,h4,h5,h6 {
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	font-weight: 500;
 	line-height: 1.1;
 }
@@ -342,16 +342,16 @@ h5 { font-size:14px; margin: 0 0 8px 0;}
   }
 /* ================================ Header ================================ */
 
-#header { position:relative; padding: 0; background: rgba(255,255,255,1); }
-
+#header { position:relative; padding: 0; background: rgba(255,255,255,1);}
+#header .shell {padding: 0 40px;}
 #logo { margin:0  0 0; padding: 0; width:194px; height:163px; cursor:pointer; position: absolute; left: -20px;top: 0  }
 #logo a { margin: 0 0 0 0; padding: 0; position:relative; width:194px; height:163px;  overflow:hidden; text-indent:-10000px; display:block; cursor:pointer; text-align: left }
 #logo a span { display:block; position:absolute; left:0; top:0; z-index:1; width:194px; height:163px; margin:0; padding:0; background:url(images/jobescompanies.png) top left no-repeat; cursor:pointer; }
 
-#header .nav { position: relative; margin: 0; float: left; margin-left: 120px;}
+#header .nav { position: relative; margin: 0; float: left; margin-left: 210px;}
 #header .nav ul { list-style-type:none; margin: 0; padding: 0; text-align: left; }	
-#header .nav ul li { display:inline-block; margin-right:65px; position: relative;}	
-#header .nav ul li a { text-transform:lowercase; color: #205131; font-size:15px; padding:3px; }
+#header .nav ul li { display:inline-block; margin-right:30px; position: relative;}	
+#header .nav ul li a { text-transform:lowercase; color: #205131; font-size:14px; padding:3px; }
 #header .nav ul li ul {display: none;}
 #header .nav ul li:hover ul {display: block; position: absolute; bottom: 0;}
 #header .nav ul li a:hover, #header nav ul li.current_page_item a { text-decoration:none; color: #205131; }
@@ -416,13 +416,13 @@ form#site_search:after {
 }
 
 form#site_search input {	
-	width: 174px; 
+	width: 230px; 
 	-webkit-border-radius: 30px;
 	-moz-border-radius: 30px;
 	border-radius: 30px; 
 	float:left; 
 	border:1px solid #999696;
-	height:24px; 
+	height:35px; 
 	font-size:16px; 
 	margin:0 10px 0 0; 
 	padding:3px;
@@ -439,7 +439,7 @@ form#site_search button {
   margin: 0;
   padding: 0 10px;
   position: absolute;
-  left: 15px;
+  right: 15px;
   top: 6px;
   width: auto;
   text-indent: -10000px;

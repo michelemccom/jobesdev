@@ -17,6 +17,7 @@
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 
+<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
 <?php wp_enqueue_script( "site-jquery", get_bloginfo('template_url')."/js/plugins.js", array( 'jquery' ) ); ?>
 <?php wp_enqueue_script( "site-js", get_bloginfo('template_url')."/js/site.js", array( 'site-jquery' ) ); ?>
@@ -38,12 +39,13 @@
                 <?php } else { ?>        
             <div id="logo"><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?><span></span></a></div>
             <?php } ?>    
+            <div class="search">
+                <?php get_search_form(); ?>
+            </div> 
             <div class="nav">     
     		<?php wp_nav_menu( array( 'theme_location' => 'navigation' ) ); ?>  
             </div>     
-            <div class="search">
-                <?php get_search_form(); ?>
-            </div>   
+              
         </div>      
     </div> <!-- /header -->
     	<div id="content"> 
