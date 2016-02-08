@@ -284,6 +284,7 @@ h5 { font-size:14px; margin: 0 0 8px 0;}
 	width:100%;
 	margin: 0 auto;
 	position:relative;
+  clear: both;
 	}
 .shell {
   max-width: 980px;
@@ -332,7 +333,13 @@ h5 { font-size:14px; margin: 0 0 8px 0;}
 	}	
 
 #footer { clear:both; font-size:10px;  padding:12px; position:relative; height: 100px; margin: 0 auto; }
-
+#header:after, .shell:after {
+  content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+  }
 /* ================================ Header ================================ */
 
 #header { position:relative; padding: 0; background: rgba(255,255,255,1); }
