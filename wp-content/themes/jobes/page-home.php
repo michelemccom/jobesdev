@@ -17,6 +17,4 @@ get_header(); ?>
 	</div>
 	<?php endwhile; endif; ?>   
 </div> <!-- end copy -->
-
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

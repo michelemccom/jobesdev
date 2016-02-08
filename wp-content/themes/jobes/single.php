@@ -40,5 +40,4 @@ get_header();
 	<?php endif; ?>
 
 </div> <!-- end copy -->
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>
