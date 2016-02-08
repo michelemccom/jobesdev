@@ -340,14 +340,14 @@ h5 { font-size:14px; margin: 0 0 8px 0;}
 #header .nav { position: relative; margin: 20px 0;}
 #header .nav ul { list-style-type:none; margin: 0; padding: 0; text-align: left; }	
 #header .nav ul li { display:inline-block; margin-right:65px;}	
-#header .nav ul li a { text-transform:lowercase; color: #ffffff; font-size:15px; padding:3px; }
-#header .nav ul li a:hover, #header nav ul li.current_page_item a { text-decoration:none; background: #428bca ; color: #fff; }
+#header .nav ul li a { text-transform:lowercase; color: #205131; font-size:15px; padding:3px; }
+#header .nav ul li a:hover, #header nav ul li.current_page_item a { text-decoration:none; color: #205131; }
 
 /* ================================ Footer ================================ */
 
 #footer ul { list-style-type:none; display:block; margin: 0 0 10px 0; height:10px; }
-#footer ul li { float:left; margin-right:12px; padding-right:12px; border-right: 1px solid #ffffff; line-height:10px; height:10px; }
-#footer ul li a { color: #ffffff; text-transform:uppercase; }
+#footer ul li { float:left; margin-right:12px; padding-right:12px; border-right: 1px solid #205131; line-height:10px; height:10px; }
+#footer ul li a { color: #205131; text-transform:uppercase; }
 
 #footer p.copyright { clear:both; width: 200px; float:left; }
 
