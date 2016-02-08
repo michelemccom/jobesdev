@@ -34,7 +34,7 @@
     <div id="header">
         <div class="shell">
              <?php if(is_front_page() ) { ?>
-            <h1 id="logo" class="thing"><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?><span></span></a></h1>
+            <h1 id="logo"><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?><span></span></a></h1>
                 <?php } else { ?>        
             <div id="logo"><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?><span></span></a></div>
             <?php } ?>    
