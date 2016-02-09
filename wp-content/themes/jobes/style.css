@@ -493,6 +493,12 @@ form label { display:block; margin-bottom:0.3em; }
 form input.text { display:block; margin-bottom:1.0em; background: #fff;	border:1px solid #000; width:100%; }
 form textarea.textarea { background: #fff; border:1px solid #000; width:100%; margin-bottom:1.0em; }	
 form input.submit {	display:block; margin-bottom:1.0em; position:relative; width:65px; height:24px; border:0; padding:0;	}		
+::-webkit-input-placeholder { 
+     opacity: 1 !important;
+}
+::-moz-input-placeholder {
+  opacity: 1 !important;
+}
 
 /* ================================ Misc ================================ */		
 	
