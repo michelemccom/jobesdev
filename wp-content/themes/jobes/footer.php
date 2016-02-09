@@ -5,7 +5,7 @@
  */
 ?>
 
-
+	</div> <!--/shell -->
 </div> <!-- /content -->
 <div id="footer">
 	<div class="shell">
