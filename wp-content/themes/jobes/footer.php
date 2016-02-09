@@ -11,7 +11,7 @@
 	<div class="shell">
 		<?php wp_nav_menu( array( 'theme_location' => 'footer' ) ); ?>           
 	    <div class="company-info">
-	    	<p>&copy; <?php echo date('Y') ?> Easy Gardener Products, Inc.</p>  
+	    	<p class="copyright">&copy; <?php echo date('Y') ?> Easy Gardener Products, Inc.</p>  
 	    	<p>Easy Gardener Products, Inc.,<br />
 	    	 3022 Franklin Avenue,<br />
 	    	 Waco, TX 76710 USA 
