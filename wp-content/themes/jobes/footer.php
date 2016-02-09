@@ -10,7 +10,13 @@
 <div id="footer">
 	<div class="shell">
 		<?php wp_nav_menu( array( 'theme_location' => 'footer' ) ); ?>           
-	    <p>Copyright &copy; <?php echo date('Y') ?></p>    
+	    <div class="company-info">
+	    	<p>&copy; <?php echo date('Y') ?> Easy Gardener Products, Inc.</p>  
+	    	<p>Easy Gardener Products, Inc.,<br />
+	    	 3022 Franklin Avenue,<br />
+	    	 Waco, TX 76710 USA 
+	    	</p>
+	    </div> 
     </div>     
 </div> <!-- /footer -->
 

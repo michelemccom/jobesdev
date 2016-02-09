@@ -372,20 +372,20 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 #header .nav ul li { display:inline-block; margin-right:26px; position: relative;}	
 #header .nav ul li a { text-transform:uppercase; color: #205131; font-size:14px; padding:0; }
 #header .nav ul li ul {display: none; background: #fff; padding-top: 38px;width: 250px;}
-#header .nav ul li ul li {background: #fff; padding: 8px; width: 100%; box-sizing:border-box;  margin: 0;}
+#header .nav ul li ul li {background: #fff; padding: 8px; width: 100%; box-sizing:border-box; margin: 0;}
 #header .nav ul li:hover ul {display: block; position: absolute; top: 15px; }
 #header .nav ul li:hover ul:before {background: url(images/arrow-down.png) no-repeat center; width: 22px; height: 20px; display: block; content: ''; position: absolute; top: 15px;}
-#header .nav ul li a:hover, #header nav ul li.current_page_item a { text-decoration:none; color: #e5083b; }
+#header .nav ul li a:hover, #header nav ul li.current_page_item a { text-decoration:none; color: #df002b; }
 #header .search {float: right;}
 /* ================================ Footer ================================ */
-#footer {background: #fff; width: 100%; position: relative; padding: 0 30px;}
+#footer {background: #fff; width: 100%; position: relative; padding: 30px 0;}
 #footer ul { list-style-type:none; display:block; margin: 0 0 10px 0; height:10px; }
 #footer ul li { float:left; margin-right:12px; padding-right:12px;}
 #footer ul li a { color: #205131; text-transform:uppercase; }
 
-#footer p.copyright { clear:both; width: 200px; float:left; }
+#footer p.copyright { clear:both; width: 200px; float:left; color: #df002b; font-size: 15px; }
 
-#footer p.created { float:right;width: 200px; font-size:10px; }
+#footer p { float:right;width: 200px; font-size:15px; }
 
 /* ================================ Content ================================ */	
 
