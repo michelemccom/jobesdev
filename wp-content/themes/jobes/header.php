@@ -34,7 +34,9 @@
         $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ) ); ?> 
         style="background-image: url('<?php echo $image[0]; ?>')" 
     <?php } else { ?> 
-        style="background: url(image/jobes_bg.png);" } ?>>
+        style="background: url(image/jobes_bg.png);" } 
+    <?php } ?>
+    >
 
 <div id="page">
 
