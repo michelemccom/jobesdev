@@ -350,7 +350,7 @@ h5 { font-size:14px; margin: 0 0 8px 0;}
 
 #header .nav { position: relative; margin: 0; float: left; margin-left: 160px;}
 #header .nav ul { list-style-type:none; margin: 0; padding: 0; text-align: left; }	
-#header .nav ul li { display:inline-block; margin-right:30px; position: relative;}	
+#header .nav ul li { display:inline-block; margin-right:26px; position: relative;}	
 #header .nav ul li a { text-transform:uppercase; color: #205131; font-size:14px; padding:3px; }
 #header .nav ul li ul {display: none;}
 #header .nav ul li:hover ul {display: block; position: absolute; bottom: 0;}
@@ -406,7 +406,7 @@ img.aligncenter {display: block; margin-left: auto; margin-right: auto}
 #sidebar ul, #sidebar ol{ margin-left:2.0em; list-style-type:none; }	
 #sidebar li {list-style-type:none; }	
 
-form#site_search { margin: 0; position: relative;  }
+form#site_search { margin: 0 0 0 10px; position: relative;  }
 form#site_search:after {
   clear: both;
   content: "";
@@ -416,16 +416,16 @@ form#site_search:after {
 }
 
 form#site_search input {	
-	width: 200px; 
+	width: 163px; 
 	-webkit-border-radius: 17px;
 	-moz-border-radius: 17px;
 	border-radius: 17px; 
 	float:left; 
-	height:25px; 
+	height:35px; 
 	font-size:14px; 
 	margin:0 0; 
-	padding:3px;
-	text-align: center;
+	padding:0px 45px 0 20px;
+	text-align: left;
   text-transform: uppercase;
   color: #6b6b6b;
   background-color: rgb(255, 255, 255);
