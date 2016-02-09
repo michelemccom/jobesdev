@@ -38,7 +38,7 @@ filter: none;
 <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?> <?php if (is_single('brand')) {  
+<body <?php body_class(); ?> <?php if (is_singular('brand')) {  
         $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ) ); ?> 
         style="background-image: url('<?php echo $image[0]; ?>')" 
     <?php } else { ?> 
