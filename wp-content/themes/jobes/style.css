@@ -200,7 +200,7 @@ body {
   font-family: 'Montserrat', sans-serif;
   font-size: 14px;
   line-height: 1.4em;
-  color: #333333;
+  color: #555;
   background-color: #40502b;
   background-repeat: no-repeat;
   background-size: cover;
@@ -211,7 +211,7 @@ body {
 
 
 }
-
+body, h1, h2, h3, h4, h5, h6, td, p, li, input, select, textarea  { font-family: 'Montserrat', sans-serif;}
 input,
 button,
 select,
@@ -247,7 +247,7 @@ ul ol,
 ol ol {
   margin-bottom: 0;
 }
-
+p, ul, ol, dl { margin: 0 0 1.2em 0; padding: 0; font-size: 1.0em; line-height: 1.6em; }
 /* ================================ Headers ================================ */
 
 /*
