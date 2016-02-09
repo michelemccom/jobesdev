@@ -247,7 +247,7 @@ ul ol,
 ol ol {
   margin-bottom: 0;
 }
-p, ul, ol, dl { margin: 0 0 1em 0; padding: 0; font-size: 1.0em; line-height: 1.2em; }
+p, ul, ol, dl { margin: 0 0 1.2em 0; padding: 0; font-size: 1.0em; line-height: 1.2em; }
 /* ================================ Headers ================================ */
 
 /*
@@ -383,8 +383,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 #footer ul li { float:left; margin-right:12px; padding-right:12px;}
 #footer ul li a { color: #205131; text-transform:uppercase; }
 
-#footer p {font-size:13px; text-transform: uppercase; }
-#footer p.copyright { clear:both; color: #df002b; font-size: 15px; }
+#footer p {font-size:13px; text-transform: uppercase; margin-bottom: 0;}
+#footer p.copyright { clear:both; color: #df002b; font-size: 15px; margin-bottom: 10px;}
 
 .company-info {width: 250px; float: right; margin-right: 20px;}
 .social {width: 200px; float: right;}
