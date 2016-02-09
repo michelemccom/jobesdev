@@ -9,7 +9,9 @@
 </div> <!-- /content -->
 <div id="footer">
 	<div class="shell">
-		<?php wp_nav_menu( array( 'theme_location' => 'footer' ) ); ?>           
+		<div class="footer-nav">
+			<?php wp_nav_menu( array( 'theme_location' => 'footer' ) ); ?> 
+		</div>	          
 	    <div class="company-info">
 	    	<p class="copyright">&copy; <?php echo date('Y') ?> Easy Gardener Products, Inc.</p>  
 	    	<p>Easy Gardener Products, Inc.,<br />
