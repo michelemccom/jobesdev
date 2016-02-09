@@ -361,10 +361,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 /* ================================ Header ================================ */
 
 #header { position:relative; padding: 0; background: rgba(255,255,255,1); margin: 0 auto;}
-#header .shell {padding: 45px 0;}
-#logo { margin:0  0 0; padding: 0; width:194px; height:163px; cursor:pointer; position: absolute; left: -96px;top: 0  }
-#logo a { margin: 0 0 0 0; padding: 0; position:relative; width:194px; height:163px;  overflow:hidden; text-indent:-10000px; display:block; cursor:pointer; text-align: left }
-#logo a span { display:block; position:absolute; left:0; top:0; z-index:1; width:194px; height:163px; margin:0; padding:0; background:url(images/jobescompanies.png) top left no-repeat; cursor:pointer; }
+#header .shell {padding: 40px 0;}
+#logo { margin:0  0 0; padding: 0; width:173px; height:145px; cursor:pointer; position: absolute; left: -86px;top: 0  }
+#logo a { margin: 0 0 0 0; padding: 0; position:relative; width:173px; height:145px;  overflow:hidden; text-indent:-10000px; display:block; cursor:pointer; text-align: left }
+#logo a span { display:block; position:absolute; left:0; top:0; z-index:1;width:173px; height:145px; margin:0; padding:0; background:url(images/jobescompanies.png) top left no-repeat; cursor:pointer; }
 
 #header .nav { position: relative; margin: 8px 0 0 145px; float: left;}
 #header .nav ul { list-style-type:none; margin: 0; padding: 0; text-align: left; }	
@@ -372,7 +372,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 #header .nav ul li a { text-transform:uppercase; color: #205131; font-size:14px; padding:3px; }
 #header .nav ul li ul {display: none;}
 #header .nav ul li:hover ul {display: block; position: absolute; top: 40px; width: 225px;}
-#header .nav ul li:hover ul:before {background: url(images/arrow-down.png) no-repeat center; width: 22px; height: 20px; display: block; content: '';}
+#header .nav ul li:hover ul:before {background: url(images/arrow-down.png) no-repeat center; width: 22px; height: 20px; display: block; content: ''; position: absolute; top: -25px;}
 #header .nav ul li a:hover, #header nav ul li.current_page_item a { text-decoration:none; color: #e5083b; }
 #header .search {float: right;}
 /* ================================ Footer ================================ */
