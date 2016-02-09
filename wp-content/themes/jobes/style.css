@@ -294,11 +294,11 @@ h5 { font-size:14px; margin: 0 0 8px 0;}
   position: relative;
 }
 #copy {
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: 3%;
+  padding-left: 3%;
   margin-right: auto;
   margin-left: auto;
-  width: 100%;
+  width: 94%;
 }
 
 #copy:before,
