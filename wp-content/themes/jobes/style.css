@@ -300,7 +300,8 @@ h5 { font-size:14px; margin: 0 0 8px 0;}
   margin-left: auto;
   position: relative;
 }
-#content .shell {
+#content + .shell {
+  padding-top: 50px;
   background: rgba(255,255,255,0.43);
 background: -moz-linear-gradient(top, rgba(255,255,255,0.43) 0%, rgba(255,255,255,0.44) 1%, rgba(255,255,255,0.75) 38%, rgba(255,255,255,1) 100%);
 background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,0.43)), color-stop(1%, rgba(255,255,255,0.44)), color-stop(38%, rgba(255,255,255,0.75)), color-stop(100%, rgba(255,255,255,1)));
@@ -360,7 +361,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
   }
 /* ================================ Header ================================ */
 
-#header { position:relative; padding: 0; background: rgba(255,255,255,1); margin: 0 auto 50px;}
+#header { position:relative; padding: 0; background: rgba(255,255,255,1); margin: 0 auto;}
 #header .shell {padding: 40px;}
 #logo { margin:0  0 0; padding: 0; width:194px; height:163px; cursor:pointer; position: absolute; left: -96px;top: 0  }
 #logo a { margin: 0 0 0 0; padding: 0; position:relative; width:194px; height:163px;  overflow:hidden; text-indent:-10000px; display:block; cursor:pointer; text-align: left }
