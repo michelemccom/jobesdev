@@ -348,7 +348,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 	float:left;
 	clear:none;
 	position:relative;
-	}	
+}	
 
 #footer { clear:both; font-size:10px;  padding:12px; position:relative; height: 100px; margin: 0 auto; }
 #header:after, .shell:after {
@@ -357,7 +357,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
     height: 0;
     clear: both;
     visibility: hidden;
-  }
+}
 /* ================================ Header ================================ */
 
 #header { position:relative; padding: 0; background: rgba(255,255,255,1); margin: 0 auto;}
