@@ -17,6 +17,13 @@
 	    	 Waco, TX 76710 USA 
 	    	</p>
 	    </div> 
+	    <div class="social">
+	    	<ul>
+	    		<li class="facebook">
+	                <a target="_blank" title="facebook" href="https://www.facebook.com/">Facebook</a>
+	            </li>
+	    	</ul>
+	    </div>
     </div>     
 </div> <!-- /footer -->
 
