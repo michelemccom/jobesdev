@@ -422,17 +422,15 @@ form#site_search input {
 	border-radius: 17px; 
 	float:left; 
 	height:25px; 
-	font-size:16px; 
+	font-size:14px; 
 	margin:0 0; 
 	padding:3px;
 	text-align: center;
   text-transform: uppercase;
-  color: #999696;
+  color: #6b6b6b;
   background-color: rgb(255, 255, 255);
   box-shadow: inset 0px 11px 28px 0px rgba(0, 0, 0, 0.35);
-
-}
-
+  border: 0;
 
 }
 form#site_search button {
