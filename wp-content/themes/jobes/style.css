@@ -386,7 +386,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 #footer p {font-size:13px; text-transform: uppercase; }
 #footer p.copyright { clear:both; color: #df002b; font-size: 15px; }
 
-.company-info {width: 225px; float: right; margin-right: 20px;}
+.company-info {width: 250px; float: right; margin-right: 20px;}
 .social {width: 200px; float: right;}
 .social li {
   height: 32px;
