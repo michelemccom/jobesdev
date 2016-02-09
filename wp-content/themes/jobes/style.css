@@ -362,7 +362,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 /* ================================ Header ================================ */
 
 #header { position:relative; padding: 0; background: rgba(255,255,255,1); margin: 0 auto;}
-#header .shell {padding: 40px;}
+#header .shell {padding: 50px 0;}
 #logo { margin:0  0 0; padding: 0; width:194px; height:163px; cursor:pointer; position: absolute; left: -96px;top: 0  }
 #logo a { margin: 0 0 0 0; padding: 0; position:relative; width:194px; height:163px;  overflow:hidden; text-indent:-10000px; display:block; cursor:pointer; text-align: left }
 #logo a span { display:block; position:absolute; left:0; top:0; z-index:1; width:194px; height:163px; margin:0; padding:0; background:url(images/jobescompanies.png) top left no-repeat; cursor:pointer; }
