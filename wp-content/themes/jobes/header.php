@@ -39,9 +39,13 @@ filter: none;
 </head>
 
 <body <?php body_class(); ?> <?php if (is_singular('brand')) {  
-        $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ) ); ?> 
-        style="background-image: url('<?php echo $image[0]; ?>')" 
-    <?php } else { ?> 
+        $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ) ); 
+         if (!empty($image)){ ?> 
+            style="background-image: url('<?php echo $image[0]; ?>')" 
+            <?php } else {  ?> 
+            style="background-image: url(<?php echo get_bloginfo('template_url')?>/images/jobes_bg.png);" }
+            <?php } ?>
+        <?php } else {  ?> 
         style="background-image: url(<?php echo get_bloginfo('template_url')?>/images/jobes_bg.png);" } 
     <?php } ?>
     >
