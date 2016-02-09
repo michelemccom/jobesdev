@@ -371,10 +371,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 #header .nav ul { list-style-type:none; margin: 0; padding: 0; text-align: left; }	
 #header .nav ul li { display:inline-block; margin-right:26px; position: relative;}	
 #header .nav ul li a { text-transform:uppercase; color: #205131; font-size:14px; padding:0; }
-#header .nav ul li ul {display: none; background: #fff; padding-top: 38px;width: 250px;}
+#header .nav ul li ul {display: none; background: #fff; padding-top: 35px;width: 250px;}
 #header .nav ul li ul li {background: #fff; padding: 8px; width: 100%; box-sizing:border-box; margin: 0;}
-#header .nav ul li:hover ul {display: block; position: absolute; top: 15px; }
-#header .nav ul li:hover ul:before {background: url(images/arrow-down.png) no-repeat center; width: 22px; height: 20px; display: block; content: ''; position: absolute; top: 15px;}
+#header .nav ul li:hover ul {display: block; position: absolute; top: 17px; }
+#header .nav ul li:hover ul:before {background: url(images/arrow-down.png) no-repeat center; width: 22px; height: 20px; display: block; content: ''; position: absolute; top: 13px;}
 #header .nav ul li a:hover, #header nav ul li.current_page_item a { text-decoration:none; color: #df002b; }
 #header .search {float: right;}
 /* ================================ Footer ================================ */
