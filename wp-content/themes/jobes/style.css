@@ -406,7 +406,7 @@ img.aligncenter {display: block; margin-left: auto; margin-right: auto}
 #sidebar ul, #sidebar ol{ margin-left:2.0em; list-style-type:none; }	
 #sidebar li {list-style-type:none; }	
 
-form#site_search { margin: 12px 10px 0 0; position: relative;  }
+form#site_search { margin: 0; position: relative;  }
 form#site_search:after {
   clear: both;
   content: "";
