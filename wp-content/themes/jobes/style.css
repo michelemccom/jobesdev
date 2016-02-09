@@ -507,7 +507,7 @@ form input.submit {	display:block; margin-bottom:1.0em; position:relative; width
   text-transform: uppercase;
   line-height: 1.6;
   text-align: center;
-  text-shadow: 0px 0px 12.6px rgba(0, 0, 0, 0.1), 0px 0px 12.6px rgba(0, 0, 0, 0.1), 0px 0px 12.6px rgba(0, 0, 0, 0.1); 
+  text-shadow: 0px 0px 7px #000000, 0px 0px 7px #000000; 
   text-align: center;
   
 }
