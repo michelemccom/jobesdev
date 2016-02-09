@@ -367,14 +367,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 #logo a { margin: 0 0 0 0; padding: 0; position:relative; width:173px; height:145px;  overflow:hidden; text-indent:-10000px; display:block; cursor:pointer; text-align: left }
 #logo a span { display:block; position:absolute; left:0; top:0; z-index:1;width:173px; height:145px; margin:0; padding:0; background:url(images/jobescompanies.png) top left no-repeat; cursor:pointer; }
 
-#header .nav { position: relative; margin: 8px 0 0 145px; float: left;}
+#header .nav { position: relative; margin: 8px 0 0 145px; float: left; z-index: 1001;}
 #header .nav ul { list-style-type:none; margin: 0; padding: 0; text-align: left; }	
 #header .nav ul li { display:inline-block; margin-right:26px; position: relative;}	
-#header .nav ul li a { text-transform:uppercase; color: #205131; font-size:14px; padding:3px; }
-#header .nav ul li ul {display: none; background: #fff; padding-top: 40px;}
+#header .nav ul li a { text-transform:uppercase; color: #205131; font-size:14px; padding:0; }
+#header .nav ul li ul {display: none; background: #fff; padding-top: 33px;width: 250px;}
 #header .nav ul li ul li {background: #fff; padding: 8px; width: 100%; box-sizing:border-box;  }
-#header .nav ul li:hover ul {display: block; position: absolute; top: 0; width: 225px;}
-#header .nav ul li:hover ul:before {background: url(images/arrow-down.png) no-repeat center; width: 22px; height: 20px; display: block; content: ''; position: absolute; top: -25px;}
+#header .nav ul li:hover ul {display: block; position: absolute; top: 0; }
+#header .nav ul li:hover ul:before {background: url(images/arrow-down.png) no-repeat center; width: 22px; height: 20px; display: block; content: ''; position: absolute; top: 10px;}
 #header .nav ul li a:hover, #header nav ul li.current_page_item a { text-decoration:none; color: #e5083b; }
 #header .search {float: right;}
 /* ================================ Footer ================================ */
