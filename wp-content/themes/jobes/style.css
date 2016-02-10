@@ -392,18 +392,22 @@ h5 { font-size:14px; margin: 0 0 8px 0;}
 .company-info {width: 250px; float: right; margin-right: 20px;}
 .social {width: 200px; float: right;}
 .social li {
-  height: 32px;
+  height: 34px;
   position: relative;
-  width: 32px;
-  background: #0C063D;
+  width: 34px;
+  margin-left: 3px;
 }
-.social li.facebook a {
-  background: url(images/icon/facebook.png) no-repeat center;
+.social li a {
   text-indent: -10000px;
   display: block;
-  height: 32px;
-   width: 32px;
+  height: 34px;
+   width: 34px;
 }
+.social li.facebook a { background: url(images/icon/facebook.jpg) no-repeat center;}
+.social li.googleplus a { background: url(images/icon/googleplus.jpg) no-repeat center;}
+.social li.pinterest a { background: url(images/icon/pinterest.jpg) no-repeat center;}
+.social li.twitter a { background: url(images/icon/twitter.jpg) no-repeat center;}
+.social li.youtube a { background: url(images/icon/youtube.jpg) no-repeat center;}
 /* ================================ Content ================================ */	
 
 
