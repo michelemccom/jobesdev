@@ -58,7 +58,7 @@ add_action( 'admin_menu', 'remove_post_boxes' );
 add_theme_support( 'post-thumbnails' ); 
 
 if ( function_exists( 'add_image_size' ) ) { 
-	add_image_size( 'team', 150, 150 );
+	add_image_size( 'block', 300, 300, true );
 }
 
 // Add Menu Support
