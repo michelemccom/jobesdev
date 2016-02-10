@@ -14,8 +14,9 @@ get_header(); ?>
 	<?php the_content(); ?>
 	<div class="blocks">
 		<div class="block one">
-			<?php
-			$image_attributes = get_post_meta( $post->ID, 'block_one_image', true ); 
+			<?php $attachment_id = get_post_meta( $post->ID, 'block_one_image', true ); 
+			$image_attributes = wp_get_attachment_image_src( $attachment_id );
+			get_post_meta( $post->ID, 'block_one_image', true ); 
 			var_dump($image_attributes);?>
 			<div class="round">
 				<img src="<?php echo $image_attributes[0];?>" width="<?php echo $image_attributes[1];?>" height="'<?php echo $image_attributes[2]; ?>">';	
