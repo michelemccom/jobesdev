@@ -364,7 +364,7 @@ h5 { font-size:14px; margin: 0 0 8px 0;}
 }
 /* ================================ Header ================================ */
 
-#header { position:relative; padding: 0; background: rgba(255,255,255,1); margin: 0 auto;}
+#header { position:relative; padding: 0; background: #fff; margin: 0 auto;}
 #header .shell {padding: 40px 0;}
 #logo { margin:0  0 0; padding: 0; width:173px; height:145px; cursor:pointer; position: absolute; left: -86px;top: 0  }
 #logo a { margin: 0 0 0 0; padding: 0; position:relative; width:173px; height:145px;  overflow:hidden; text-indent:-10000px; display:block; cursor:pointer; text-align: left }

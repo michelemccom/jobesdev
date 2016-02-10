@@ -69,4 +69,4 @@ filter: none;
         </div>      
     </div> <!-- /header -->
     	<div id="content"> 
-            <div class="shell">
+            <div class="shell gradient">
