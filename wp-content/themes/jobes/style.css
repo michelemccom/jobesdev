@@ -301,18 +301,20 @@ h5 { font-size:14px; margin: 0 0 8px 0;}
   margin-left: auto;
   position: relative;
 }
-#content > .shell {
+.home #content > .shell {
   padding-top: 50px;
   background: rgba(255,255,255,0.04);
-background: -moz-linear-gradient(top, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0.75) 50%, rgba(255,255,255,1) 100%);
-background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,0.04)), color-stop(43%, rgba(255,255,255,0.75)), color-stop(100%, rgba(255,255,255,1)));
-background: -webkit-linear-gradient(top, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0.75) 50%, rgba(255,255,255,1) 100%);
-background: -o-linear-gradient(top, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0.75) 50%, rgba(255,255,255,1) 100%);
-background: -ms-linear-gradient(top, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0.75) 50%, rgba(255,255,255,1) 100%);
-background: linear-gradient(to bottom, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0.75) 50%, rgba(255,255,255,1) 100%);
+background: -moz-linear-gradient(top, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0.75) 50%, rgba(255,255,255,.9) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,0.04)), color-stop(43%, rgba(255,255,255,0.75)), color-stop(100%, rgba(255,255,255,.9)));
+background: -webkit-linear-gradient(top, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0.75) 50%, rgba(255,255,255,.9) 100%);
+background: -o-linear-gradient(top, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0.75) 50%, rgba(255,255,255,.9) 100%);
+background: -ms-linear-gradient(top, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0.75) 50%, rgba(255,255,255,.9) 100%);
+background: linear-gradient(to bottom, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0.75) 50%, rgba(255,255,255,.9) 100%);
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff', GradientType=0 );
 }
-
+#content > .shell {
+  background: rgba(255,255,255,0.9);
+}
 #copy {
   padding-right: 3%;
   padding-left: 3%;
@@ -404,43 +406,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 }
 /* ================================ Content ================================ */	
 
-.more { font-size:10px; clear:both; }
-	
-#copy p.postmetadata { font-size:0.9em; font-weight:normal; line-height:1.7em;	}	
-#copy ul.postmetadata { font-size:0.9em; font-weight:normal; line-height:1.7em; margin-top:2.0em; list-style-type:none; }	
-#copy ul.postmetadata li { background:none; padding-left:0; }
-#copy ul.postmetadata li.comment { float:right; text-align:right; width:150px; }	
-
-.post { position:relative; }
-
-ol.commentlist { list-style-type:none; }	
-ol.commentlist li { margin-bottom:2.0em; }
-ol.commentlist li  p { line-height:1.4em; }	
-ol.commentlist li cite { margin-top:-0.5em;	display:block; font-style:normal; font-size:0.9em;}
-
-	
-#respond {  }	
-h3#comments { margin-top:2.0em; }
 
 img.alignright {float:right; margin:0 0 1em 1em}
 img.alignleft {float:left; margin:0 1em 1em 0}
 img.aligncenter {display: block; margin-left: auto; margin-right: auto}
 
-.blognav { height:60px; display: block; }
-.blognav-bottom { height:20px; margin-top:10px; }
-.blognav a { }
-.blognav .alignright { float: right; width:50%; text-align:right; }
-.blognav .alignleft { float: left; width:50%; }		
-	
-.tags { padding: 6px 20px 8px 50px; font-size: 10px; margin: 25px -20px 0px -20px; color: #fff; min-height:11px; line-height:13px; }
-.tags a { color: #fff; outline:0; }
 
-#comments { background:#eeeeee; padding: 40px 30px 40px 80px;  margin: 0 -20px 0px -20px; }
-
-/* ================================ Sidebar ================================ */	
-
-#sidebar ul, #sidebar ol{ margin-left:2.0em; list-style-type:none; }	
-#sidebar li {list-style-type:none; }	
+/* ================================ Search ================================ */	
 
 form#site_search { margin: 0 0 0 10px; position: relative;  }
 form#site_search:after {
@@ -486,14 +458,20 @@ form#site_search button {
 
 }
 
-.cnss-social-icon td a { height:32px; width:32px; line-height:32px; background: #000; border-radius: 50%; -moz-border-radius: 50%; -webkit-border-radius: 50%; display:block; text-align:center; }
-.cnss-social-icon td a:hover { background: #006132; }
-.cnss-social-icon td a img { height: auto !important; width: auto !important; display:inline; margin-top:6px; opacity:1 !important;}
-.search-box {float: right;}
 
 /* ================================ Page ================================ */	
 
 body.page #copy ul, body.page #copy ol { margin-left:2.0em; }
+h1.page-title {
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+  line-height: 1;
+  text-align: center;
+  text-shadow: 0px 0px 12px #000000; 
+  text-align: center;
+  font-size: 64px;
+}
+
 
 /* ================================ Search ================================ */		
 
