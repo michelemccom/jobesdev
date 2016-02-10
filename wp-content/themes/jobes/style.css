@@ -382,9 +382,9 @@ h5 { font-size:14px; margin: 0 0 8px 0;}
 /* ================================ Footer ================================ */
 #footer {background: #fff; width: 100%; position: relative; padding: 30px 0;}
 #footer .footer-nav {float: left;}
-#footer ul { list-style-type:none; display:block; margin: 0 0 10px 0; height:10px; }
-#footer ul li { float:left; margin-right:12px; padding-right:12px;}
-#footer ul li a { color: #205131; text-transform:uppercase; }
+#footer .footer-nav ul { list-style-type:none; display:block; margin: 0 0 10px 0; height:10px; }
+#footer .footer-nav ul li { float:left; margin-right:12px; padding-right:12px;}
+#footer .footer-nav ul li a { color: #205131; text-transform:uppercase; }
 
 #footer p {font-size:13px; text-transform: uppercase; margin-bottom: 0;}
 #footer p.copyright { clear:both; color: #df002b; font-size: 15px; margin-bottom: 10px;}
@@ -396,6 +396,10 @@ h5 { font-size:14px; margin: 0 0 8px 0;}
   position: relative;
   width: 34px;
   margin-left: 3px;
+  float: left;
+  list-style: none;
+  display: block
+
 }
 .social li a {
   text-indent: -10000px;

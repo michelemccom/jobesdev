@@ -20,6 +20,7 @@
 	    	</p>
 	    </div> 
 	    <div class="social">
+	    	<h5>Connect</h5>
 	    	<ul>
 	    		<li class="facebook">
 	                <a target="_blank" title="facebook" href="https://www.facebook.com/">Facebook</a>
