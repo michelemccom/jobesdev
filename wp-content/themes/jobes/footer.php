@@ -24,6 +24,18 @@
 	    		<li class="facebook">
 	                <a target="_blank" title="facebook" href="https://www.facebook.com/">Facebook</a>
 	            </li>
+	            <li class="google">
+	                <a target="_blank" title="google plus" href="https://www.google.com/">Facebook</a>
+	            </li>
+	            <li class="twitter">
+	                <a target="_blank" title="twitter" href="https://www.twitter.com/">Facebook</a>
+	            </li>
+	            <li class="pinterest">
+	                <a target="_blank" title="pinterest" href="https://www.pinterest.com/">Facebook</a>
+	            </li>
+	            <li class="youtube">
+	                <a target="_blank" title="youtube" href="https://www.youtube.com/">Facebook</a>
+	            </li>
 	    	</ul>
 	    </div>
     </div>     
