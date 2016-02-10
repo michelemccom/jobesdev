@@ -24,7 +24,7 @@
 	    		<li class="facebook">
 	                <a target="_blank" title="facebook" href="https://www.facebook.com/">Facebook</a>
 	            </li>
-	            <li class="google">
+	            <li class="googleplus">
 	                <a target="_blank" title="google plus" href="https://www.google.com/">Facebook</a>
 	            </li>
 	            <li class="twitter">
