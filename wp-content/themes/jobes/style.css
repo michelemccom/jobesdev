@@ -512,6 +512,7 @@ form input.submit {	display:block; margin-bottom:1.0em; position:relative; width
   opacity: 1 !important;
 }
 
+
 /* ================================ Misc ================================ */		
 .banner  > *  {
   font-size: 30px;
@@ -525,6 +526,17 @@ form input.submit {	display:block; margin-bottom:1.0em; position:relative; width
 }
 .banner h3 {font-size: 40px; }
 .banner h2 {font-size: 64px; }
+.round {
+    border-radius: 50%;
+    overflow: hidden;
+    width: 300px;
+    height: 300px;
+}
+.round img {
+    display: block;
+min-width: 100%;
+min-height: 100%;
+}
 
 /* ================================ Responsive ================================ */
 /* All Mobile Sizes (devices and browser) */
