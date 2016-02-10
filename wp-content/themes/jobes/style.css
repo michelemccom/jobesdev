@@ -475,7 +475,7 @@ form#site_search button {
 
 /* ================================ Page ================================ */	
 
-body.page #copy ul, body.page #copy ol { margin-left:2.0em; }
+#copy ul, #copy ol { margin-left:2.0em; }
 h1.page-title {
   color: rgb(255, 255, 255);
   text-transform: uppercase;
