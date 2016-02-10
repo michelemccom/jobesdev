@@ -15,8 +15,8 @@ get_header(); ?>
 	<div class="blocks">
 		<div class="block one">
 			<?php $attachment_id = $post->ID;
-			$image_attributes = wp_get_attachment_image_src( $attachment_id ); ?>
-			var_dump($image_attributes);
+			$image_attributes = wp_get_attachment_image_src( $attachment_id ); 
+			var_dump($image_attributes);?>
 			<div class="round">
 				<img src="<?php echo $image_attributes[0];?>" width="<?php echo $image_attributes[1];?>" height="'<?php echo $image_attributes[2]; ?>">';	
 			</div>
