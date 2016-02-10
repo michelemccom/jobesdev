@@ -222,13 +222,13 @@ textarea {
 }
 
 a {
-  color: #428bca;
+  color: #205131;
   text-decoration: none;
 }
 
 a:hover,
 a:focus {
-  color: #2a6496;
+  color: #df002b;
   text-decoration: underline;
   outline: none;
 }
@@ -261,6 +261,7 @@ h1,h2,h3,h4,h5,h6 {
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 500;
 	line-height: 1.1;
+  color: #205131;
 }
 h1 { font-size:34px; margin:0 0 20px 0; }	
 h2 { font-size:30px; margin:0 0 20px 0; }
