@@ -537,7 +537,12 @@ form input.submit {	display:block; margin-bottom:1.0em; position:relative; width
 min-width: 100%;
 min-height: 100%;
 }
-
+.block {
+  width: 31%;
+  margin-right: 2%;
+  float: left;
+}
+.block.three {margin-right: 0;}
 /* ================================ Responsive ================================ */
 /* All Mobile Sizes (devices and browser) */
 @media only screen and (max-width: 768px) {
