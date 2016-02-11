@@ -529,7 +529,7 @@ form input.submit {	display:block; margin-bottom:1.0em; position:relative; width
 .round {
     border-radius: 50%;
     overflow: hidden;
-    width: 33%;
+    width: 100%;
     height: auto;
     max-width: 280px;
     max-height: 280px;
