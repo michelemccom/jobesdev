@@ -23,9 +23,9 @@ get_header(); ?>
 		</div>
 		<div class="block two">
 			<?php $attachment_id = get_post_meta( $post->ID, 'block_two_image', true ); 
-			$image_attributes_two = wp_get_attachment_image_src( $attachment_id, 'block'); ?>
+			$image_attributes_two = wp_get_attachment_image_src( $attachment_id, 'block' ); ?>
 			<div class="round">
-				<img src="<?php echo $image_attributes_two[0];?>" width="<?php echo $image_attributes_two[1];?>" height="'<?php echo $image_attributes_two[2]; ?>">
+				<img src="<?php echo $image_attributes_two[0];?>" width="<?php echo $image_attributes_two[1];?>" height="<?php echo $image_attributes_two[2]; ?>">	
 			</div>
 			<a href="<?php echo get_post_meta($post->ID, "block_two_link", true);?>"><?php echo get_post_meta($post->ID, "block_two_text", true);?></a>
 		</div>
