@@ -318,8 +318,7 @@ h5 { font-size:14px; margin: 0 0 8px 0;}
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff', GradientType=0 );
 }
 #copy {
-  padding-right: 3%;
-  padding-left: 3%;
+  padding: 50px 3%;
   margin-right: auto;
   margin-left: auto;
   width: 94%;
