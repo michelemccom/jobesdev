@@ -512,9 +512,9 @@ form input.submit {	display:block; margin-bottom:1.0em; position:relative; width
 }
 
 /* ================================ Home ================================ */    
-.home .blocks .block-content .image-text {margin-bottom: 10px; height: 100px; display: table; text-align: center;}
-.home .blocks .block-content .image-text img, .home .blocks .block-content .image-text h5 {display: table-cell; vertical-align: middle;}
-.home .blocks .block-content h5 {
+.home .blocks .image-text {margin-bottom: 10px; height: 100px; display: table; text-align: center;}
+.home .blocks  .image-text img, .home .blocks .image-text h5 {display: table-cell; vertical-align: middle;}
+.home .blocks h5 {
   font-size: 32px;
   display: block;
   color: #df002b;
