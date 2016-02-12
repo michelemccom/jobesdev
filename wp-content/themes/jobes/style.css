@@ -229,7 +229,7 @@ a {
 a:hover,
 a:focus {
   color: #df002b;
-  text-decoration: underline;
+  text-decoration: none;
   outline: none;
 }
 img {
