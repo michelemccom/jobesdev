@@ -12,7 +12,7 @@ get_header(); ?>
 	</div>
 <div id="copy"> 
 	<?php the_content(); ?>
-	<div class="blocks">
+	<div class="blocks section">
 		<div class="block one">
 			<?php $attachment_id = get_post_meta( $post->ID, 'block_one_image', true ); 
 			$image_attributes_one = wp_get_attachment_image_src( $attachment_id, 'block' ); ?>
@@ -79,6 +79,10 @@ get_header(); ?>
 				<a href="<?php echo get_post_meta($post->ID, "block_three_link", true);?>"><?php echo get_post_meta($post->ID, "block_three_text", true);?></a>
 			</div>
 		</div>
+	</div>
+	<div class="divider"></div>
+	<div class="call-out section">
+
 	</div>
 </div> <!-- end copy -->
 <?php endwhile; endif; ?>
