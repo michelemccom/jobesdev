@@ -20,13 +20,14 @@ get_header(); ?>
 				<img src="<?php echo $image_attributes_one[0];?>" width="<?php echo $image_attributes_one[1];?>" height="<?php echo $image_attributes_one[2]; ?>">	
 			</div>
 			<?php $imageText = get_post_meta($post->ID, "block_one_text", true);
-				if (!empty($imageText)){?>
+				if (!empty($imageText)){
+					var_dump($imageText);?>
 					<div class="image-text">
-					<?php if ($imageText =="image"){
+					<?php if ($imageText == "image"){
 							$attachment_id = get_post_meta( $post->ID, 'block_one_secondary_image', true ); 
 							$image_attributes_one_s = wp_get_attachment_image_src( $attachment_id, 'full' ); ?>
 							<img src="<?php echo $image_attributes_one_s[0];?>" width="<?php echo $image_attributes_one_s[1];?>" height="<?php echo $image_attributes_one_s[2]; ?>">
-					<?php } elseif ($imageText =="subtitle") { ?>	 
+					<?php } elseif ($imageText == "subtitle") { ?>	 
 						<h5><?php echo get_post_meta($post->ID, "block_one_subtitle", true);?></h5>
 					<?php } ?>
 					</div>
