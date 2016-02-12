@@ -463,7 +463,7 @@ form#site_search button {
   padding: 0;
   position: absolute;
   right: 15px;
-  top: 2px;
+  top: 4px;
   width: auto;
   text-indent: -10000px;
   height: 27px;
@@ -543,7 +543,7 @@ form input.submit {	display:block; margin-bottom:1.0em; position:relative; width
     height: auto;
     max-width: 280px;
     max-height: 280px;
-    margin-bottom: 15px;
+    margin: 0 auto 15px;
 }
 .round img {
     display: block;
