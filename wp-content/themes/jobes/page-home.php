@@ -19,9 +19,8 @@ get_header(); ?>
 			<div class="round">
 				<img src="<?php echo $image_attributes_one[0];?>" width="<?php echo $image_attributes_one[1];?>" height="<?php echo $image_attributes_one[2]; ?>">	
 			</div>
-			<?php $imageText = get_post_meta($post->ID, "block_one_text", true);
-				if (!empty($imageText)){
-					var_dump($imageText);?>
+			<?php $imageText = get_post_meta($post->ID, "one_image_or_subtitle", true);
+				if (!empty($imageText)){?>
 					<div class="image-text">
 					<?php if ($imageText == "image"){
 							$attachment_id = get_post_meta( $post->ID, 'block_one_secondary_image', true ); 
