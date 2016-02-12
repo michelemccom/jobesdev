@@ -536,6 +536,13 @@ form input.submit {	display:block; margin-bottom:1.0em; position:relative; width
 .banner h2 {font-size: 64px; }
 .section {position: relative; margin: 0 auto;}
 .section:after {clear: both;height: 0; display: block;content: ''; visibility: hidden;}
+
+.block {
+  width: 32%;
+  margin-right: 2%;
+  float: left;
+}
+.block.three {margin-right: 0;}
 .round {
     border-radius: 50%;
     overflow: hidden;
@@ -550,13 +557,6 @@ form input.submit {	display:block; margin-bottom:1.0em; position:relative; width
 min-width: 100%;
 min-height: 100%;
 }
-.block {
-  width: 31%;
-  margin-right: 2%;
-  float: left;
-}
-.block.three {margin-right: 0;}
-
 .divider {
     clear: both;
     margin: 45px 0;
