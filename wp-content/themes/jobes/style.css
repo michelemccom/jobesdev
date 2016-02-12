@@ -511,6 +511,14 @@ form input.submit {	display:block; margin-bottom:1.0em; position:relative; width
   opacity: 1 !important;
 }
 
+/* ================================ Home ================================ */    
+.home .blocks .block-content img, .home .blocks .block-content h1, .home .blocks .block-content h2, .home .blocks .block-content h3, .home .blocks .block-content h4, .home .blocks .block-content h5 {margin-bottom: 10px;}
+.home .blocks .block-content h1, .home .blocks .block-content h2, .home .blocks .block-content h3, .home .blocks .block-content h4, .home .blocks .block-content h5 {
+  font-size: 32px;
+  display: block;
+  color: #df002b;
+}
+
 
 /* ================================ Misc ================================ */		
 .banner  > *  {
@@ -532,6 +540,7 @@ form input.submit {	display:block; margin-bottom:1.0em; position:relative; width
     height: auto;
     max-width: 280px;
     max-height: 280px;
+    margin-bottom: 15px;
 }
 .round img {
     display: block;

@@ -19,7 +19,9 @@ get_header(); ?>
 			<div class="round">
 				<img src="<?php echo $image_attributes_one[0];?>" width="<?php echo $image_attributes_one[1];?>" height="<?php echo $image_attributes_one[2]; ?>">	
 			</div>
-			<a href="<?php echo get_post_meta($post->ID, "block_one_link", true);?>"><?php echo get_post_meta($post->ID, "block_one_text", true);?></a>
+			<div class="block-content">
+				<a href="<?php echo get_post_meta($post->ID, "block_one_link", true);?>"><?php echo get_post_meta($post->ID, "block_one_text", true);?></a>
+			</div>
 		</div>
 		<div class="block two">
 			<?php $attachment_id = get_post_meta( $post->ID, 'block_two_image', true ); 
@@ -27,7 +29,9 @@ get_header(); ?>
 			<div class="round">
 				<img src="<?php echo $image_attributes_two[0];?>" width="<?php echo $image_attributes_two[1];?>" height="<?php echo $image_attributes_two[2]; ?>">	
 			</div>
-			<a href="<?php echo get_post_meta($post->ID, "block_two_link", true);?>"><?php echo get_post_meta($post->ID, "block_two_text", true);?></a>
+			<div class="block-content">
+				<a href="<?php echo get_post_meta($post->ID, "block_two_link", true);?>"><?php echo get_post_meta($post->ID, "block_two_text", true);?></a>
+			</div>
 		</div>
 		<div class="block three">
 			<?php $attachment_id = get_post_meta( $post->ID, 'block_three_image', true ); 
@@ -35,7 +39,9 @@ get_header(); ?>
 			<div class="round">
 				<img src="<?php echo $image_attributes_three[0];?>" width="<?php echo $image_attributes_three[1];?>" height="'<?php echo $image_attributes_three[2]; ?>">
 			</div>
-			<a href="<?php echo get_post_meta($post->ID, "block_three_link", true);?>"><?php echo get_post_meta($post->ID, "block_three_text", true);?></a>
+			<div class="block-content">
+				<a href="<?php echo get_post_meta($post->ID, "block_three_link", true);?>"><?php echo get_post_meta($post->ID, "block_three_text", true);?></a>
+			</div>
 		</div>
 	</div>
 </div> <!-- end copy -->
