@@ -61,30 +61,6 @@ if ( function_exists( 'add_image_size' ) ) {
 	add_image_size( 'block', 280, 280, true );
 }
 
-function my_taxonomies_brand() {
-	$labels = array(
-		'name'              => _x( 'Product Types', 'taxonomy general name' ),
-		'singular_name'     => _x( 'Product Type', 'taxonomy singular name' ),
-		'search_items'      => __( 'Search Product Categories' ),
-		'all_items'         => __( 'All Product Categories' ),
-		'parent_item'       => __( 'Parent Product Category' ),
-		'parent_item_colon' => __( 'Parent Product Category:' ),
-		'edit_item'         => __( 'Edit Product Category' ),
-		'update_item'       => __( 'Update Product Category' ),
-		'add_new_item'      => __( 'Add New Product Category' ),
-		'new_item_name'     => __( 'New Product Category' ),
-		'menu_name'         => __( 'Product Types' ),
-	);
-	$args = array(
-		'labels' => $labels,
-		'hierarchical' 	=> true,
-		'public'		=> true,
-		'rewrite'		=>  array('slug' => 'brand/%brand%/' ),
-		'_builtin'		=> false,
-	);
-	register_taxonomy( 'type', 'brand', $args );
-}
-add_action( 'init', 'my_taxonomies_brand', 0 );
 
 // Add Menu Support
 if ( function_exists( 'register_nav_menus' ) ) {
