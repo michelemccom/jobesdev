@@ -14,7 +14,7 @@ get_header();
         <h1 class="page-title"><?php the_title(); ?></h1>
         
             <?php  the_content();
-=
+
 //list terms in a given taxonomy (useful as a widget for twentyten)
 $taxonomy = 'type';
 $tax_terms = get_terms($taxonomy);
@@ -27,7 +27,7 @@ echo '<li>' . '<a href="' . esc_attr(get_term_link($tax_term, $taxonomy)) . '" t
 ?>
 </ul>
 
-           <?php  $doctors = get_posts(array(
+            <?php $doctors = get_posts(array(
 							'post_type' => 'product',
 							'meta_query' => array(
 								array(
