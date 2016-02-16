@@ -16,10 +16,10 @@ get_header();
             <?php  the_content();
 
             $doctors = get_posts(array(
-							'post_type' => 'brand',
+							'post_type' => 'product',
 							'meta_query' => array(
 								array(
-									'key' => 'product', // name of custom field
+									'key' => 'brand', // name of custom field
 									'value' => '"' . get_the_ID() . '"', // matches exaclty "123", not just 123. This prevents a match for "1234"
 									'compare' => 'LIKE'
 								)
@@ -43,23 +43,19 @@ get_header();
 								</li>
 							<?php endforeach; ?>
 							</ul>
-						<?php endif; 
-  		$brands = get_field('brand');
-
-						?>
-						<?php if( $brands ): ?>
-							<ul>
-							<?php foreach( $brands as $brand ): ?>
-								<li>
-									<a href="<?php echo get_permalink( $brand->ID ); ?>">
-										<?php echo get_the_title( $brand->ID ); ?>
-									</a>
-								</li>
-							<?php endforeach; ?>
-							</ul>
-					<?php endif; ?>
-
-      
+						<?php endif; ?>
+						hello
+								<?php $brands = get_field('brand'); if( $brands ): ?>
+									<ul>
+									<?php foreach( $brands as $brand ): ?>
+										<li>
+											<a href="<?php echo get_permalink( $brand->ID ); ?>">
+												<?php echo get_the_title( $brand->ID ); ?>
+											</a>
+										</li>
+									<?php endforeach; ?>
+									</ul>
+							<?php endif; ?>
     </div>
 
 <?php endwhile; endif; ?>   
