@@ -17,7 +17,7 @@ get_header();
   		$brands = get_field('brand');
 
 						?>
-						<?php if( $locations ): ?>
+						<?php if( $brands ): ?>
 							<ul>
 							<?php foreach( $brands as $brand ): ?>
 								<li>
