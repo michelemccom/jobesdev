@@ -27,7 +27,7 @@ echo '<li>' . '<a href="' . esc_attr(get_term_link($tax_term, $taxonomy)) . '" t
 ?>
 </ul>
 
-            $doctors = get_posts(array(
+           <?php  $doctors = get_posts(array(
 							'post_type' => 'product',
 							'meta_query' => array(
 								array(
