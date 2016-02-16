@@ -61,7 +61,6 @@ if ( function_exists( 'add_image_size' ) ) {
 	add_image_size( 'block', 280, 280, true );
 }
 
-
 // Add Menu Support
 if ( function_exists( 'register_nav_menus' ) ) {
 	register_nav_menus(
