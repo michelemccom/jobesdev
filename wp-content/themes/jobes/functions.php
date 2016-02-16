@@ -79,7 +79,6 @@ function my_taxonomies_brand() {
 		'labels' => $labels,
 		'hierarchical' 	=> true,
 		'public'		=> true,
-		'query_var'		=> 'brand',
 		'rewrite'		=>  array('slug' => 'brand/%brand%/' ),
 		'_builtin'		=> false,
 	);
