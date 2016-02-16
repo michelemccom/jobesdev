@@ -14,6 +14,18 @@ get_header();
         <h1 class="page-title"><?php the_title(); ?></h1>
         
             <?php  the_content();
+=
+//list terms in a given taxonomy (useful as a widget for twentyten)
+$taxonomy = 'type';
+$tax_terms = get_terms($taxonomy);
+?>
+<ul>
+<?php
+foreach ($tax_terms as $tax_term) {
+echo '<li>' . '<a href="' . esc_attr(get_term_link($tax_term, $taxonomy)) . '" title="' . sprintf( __( "View all posts in %s" ), $tax_term->name ) . '" ' . '>' . $tax_term->name.'</a></li>';
+}
+?>
+</ul>
 
             $doctors = get_posts(array(
 							'post_type' => 'product',
