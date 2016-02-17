@@ -82,9 +82,28 @@ function create_brand_taxonomies() {
    
 }
 
+/**
+ * Inject term slug into custom post type permastruct.
+ * 
+ * @link   http://wordpress.stackexchange.com/a/5313/1685
+ * 
+ * @param  string  $link
+ * @param  WP_Post $post 
+ * @return array
+ */
+function wpse_5308_post_type_link( $link, $post ) {
+    if ( $post->post_type === 'brands' ) {
+        if ( $terms = get_the_terms( $post->ID, 'brand_cat' ) )
+            $link = str_replace( 'brand_cat%', current( $terms )->slug, $link );
+    }
+
+    return $link;
+}
+
+add_filter( 'post_type_link', 'wpse_5308_post_type_link', 10, 2 );
 function filter_post_type_link($link, $post)
 {
-    if ($post->post_type != 'brand')
+    if ($post->post_type != 'brands')
         return $link;
 
     if ($cats = get_the_terms($post->ID, 'brand_cat'))
