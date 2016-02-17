@@ -16,7 +16,7 @@ get_header(); ?>
 
 $brands = get_post_meta($post->ID, "product_categories", true);
 
-
+var_dump($brands);
 if( $brands ): ?>
 
 	<ul>
