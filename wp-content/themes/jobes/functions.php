@@ -87,9 +87,9 @@ function filter_post_type_link($link, $post)
     if ($post->post_type != 'brand')
         return $link;
 
-    if ($cats = get_the_terms($post->ID, 'category'))
+    if ($cats = get_the_terms($post->ID, 'brand_cat'))
     {
-        $link = str_replace('%taxonomy_name%', get_taxonomy_parents(array_pop($cats)->term_id, 'category', false, '/', true), $link); // see custom function defined below
+        $link = str_replace('%taxonomy_name%', get_taxonomy_parents(array_pop($cats)->term_id, 'brand_cat', false, '/', true), $link); // see custom function defined below
     }
     return $link;
 }
