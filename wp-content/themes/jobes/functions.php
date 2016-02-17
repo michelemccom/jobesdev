@@ -94,7 +94,7 @@ function create_brand_taxonomies() {
 function wpse_5308_post_type_link( $link, $post ) {
     if ( $post->post_type === 'brands' ) {
         if ( $terms = get_the_terms( $post->ID, 'brand_cat' ) )
-            $link = str_replace( 'brand_cat%', current( $terms )->slug, $link );
+            $link = str_replace( '%brand_cat%', current( $terms )->slug, $link );
     }
 
     return $link;
