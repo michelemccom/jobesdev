@@ -9,67 +9,67 @@ get_header();
 
 <div id="copy"> 
 
-		<?php if (have_posts()) : ?>
-
- 	  <?php $post = $posts[0]; // Hack. Set $post so that the_date() works. ?>
- 	  <?php /* If this is a category archive */ if (is_category()) { ?>
-		<h4>&#8216;<?php single_cat_title(); ?>&#8217; Category</h4>
- 	  <?php /* If this is a tag archive */ } elseif( is_tag() ) { ?>
-		<h4>Posts Tagged &#8216;<?php single_tag_title(); ?>&#8217;</h4>
- 	  <?php /* If this is a daily archive */ } elseif (is_day()) { ?>
-		<h4>Archive for <?php the_time('F jS, Y'); ?></h4>
- 	  <?php /* If this is a monthly archive */ } elseif (is_month()) { ?>
-		<h4>Archive for <?php the_time('F, Y'); ?></h4>
- 	  <?php /* If this is a yearly archive */ } elseif (is_year()) { ?>
-		<h4>Archive for <?php the_time('Y'); ?></h4>
-	  <?php /* If this is an author archive */ } elseif (is_author()) { ?>
-		<h4>Author Archive</h4>
- 	  <?php /* If this is a paged archive */ } elseif (isset($_GET['paged']) && !empty($_GET['paged'])) { ?>
-		<h4>Blog Archives</h4>
- 	  <?php } ?>
-
-		<?php while (have_posts()) : the_post(); ?>
-		<div <?php post_class() ?>>
-            <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-            <p class="postmetadata">By: <?php the_author_posts_link(); ?> on <?php the_time('l, F jS, Y') ?> at <?php the_time() ?></p>
-
-            <div class="entry">
-                <?php echo trim_content($post->post_content, 110); ?>
-            </div>
-       
-            <ul class="postmetadata">
-                <li class="comment"><?php comments_popup_link('No Comments', '1 Comment', '% Comments'); ?></li>
-                <li>Category: <?php the_category(', ') ?></li>
-                <li class="share"><?php if (function_exists('sharethis_button')) { sharethis_button(); } ?></a></li>   
-                <li>Tags: <?php the_tags( '', ', ', ''); ?></li>            
-            </ul>
-        </div>
-
-
-		<?php endwhile; ?>
-
-		<div class="blognav">
-			<div class="alignleft"><?php next_posts_link('&laquo; Older Entries') ?></div>
-			<div class="alignright"><?php previous_posts_link('Newer Entries &raquo;') ?></div>
-		</div>
-	<?php else :
-
-		if ( is_category() ) { // If this is a category archive
-			printf("<h2 class='center'>Sorry, but there aren't any posts in the %s category yet.</h2>", single_cat_title('',false));
-		} else if ( is_date() ) { // If this is a date archive
-			echo("<h2>Sorry, but there aren't any posts with this date.</h2>");
-		} else if ( is_author() ) { // If this is a category archive
-			$userdata = get_userdatabylogin(get_query_var('author_name'));
-			printf("<h2 class='center'>Sorry, but there aren't any posts by %s yet.</h2>", $userdata->display_name);
-		} else {
-			echo("<h2 class='center'>No posts found.</h2>");
-		}
-		get_search_form();
-
-	endif;
+	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+    <div <?php post_class() ?> id="post-<?php the_ID(); ?>">
+        <h1 class="page-title"><?php the_title(); ?></h1>
+        
+            <?php  the_content();
+            //list terms in a given taxonomy (useful as a widget for twentyten)
+$taxonomy = 'subcategory';
+$tax_terms = get_terms($taxonomy);
 ?>
+<ul>
+<?php
+foreach ($tax_terms as $tax_term) {
+echo '<li>' . '<a href="' . esc_attr(get_term_link($tax_term, $taxonomy)) . '" title="' . sprintf( __( "View all posts in %s" ), $tax_term->name ) . '" ' . '>' . $tax_term->name.'</a></li>';
+}
+?>
+</ul>
 
-	</div>
+<?php $doctors = get_posts(array(
+							'post_type' => 'product',
+							'meta_query' => array(
+								array(
+									'key' => 'brands', // name of custom field
+									'value' => '"' . get_the_ID() . '"', // matches exaclty "123", not just 123. This prevents a match for "1234"
+									'compare' => 'LIKE'
+								)
+							)
+						));
 
+						?>
+						<?php if( $doctors ): ?>
+							<ul>
+							<?php foreach( $doctors as $doctor ): ?>
+								<?php 
 
+								$photo = get_field('photo', $doctor->ID);
+
+								?>
+								<li>
+									<a href="<?php echo get_permalink( $doctor->ID ); ?>">
+								
+										<?php echo get_the_title( $doctor->ID ); ?>
+									</a>
+								</li>
+							<?php endforeach; ?>
+							</ul>
+						<?php endif; ?>
+						hello
+								<?php $brands = get_field('brand'); if( $brands ): ?>
+									<ul>
+									<?php foreach( $brands as $brand ): ?>
+										<li>
+											<a href="<?php echo get_permalink( $brand->ID ); ?>">
+												<?php echo get_the_title( $brand->ID ); ?>
+											</a>
+										</li>
+									<?php endforeach; ?>
+									</ul>
+							<?php endif; ?>
+    </div>
+
+<?php endwhile; endif; ?>   
+
+</div> <!-- end copy -->
 <?php get_footer(); ?>
