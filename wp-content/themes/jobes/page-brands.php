@@ -23,9 +23,7 @@ if( $brands ): ?>
 
 	<?php foreach( $brands as $brand ): ?>
 
-		<h2><?php echo $brand->name; ?></h2>
-		<p><?php echo $brand->description; ?></p>
-		<a href="<?php echo get_term_link( $brand ); ?>">View all '<?php echo $brand->name; ?>' posts</a>
+		<li><a href="<?php echo get_term_link( $brand ); ?>">View all '<?php echo $brand->name; ?>' posts</a></li>
 
 	<?php endforeach; ?>
 
