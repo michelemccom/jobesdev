@@ -21,7 +21,7 @@ if ( function_exists('register_sidebar') ) {
 ///// CUSTOM POST TYPES /////
 
 // register the new post type
-register_post_type( 'brand_listing', array( 
+register_post_type( 'brands', array( 
     'labels'                 => array(
         'name'               => __( 'Brands' ),
         'singular_name'      => __( 'Brand' ),
@@ -70,7 +70,7 @@ function create_brand_taxonomies() {
         'menu_name'         => __( 'Category' ),
     );  
 
-    register_taxonomy( 'brand_cat', array( 'brand_listing' ), array(
+    register_taxonomy( 'brand_cat', array( 'brands' ), array(
         'hierarchical'  => true,
         'labels'        => $labels,
         'show_ui'       => true,
