@@ -16,19 +16,22 @@ get_header(); ?>
 
 $brands = get_post_meta($post->ID, "product_categories", true);
 
-var_dump($brands);
-if( $brands ): ?>
-	<ul>
-	<?php foreach( $brands as $brand ): // variable must NOT be called $post (IMPORTANT) ?>
-	    <li>
-	    	<a href="<?php echo get_permalink( $brand->ID ); ?>"><?php echo get_the_title( $brand->ID ); ?></a>
-  
-         </li>
-    <?php endforeach; ?>
-    </ul>
-    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
-<?php endif; ?>
 
+if( $brands ): ?>
+
+	<ul>
+
+	<?php foreach( $brands as $brand ): ?>
+
+		<h2><?php echo $brand->name; ?></h2>
+		<p><?php echo $brand->description; ?></p>
+		<a href="<?php echo get_term_link( $brand ); ?>">View all '<?php echo $brand->name; ?>' posts</a>
+
+	<?php endforeach; ?>
+
+	</ul>
+
+<?php endif; ?>
 
 		<?php edit_post_link('Edit this entry.', '<p>', '</p>'); ?>
 	</div>
