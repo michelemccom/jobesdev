@@ -64,20 +64,20 @@ add_action( 'init', 'brands_post_type', 0 );
 // Register Custom Taxonomy
 function custom_taxonomy()  {
     $labels = array(
-        'name'                       => _x( 'Catergories', 'Taxonomy General Name', 'text_domain' ),
+        'name'                       => _x( 'Categories', 'Taxonomy General Name', 'text_domain' ),
         'singular_name'              => _x( 'Category', 'Taxonomy Singular Name', 'text_domain' ),
-        'menu_name'                  => __( 'Catergories', 'text_domain' ),
-        'all_items'                  => __( 'All Catergories', 'text_domain' ),
-        'parent_item'                => __( 'Parent Catergories', 'text_domain' ),
-        'parent_item_colon'          => __( 'Parent Catergories:', 'text_domain' ),
+        'menu_name'                  => __( 'Categories', 'text_domain' ),
+        'all_items'                  => __( 'All Categories', 'text_domain' ),
+        'parent_item'                => __( 'Parent Categories', 'text_domain' ),
+        'parent_item_colon'          => __( 'Parent Categories:', 'text_domain' ),
         'new_item_name'              => __( 'New Category Name', 'text_domain' ),
         'add_new_item'               => __( 'Add New Category', 'text_domain' ),
         'edit_item'                  => __( 'Edit Category', 'text_domain' ),
         'update_item'                => __( 'Update Category', 'text_domain' ),
-        'separate_items_with_commas' => __( 'Separate Catergories with commas', 'text_domain' ),
-        'search_items'               => __( 'Search Catergories', 'text_domain' ),
-        'add_or_remove_items'        => __( 'Add or Remove Catergories', 'text_domain' ),
-        'choose_from_most_used'      => __( 'Choose from Most Used Catergories', 'text_domain' ),
+        'separate_items_with_commas' => __( 'Separate Categories with commas', 'text_domain' ),
+        'search_items'               => __( 'Search Categories', 'text_domain' ),
+        'add_or_remove_items'        => __( 'Add or Remove Categories', 'text_domain' ),
+        'choose_from_most_used'      => __( 'Choose from Most Used Categories', 'text_domain' ),
     );
 
     $args = array(
