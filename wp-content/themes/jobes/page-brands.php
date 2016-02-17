@@ -16,14 +16,14 @@ get_header(); ?>
 
 $posts = get_post_meta($post->ID, "product_categories", true);
 
+
 if( $posts ): ?>
-    <ul>
-    <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
-        <?php setup_postdata($post); ?>
-        <li>
-            <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-            <span>Custom field from $post: <?php the_field('author'); ?></span>
-        </li>
+	<ul>
+	<?php foreach( $posts as $p ): // variable must NOT be called $post (IMPORTANT) ?>
+	    <li>
+	    	<a href="<?php echo get_permalink( $p->ID ); ?>"><?php echo get_the_title( $p->ID ); ?></a>
+  
+         </li>
     <?php endforeach; ?>
     </ul>
     <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
