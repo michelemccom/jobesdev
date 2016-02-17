@@ -43,7 +43,7 @@ register_post_type( 'brand_listing', array(
     'exclude_from_search'   => false,
     'hierarchical'          => true,
     '_builtin'              => false, // It's a custom post type, not built in!
-    'rewrite'               => array( 'slug' => 'brand/%brand_cat%', 'with_front' => true ),
+    'rewrite'               => array( 'slug' => 'brands/%brand_cat%', 'with_front' => true ),
     'query_var'             => true,
     'supports'              => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'trackbacks', 'custom-fields', 'comments', 'revisions' ),
 ) );
