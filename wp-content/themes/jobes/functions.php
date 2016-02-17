@@ -18,43 +18,89 @@ if ( function_exists('register_sidebar') ) {
 }
 
 
-/*
- * Replace Taxonomy slug with Post Type slug in url
- * Version: 1.1
- */
-function taxonomy_slug_rewrite($wp_rewrite) {
-    $rules = array();
-    // get all custom taxonomies
-    $taxonomies = get_taxonomies(array('_builtin' => false), 'objects');
-    // get all custom post types
-    $post_types = get_post_types(array('public' => true, '_builtin' => false), 'objects');
-     
-    foreach ($post_types as $post_type) {
-        foreach ($taxonomies as $taxonomy) {
-         
-            // go through all post types which this taxonomy is assigned to
-            foreach ($taxonomy->object_type as $object_type) {
-                 
-                // check if taxonomy is registered for this custom type
-                if ($object_type == $post_type->rewrite['slug']) {
-             
-                    // get category objects
-                    $terms = get_categories(array('type' => $object_type, 'taxonomy' => $taxonomy->name, 'hide_empty' => 0));
-             
-                    // make rules
-                    foreach ($terms as $term) {
-                        $rules[$object_type . '/' . $term->slug . '/?$'] = 'index.php?' . $term->taxonomy . '=' . $term->slug;
-                    }
-                }
-            }
-        }
-    }
-    // merge with global rules
-    $wp_rewrite->rules = $rules + $wp_rewrite->rules;
+///// CUSTOM POST TYPES /////
+
+// register the new post type
+register_post_type( 'brand_listing', array( 
+    'labels'                 => array(
+        'name'               => __( 'Brands' ),
+        'singular_name'      => __( 'Brand' ),
+        'add_new'            => __( 'Add New' ),
+        'add_new_item'       => __( 'Create New Brand' ),
+        'edit'               => __( 'Edit' ),
+        'edit_item'          => __( 'Edit Brand' ),
+        'new_item'           => __( 'New Brand' ),
+        'view'               => __( 'View Brands' ),
+        'view_item'          => __( 'View Brand' ),
+        'search_items'       => __( 'Search Brands' ),
+        'not_found'          => __( 'No brands found' ),
+        'not_found_in_trash' => __( 'No brands found in trash' )
+    ),
+    'public'                => true,
+    'show_ui'               => true,
+    'capability_type'       => 'post',
+    'publicly_queryable'    => true,
+    'exclude_from_search'   => false,
+    'hierarchical'          => true,
+    '_builtin'              => false, // It's a custom post type, not built in!
+    'rewrite'               => array( 'slug' => 'brand/%brand_cat%', 'with_front' => true ),
+    'query_var'             => true,
+    'supports'              => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'trackbacks', 'custom-fields', 'comments', 'revisions' ),
+) );
+
+
+//hook into the init action and call create_book_taxonomies when it fires
+add_action( 'init', 'create_brand_taxonomies', 0 );
+//add_action('admin_init', 'flush_rewrite_rules');
+
+//create two taxonomies, genres and writers for the post type "book"
+function create_brand_taxonomies() {
+    // Add new taxonomy, make it hierarchical (like categories)
+    $labels = array(
+        'name'              => _x( 'Categories', 'taxonomy general name' ),
+        'singular_name'     => _x( 'Category', 'taxonomy singular name' ),
+        'search_items'      =>  __( 'Search Categories' ),
+        'all_items'         => __( 'All Categories' ),
+        'parent_item'       => __( 'Parent Categories' ),
+        'parent_item_colon' => __( 'Parent Categories:' ),
+        'edit_item'         => __( 'Edit Category' ), 
+        'update_item'       => __( 'Update Category' ),
+        'add_new_item'      => __( 'Add New Category' ),
+        'new_item_name'     => __( 'New Category Name' ),
+        'menu_name'         => __( 'Category' ),
+    );  
+
+    register_taxonomy( 'brand_cat', array( 'brand_listing' ), array(
+        'hierarchical'  => true,
+        'labels'        => $labels,
+        'show_ui'       => true,
+        'query_var'     => true,
+        //'rewrite'     => true,
+        'rewrite'       => array( 'slug' => 'brands', 'with_front' => true ),
+    ) );
+
+   
 }
-add_filter('generate_rewrite_rules', 'taxonomy_slug_rewrite');
 
+/**
+ * Inject term slug into custom post type permastruct.
+ * 
+ * @link   http://wordpress.stackexchange.com/a/5313/1685
+ * 
+ * @param  string  $link
+ * @param  WP_Post $post 
+ * @return array
+ */
+function wpse_5308_post_type_link( $link, $post ) {
+    if ( $post->post_type === 'brand_listing' ) {
+        if ( $terms = get_the_terms( $post->ID, 'brand_cat' ) )
+            $link = str_replace( '%brand_cat%', current( $terms )->slug, $link );
+    }
 
+    return $link;
+}
+
+add_filter( 'post_type_link', 'wpse_5308_post_type_link', 10, 2 );
 
 // Remove some Admin menu items
 function remove_admin_menu_item(){
