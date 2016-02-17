@@ -6,5 +6,5 @@
 
 get_header();
 
-header( 'Location: /' ) ;
+header( 'Location: //' . $_SERVER['SERVER_NAME']) ;
  get_footer(); ?>
