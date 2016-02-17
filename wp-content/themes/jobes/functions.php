@@ -17,7 +17,96 @@ if ( function_exists('register_sidebar') ) {
 	));
 }
 
+function brands_post_type() {
+    $labels = array(
+        'name'                => _x( 'Brands', 'Post Type General Name', 'text_domain' ),
+        'singular_name'       => _x( 'Brand', 'Post Type Singular Name', 'text_domain' ),
+        'menu_name'           => __( 'Brands', 'text_domain' ),
+        'all_items'           => __( 'All Brands', 'text_domain' ),
+        'view_item'           => __( 'View Brand', 'text_domain' ),
+        'add_new_item'        => __( 'Add New Brand', 'text_domain' ),
+        'add_new'             => __( 'New Brand', 'text_domain' ),
+        'edit_item'           => __( 'Edit Brand', 'text_domain' ),
+        'update_item'         => __( 'Update Brand', 'text_domain' ),
+        'search_items'        => __( 'Search Brands', 'text_domain' ),
+        'not_found'           => __( 'No Brands Found', 'text_domain' ),
+        'not_found_in_trash'  => __( 'No Brands Found in Trash', 'text_domain' ),
+    );
 
+    $args = array(
+        'label'               => __( 'Brands', 'text_domain' ),
+        'labels'              => $labels,
+        'hierarchical'        => false,
+        'public'              => true,
+        'show_ui'             => true,
+        'show_in_menu'        => true,
+        'show_in_nav_menus'   => true,
+        'show_in_admin_bar'   => true,
+        'supports'        => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments'),
+        'menu_position'       => 5,
+        'menu_icon'           => null,
+        'can_export'          => true,
+        'has_archive'         => true,
+        'exclude_from_search' => false,
+        'publicly_queryable'  => true,
+        'capability_type'     => 'post',
+        'rewrite'                    => array('slug' => 'brands'),
+    );
+
+    register_post_type( 'brands', $args );
+
+
+// Hook into the 'init' action
+
+}
+add_action( 'init', 'brands_post_type', 0 );
+
+// Register Custom Taxonomy
+function custom_taxonomy()  {
+    $labels = array(
+        'name'                       => _x( 'Catergories', 'Taxonomy General Name', 'text_domain' ),
+        'singular_name'              => _x( 'Category', 'Taxonomy Singular Name', 'text_domain' ),
+        'menu_name'                  => __( 'Catergories', 'text_domain' ),
+        'all_items'                  => __( 'All Catergories', 'text_domain' ),
+        'parent_item'                => __( 'Parent Catergories', 'text_domain' ),
+        'parent_item_colon'          => __( 'Parent Catergories:', 'text_domain' ),
+        'new_item_name'              => __( 'New Category Name', 'text_domain' ),
+        'add_new_item'               => __( 'Add New Category', 'text_domain' ),
+        'edit_item'                  => __( 'Edit Category', 'text_domain' ),
+        'update_item'                => __( 'Update Category', 'text_domain' ),
+        'separate_items_with_commas' => __( 'Separate Catergories with commas', 'text_domain' ),
+        'search_items'               => __( 'Search Catergories', 'text_domain' ),
+        'add_or_remove_items'        => __( 'Add or Remove Catergories', 'text_domain' ),
+        'choose_from_most_used'      => __( 'Choose from Most Used Catergories', 'text_domain' ),
+    );
+
+    $args = array(
+        'labels'                     => $labels,
+        'hierarchical'               => true,
+        'public'                     => true,
+        'show_ui'                    => true,
+        'show_admin_column'          => true,
+        'show_in_nav_menus'          => true,
+        'show_tagcloud'              => false,
+        'rewrite'                    => array('slug' => 'brands/%category%'),
+    );
+
+    register_taxonomy( 'category', 'brands', $args );
+}
+function wpa_course_post_link( $post_link, $id = 0 ){
+    $post = get_post($id);  
+    if ( is_object( $post ) ){
+        $terms = wp_get_object_terms( $post->ID, 'category' );
+        if( $terms ){
+            return str_replace( '%category%' , $terms[0]->slug , $post_link );
+        }
+    }
+    return $post_link;  
+}
+add_filter( 'post_type_link', 'wpa_course_post_link', 1, 3 );
+
+// Hook into the 'init' action
+add_action( 'init', 'custom_taxonomy', 0 );
 // Remove some Admin menu items
 function remove_admin_menu_item(){
 	global $menu;
