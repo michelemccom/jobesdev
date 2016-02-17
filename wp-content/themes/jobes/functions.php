@@ -8,6 +8,8 @@ add_theme_support( 'automatic-feed-links' );
 
 if ( function_exists('register_sidebar') ) {
 	register_sidebar(array(
+		'name' => 'Sidebar 1',
+		'id' => 'sidebar-1',
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h4 class="widgettitle">',
