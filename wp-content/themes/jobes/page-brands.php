@@ -14,14 +14,14 @@ get_header(); ?>
 		<?php the_content(); 
 
 
-$posts = get_post_meta($post->ID, "product_categories", true);
+$brands = get_post_meta($post->ID, "product_categories", true);
 
-var_dump($posts);
-if( $posts ): ?>
+var_dump($brands);
+if( $brands ): ?>
 	<ul>
-	<?php foreach( $posts as $p ): // variable must NOT be called $post (IMPORTANT) ?>
+	<?php foreach( $brands as $brand ): // variable must NOT be called $post (IMPORTANT) ?>
 	    <li>
-	    	<a href="<?php echo get_permalink( $p->ID ); ?>"><?php echo get_the_title( $p->ID ); ?></a>
+	    	<a href="<?php echo get_permalink( $brand->ID ); ?>"><?php echo get_the_title( $brand->ID ); ?></a>
   
          </li>
     <?php endforeach; ?>
