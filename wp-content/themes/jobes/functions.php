@@ -43,7 +43,7 @@ register_post_type( 'brand_listing', array(
     'exclude_from_search'   => false,
     'hierarchical'          => true,
     '_builtin'              => false, // It's a custom post type, not built in!
-    'rewrite'               => array( 'slug' => 'brands/%brand_cat%', 'with_front' => true ),
+    'rewrite'               => array( 'slug' => 'brands', 'with_front' => true ),
     'query_var'             => true,
     'supports'              => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'trackbacks', 'custom-fields', 'comments', 'revisions' ),
 ) );
@@ -76,7 +76,7 @@ function create_brand_taxonomies() {
         'show_ui'       => true,
         'query_var'     => true,
         //'rewrite'     => true,
-        'rewrite'       => array( 'slug' => 'brands', 'with_front' => true ),
+        'rewrite'       => array( 'slug' => 'brands/%brand_cat%', 'with_front' => true ),
     ) );
 
    
@@ -94,7 +94,7 @@ function create_brand_taxonomies() {
 function wpse_5308_post_type_link( $link, $post ) {
     if ( $post->post_type === 'brands' ) {
         if ( $terms = get_the_terms( $post->ID, 'brand_cat' ) )
-            $link = str_replace( 'brand_cat%', current( $terms )->slug, $link );
+            $link = str_replace( '%brand_cat%', current( $terms )->slug, $link );
     }
 
     return $link;
@@ -114,32 +114,6 @@ function filter_post_type_link($link, $post)
 }
 add_filter('post_type_link', 'filter_post_type_link', 10, 2);
 
-// my own function to do what get_category_parents does for other taxonomies
-function get_taxonomy_parents($id, $taxonomy, $link = false, $separator = '/', $nicename = false, $visited = array()) {    
-    $chain = '';   
-    $parent = &get_term($id, $taxonomy);
-
-    if (is_wp_error($parent)) {
-        return $parent;
-    }
-
-    if ($nicename)    
-        $name = $parent -> slug;        
-else    
-        $name = $parent -> name;
-
-    if ($parent -> parent && ($parent -> parent != $parent -> term_id) && !in_array($parent -> parent, $visited)) {    
-        $visited[] = $parent -> parent;    
-        $chain .= get_taxonomy_parents($parent -> parent, $taxonomy, $link, $separator, $nicename, $visited);
-
-    }
-
-    if ($link) {
-        // nothing, can't get this working :(
-    } else    
-        $chain .= $name . $separator;    
-    return $chain;    
-}
 
 // Remove some Admin menu items
 function remove_admin_menu_item(){
