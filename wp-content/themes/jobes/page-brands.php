@@ -16,7 +16,7 @@ get_header(); ?>
 
 $posts = get_post_meta($post->ID, "product_categories", true);
 
-
+var_dump($posts);
 if( $posts ): ?>
 	<ul>
 	<?php foreach( $posts as $p ): // variable must NOT be called $post (IMPORTANT) ?>
