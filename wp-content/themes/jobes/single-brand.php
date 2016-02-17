@@ -15,7 +15,7 @@ get_header();
         
             <?php  the_content();
             //list terms in a given taxonomy (useful as a widget for twentyten)
-$taxonomy = 'type';
+$taxonomy = 'subcategory';
 $tax_terms = get_terms($taxonomy);
 ?>
 <ul>
