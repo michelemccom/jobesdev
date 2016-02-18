@@ -29,22 +29,8 @@ get_header();
               )
         
           ); 
-          $the_query = new WP_Query($args);
-        if ($the_query->have_posts()) :  while ($the_query->have_posts()) : $the_query->the_post(); 
-        $slug = get_query_var( 'term' );
-        $term = get_term_by( 'slug', $slug , 'product_categories' );
-        $term_id = $term->term_id;
-         $args=array(
-            'post_type' => 'products',
-            'tax_query' => array(
-                'taxonomy'      => 'product_categories',
-                'hide_empty'    => 0,
-                'parent'        => $term_id_products,
-                'terms'         => $term_products,
-                'field'         => 'slug',
-              )
-            ); 
-            $categories=get_categories($args);
+
+        $categories=get_categories($args);
          
             foreach($categories as $category) {
                 echo '<div class="product-cat">'; 
@@ -58,7 +44,7 @@ get_header();
             }?>
 
     
-        <?php endwhile; endif;wp_reset_postdata();?>
+
      
         http://www.ileaddesign.co.za/scw/product-brand/brands/fullvision/?product-range-cat=product-range-cat&product-range-subcat=dome-infra-red-12vdc
 
