@@ -37,6 +37,8 @@ get_header();
         if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->the_post(); ?>
         <li><?php the_title();?></li>
         
+         <?php endwhile; endif;wp_reset_postdata();?>
+         
             
 
       </div> <!--end of entry-->      
