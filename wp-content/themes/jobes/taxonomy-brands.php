@@ -27,6 +27,22 @@ get_header();
                 'field'         => 'slug',
             )
           ); 
+          $my_cats = array(); 
+          $the_query = new WP_Query($args);
+            if ($the_query->have_posts()){
+            //loop over all post and collect the categories in to an array
+                while ($the_query->have_posts()){
+                    $the_query->the_post();
+                    foreach((get_the_category($post->ID)) as $category) {
+                        if (!in_array($category->cat_ID ,$my_cats)){
+                            $my_cats[] = echo '<a class="cat-title" href="http://jobesdev.com/brands/'.$term_brands->slug.'/?brands='.$term_brands->slug .'&cat='.$category->cat_ID.'">' . $category->name.'</a>';
+                echo '</div> <!--end product cat-->';
+                        }
+                    } 
+                }
+            }
+
+
         $categories=get_categories();
          
             foreach($categories as $category) {
