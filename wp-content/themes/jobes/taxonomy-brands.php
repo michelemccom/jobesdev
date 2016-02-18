@@ -11,7 +11,7 @@ get_header();
 <?php 
 
     $slug_brands = get_query_var( 'term' );
-  $term_brands = get_term_by( 'slug', $slug_brands, 'product_brands' );
+  $term_brands = get_term_by( 'slug', $slug_brands, 'brands' );
   $term_id_brands = $term_brands->term_id;
 ?>
         <h1><?php echo $term_brands->name; ?></h1>
@@ -21,7 +21,7 @@ get_header();
           $args=array(
             'post_type' => 'products',
             'tax_query' => array(
-                'taxonomy'      => 'product_brands',
+                'taxonomy'      => 'brands',
                 'hide_empty'    => 0,
                 'parent'        => $term_id_brands,
                 'terms'         => $term_brands,
