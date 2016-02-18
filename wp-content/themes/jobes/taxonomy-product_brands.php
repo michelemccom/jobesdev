@@ -14,7 +14,7 @@ get_header();
   $term_brands = get_term_by( 'slug', $slug_brands, 'product_brands' );
   $term_id_brands = $term_brands->term_id;
 ?>
-        <h1><?php echo $term_brands->name; ?>/h1>
+        <h1><?php echo $term_brands->name; ?></h1>
         <p><?php echo $term_brands->description; ?></p>
 
         <?php
