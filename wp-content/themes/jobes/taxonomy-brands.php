@@ -21,23 +21,28 @@ get_header();
           $args=array(
             'post_type' => 'products',
             'hide_empty'        => 0,
+            'parent'        => 0,
+                        
             'tax_query' => array(
+                 array(
                 'taxonomy'      => 'brands',
                 'hide_empty'    => 0,
                 'parent'        => $term_id_brands,
                 'terms'         => $term_brands,
                 'field'         => 'slug',
               )
+                 )
         
           ); 
           $categories=get_categories($args);
          
-            foreach($categories as $category) {
-                echo '<div class="product-cat">'; 
-                //$thumb_url = get_option('taxonomy_image_plugin');
-                echo '<a class="cat-title" href="http://jobesdev.com/brands/'.$term_brands->slug.'/?cat='.$category->cat_ID.'">' . $category->name.'</a>';
-                echo '</div> <!--end product cat-->';
-            }?>
+        foreach($categories as $category) {
+            echo '<div class="product-cat">'; 
+            //$thumb_url = get_option('taxonomy_image_plugin');
+            echo '<a class="cat-title" href="http://jobesdev.com/brands/'.$term_brands->slug.'/?cat='.$category->cat_ID.'">' . $category->name.'</a>';
+            echo '</div> <!--end product cat-->';
+        }?>
+         
             
 
       </div> <!--end of entry-->      
