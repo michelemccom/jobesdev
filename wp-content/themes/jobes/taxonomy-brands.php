@@ -22,16 +22,13 @@ get_header();
             'post_type' => 'products',
             'hide_empty'        => 0,
             'parent'        => 0,
-                        
-            'tax_query' => array(
-                 array(
-                'taxonomy'      => 'brands',
-                'hide_empty'    => 0,
-                'parent'        => $term_id_brands,
-                'terms'         => $term_brands,
-                'field'         => 'slug',
-              )
-                 )
+           'meta_query' => array(
+            array(
+                'key' => 'brands', // name of custom field
+                'value' => '"' . get_the_ID() . '"', // matches exaclty "123", not just 123. This prevents a match for "1234"
+                'compare' => 'LIKE'
+            )
+            )
         
           ); 
           $categories=get_categories($args);
