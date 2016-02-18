@@ -27,24 +27,11 @@ get_header();
                 'field'         => 'slug',
             )
           ); 
-          $my_cats = array(); 
-          $the_query = new WP_Query($args);
-            if ($the_query->have_posts()){
-            //loop over all post and collect the categories in to an array
-                while ($the_query->have_posts()){
-                    $the_query->the_post();
-                    foreach((get_the_category($post->ID)) as $category) {
-                        if (!in_array($category->cat_ID ,$my_cats)){
-                            $my_cats[] = $category->name;
-                        }
-                    } 
-                }
-            }
-
+        
 
         $categories=get_categories();
          
-            foreach($categories as $category) {
+            foreach((get_the_category($term_id_brands)) as $category) {
                 echo '<div class="product-cat">'; 
              
                 //$thumb_url = get_option('taxonomy_image_plugin');
