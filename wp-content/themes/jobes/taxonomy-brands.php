@@ -35,8 +35,7 @@ get_header();
                     $the_query->the_post();
                     foreach((get_the_category($post->ID)) as $category) {
                         if (!in_array($category->cat_ID ,$my_cats)){
-                            $my_cats[] = echo '<a class="cat-title" href="http://jobesdev.com/brands/'.$term_brands->slug.'/?brands='.$term_brands->slug .'&cat='.$category->cat_ID.'">' . $category->name.'</a>';
-                echo '</div> <!--end product cat-->';
+                            $my_cats[] = $category->name;
                         }
                     } 
                 }
