@@ -42,7 +42,8 @@ get_header();
                 'parent'        => $term_id_products,
                 'terms'         => $term_products,
                 'field'         => 'slug',
-              ),
+              )
+            ); 
             $categories=get_categories($args);
          
             foreach($categories as $category) {
