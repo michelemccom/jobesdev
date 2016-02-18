@@ -29,7 +29,11 @@ get_header();
               )
         
           ); 
-        $categories=get_categories($args);
+        $categories=get_categories( array(
+            'orderby' => 'name',
+            'parent'  => 0,
+            'hide_empty'    => 0,
+        ) );
          
             foreach($categories as $category) {
                 echo '<div class="product-cat">'; 
