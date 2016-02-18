@@ -9,9 +9,6 @@ get_header();
 
 <div id="copy"> 
 <?php 
-  $slug_products = get_query_var( 'term' );
-  $term_products = get_term_by( 'slug', $slug_products, 'product_categories' );
-  $term_id_products = $term_products->term_id;
 
   $slug_brands = get_query_var( 'term' );
   $term_brands = get_term_by( 'slug', $slug_brands, 'product_brands' );
@@ -25,15 +22,7 @@ get_header();
             'post_type' => 'products',
 
             'tax_query' => array(
-              'relation' => 'AND',
-
-              array(
-                'taxonomy'      => 'product_categories',
-                'hide_empty'    => 0,
-                'parent'        => $term_id_products,
-                'terms'         => $term_products,
-                'field'         => 'slug',
-              ),
+        
 
               array(
                 'taxonomy'      => 'product_brands',
