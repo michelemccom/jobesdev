@@ -38,7 +38,6 @@ register_taxonomy('brands',array('products'), array(
     'show_ui' => true
  ));
 
-
 // Remove some Admin menu items
 function remove_admin_menu_item(){
 	global $menu;
