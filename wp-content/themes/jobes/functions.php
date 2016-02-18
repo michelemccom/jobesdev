@@ -54,7 +54,8 @@ register_taxonomy('product_brands',array('products'), array(
     'hierarchical' => true,
     'labels' => $labels,
     'query_var' => true,
-    'show_ui' => true
+    'show_ui' => true,
+    'rewrite' => array('slug' => 'brands'),
  ));
 
 
