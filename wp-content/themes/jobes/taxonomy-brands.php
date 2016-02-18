@@ -30,8 +30,15 @@ get_header();
         
           ); 
         $categories=get_categories( array(
+            'tax_query' => array(
+                'taxonomy'      => 'brands',
+                'hide_empty'    => 0,
+                'parent'        => $term_id_brands,
+                'terms'         => $term_brands,
+                'field'         => 'slug',
+              )
+        
             'orderby' => 'name',
-            'parent'  => 0,
             'hide_empty'    => 0,
         ) );
          
