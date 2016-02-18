@@ -9,6 +9,9 @@ get_header();
 
 <div id="copy"> 
 <?php 
+  $slug_products = get_query_var( 'term' );
+  $term_products = get_term_by( 'slug', $slug_products, 'product_categories' );
+  $term_id_products = $term_products->term_id;
 
   $slug_brands = get_query_var( 'term' );
   $term_brands = get_term_by( 'slug', $slug_brands, 'product_brands' );
@@ -22,7 +25,15 @@ get_header();
             'post_type' => 'products',
 
             'tax_query' => array(
-        
+              'relation' => 'AND',
+
+              array(
+                'taxonomy'      => 'product_categories',
+                'hide_empty'    => 0,
+                'parent'        => $term_id_products,
+                'terms'         => $term_products,
+                'field'         => 'slug',
+              ),
 
               array(
                 'taxonomy'      => 'product_brands',
@@ -39,10 +50,8 @@ get_header();
           if(!$categories){ 
 
           //get the product category name
-          echo "<h3>' .$term_brands->name. ' Products hello</h3>";
-            $slug_products = get_query_var( 'term' );
-              $term_products = get_term_by( 'slug', $slug_products, 'product_categories' );
-              $term_id_products = $term_products->term_id;
+          echo "<h3>' .$term_brands->name. ' Products</h3>";
+
           $args = array(
             'posts_per_page' => 50, //remember posts per page should be less or more that what's set in general settings
             'paged' => $paged,
@@ -100,7 +109,7 @@ get_header();
         <?php } else { 
 
           //output current category name - MOST OF THE ACTION IS HERE
-          echo '<h3>'.$term_brands->name.' Products NOPE</h3>';
+          echo '<h3>'.$term_brands->name.' Products</h3>';
 
           foreach($categories as $category) {
             $product_cat_url = get_term_link( $category->slug, 'product_categories' );
