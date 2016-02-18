@@ -39,14 +39,9 @@ get_header();
                 $product_cat_url = get_term_link( $category->slug, 'product_categories' );
                              
         
-                echo '<a class="cat-title" href="http://jobesdev.com/brands/jobes-organics/?product_categories=fertilizers">' . $category->name.'</a>';
+                echo '<a class="cat-title" href="/?product_categories='.$category->slug.'">' . $category->name.'</a>';
                 echo '</div> <!--end product cat-->';
             }?>
-
-    
-
-     
-        http://www.ileaddesign.co.za/scw/product-brand/brands/fullvision/?product-range-cat=product-range-cat&product-range-subcat=dome-infra-red-12vdc
 
       </div> <!--end of entry-->      
 
