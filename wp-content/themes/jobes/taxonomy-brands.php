@@ -22,23 +22,12 @@ get_header();
             'post_type' => 'products',
             'tax_query' => array(
                 'taxonomy'      => 'brands',
-        
                 'parent'        => $term_id_brands,
                 'terms'         => $term_brands,
                 'field'         => 'slug',
-              )
-        
+            )
           ); 
-        $categories=get_categories( array(
-            'tax_query' => array(
-                'taxonomy'      => 'brands',
-            
-                'parent'        => $term_id_brands,
-                'terms'         => $term_brands,
-                'field'         => 'slug',
-              ),
-            'orderby' => 'name',
-        ) );
+        $categories=get_categories();
          
             foreach($categories as $category) {
                 echo '<div class="product-cat">'; 
@@ -47,7 +36,7 @@ get_header();
                 $product_cat_url = get_term_link( $category->slug, 'product_categories' );
                              
         
-                echo '<a class="cat-title" href="http://jobesdev.com/brands/'.$term_brands->slug.'/?cat='.$category->cat_ID.'">' . $category->name.'</a>';
+                echo '<a class="cat-title" href="http://jobesdev.com/brands/'.$term_brands->slug.'/?brands='.$term_brands->slug .'&cat='.$category->cat_ID.'">' . $category->name.'</a>';
                 echo '</div> <!--end product cat-->';
             }?>
 
