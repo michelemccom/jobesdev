@@ -36,8 +36,7 @@ get_header();
                 'parent'        => $term_id_brands,
                 'terms'         => $term_brands,
                 'field'         => 'slug',
-              )
-        
+              ),
             'orderby' => 'name',
             'hide_empty'    => 0,
         ) );
