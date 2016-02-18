@@ -10,8 +10,8 @@ get_header();
 <div id="copy"> 
 <?php 
 
-  $slug_brands = get_query_var( 'term' );
-  $term_brands = get_term_by( 'slug', $slug_brands, 'brands' );
+    $slug_brands = get_query_var( 'term' );
+  $term_brands = get_term_by( 'slug', $slug_brands, 'product_brands' );
   $term_id_brands = $term_brands->term_id;
 ?>
         <h1><?php echo $term_brands->name; ?></h1>
@@ -20,33 +20,27 @@ get_header();
         <?php
           $args=array(
             'post_type' => 'products',
-            'hide_empty'        => 0,
-            'parent'        => 0,
-                        
             'tax_query' => array(
-                 array(
-                'taxonomy'      => 'brands',
+                'taxonomy'      => 'product_brands',
                 'hide_empty'    => 0,
                 'parent'        => $term_id_brands,
                 'terms'         => $term_brands,
-                'field'         => 'slug'
-                )
-            )
+                'field'         => 'slug',
+              )
+        
           ); 
-        $the_query = new WP_Query($args);
-        if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->the_post(); ?>
-        <li><?php the_title();?></li>
-        <?php $categories=get_categories($args);
+        $categories=get_categories($args);
          
             foreach($categories as $category) {
                 echo '<div class="product-cat">'; 
+             
                 //$thumb_url = get_option('taxonomy_image_plugin');
-                echo '<a class="cat-title" href="http://jobesdev.com/brands/'.$term_brands->slug.'/?cat='.$category->cat_ID.'">' . $category->name.'</a>';
+                $product_cat_url = get_term_link( $category->slug, 'product_categories' );
+                             
+        
+                echo '<a class="cat-title" href="/?product_categories='.$category->slug.'">' . $category->name.'</a>';
                 echo '</div> <!--end product cat-->';
             }?>
-         <?php endwhile; endif;wp_reset_postdata();?>
-         
-            
 
       </div> <!--end of entry-->      
 
