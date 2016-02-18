@@ -20,25 +20,30 @@ get_header();
         <?php
           $args=array(
             'post_type' => 'products',
-            'hide_empty'        => 0,
-            'parent'        => 0,
-            'taxonomy'      => 'product_categories',
             'tax_query' => array(
-
-
-              array(
                 'taxonomy'      => 'product_brands',
                 'hide_empty'    => 0,
                 'parent'        => $term_id_brands,
                 'terms'         => $term_brands,
                 'field'         => 'slug',
               )
-            )
+        
           ); 
           $the_query = new WP_Query($args);
         if ($the_query->have_posts()) :  while ($the_query->have_posts()) : $the_query->the_post(); 
-       
-        $categories=get_categories($args);
+        $slug = get_query_var( 'term' );
+        $term = get_term_by( 'slug', $slug , 'product_categories' );
+        $term_id = $term->term_id;
+         $args=array(
+            'post_type' => 'products',
+            'tax_query' => array(
+                'taxonomy'      => 'product_categories',
+                'hide_empty'    => 0,
+                'parent'        => $term_id_products,
+                'terms'         => $term_products,
+                'field'         => 'slug',
+              ),
+            $categories=get_categories($args);
          
             foreach($categories as $category) {
                 echo '<div class="product-cat">'; 
