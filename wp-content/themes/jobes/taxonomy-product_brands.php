@@ -22,7 +22,7 @@ get_header();
             'post_type' => 'products',
             'hide_empty'        => 0,
             'parent'        => 0,
-            'taxonomy'      => 'product_categories'
+            'taxonomy'      => 'product_categories',
             'tax_query' => array(
 
 
