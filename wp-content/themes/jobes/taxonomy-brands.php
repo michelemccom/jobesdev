@@ -27,21 +27,21 @@ get_header();
                 'field'         => 'slug',
             )
           ); 
-        
+         $the_query = new WP_Query($args);
+        if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->the_post();
 
-        $categories=get_categories();
-         
-            foreach((get_the_category($term_id_brands)) as $category) {
-                echo '<div class="product-cat">'; 
+            $categories=get_categories($args);
              
-                //$thumb_url = get_option('taxonomy_image_plugin');
-                $product_cat_url = get_term_link( $category->slug, 'product_categories' );
-                             
-        
-                echo '<a class="cat-title" href="http://jobesdev.com/brands/'.$term_brands->slug.'/?brands='.$term_brands->slug .'&cat='.$category->cat_ID.'">' . $category->name.'</a>';
-                echo '</div> <!--end product cat-->';
-            }?>
-
+                foreach($categories as $category) {
+                    echo '<div class="product-cat">'; 
+                 
+            
+                                 
+            
+                    echo '<a class="cat-title" href="http://jobesdev.com/brands/'.$term_brands->slug.'/?brands='.$term_brands->slug .'&cat='.$category->cat_ID.'">' . $category->name.'</a>';
+                    echo '</div> <!--end product cat-->';
+                }?>
+<?php endwhile; endif;wp_reset_postdata();?>    
       </div> <!--end of entry-->      
 
     </article>
