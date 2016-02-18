@@ -31,12 +31,11 @@ $labels = array(
     'menu_name' => __( 'Product Brands' )
   );    
  
-register_taxonomy('product_brands',array('products'), array(
+register_taxonomy('brands',array('products'), array(
     'hierarchical' => true,
     'labels' => $labels,
     'query_var' => true,
-    'show_ui' => true,
-    'rewrite' => array('slug' => 'brands/'),
+    'show_ui' => true
  ));
 
 
