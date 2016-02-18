@@ -15,16 +15,24 @@ get_header();
         
             <?php  the_content();
             //list terms in a given taxonomy (useful as a widget for twentyten)
-$taxonomy = 'product-category';
-$tax_terms = get_terms($taxonomy);
-?>
-<ul>
-<?php
-foreach ($tax_terms as $tax_term) {
-echo '<li>' . '<a href="' . esc_attr(get_term_link($tax_term, $taxonomy)) . '" title="' . sprintf( __( "View all posts in %s" ), $tax_term->name ) . '" ' . '>' . $tax_term->name.'</a></li>';
-}
-?>
-</ul>
+$terms = get_field('product_categories');
+
+if( $terms ): ?>
+
+	<ul>
+
+	<?php foreach( $terms as $term ): ?>
+
+		<h2><?php echo $term->name; ?></h2>
+		<p><?php echo $term->description; ?></p>
+		<a href="<?php echo get_term_link( $term ); ?>">View all '<?php echo $term->name; ?>' posts</a>
+
+	<?php endforeach; ?>
+
+	</ul>
+
+<?php endif; ?>
+
 
 <?php $doctors = get_posts(array(
 							'post_type' => 'product',
