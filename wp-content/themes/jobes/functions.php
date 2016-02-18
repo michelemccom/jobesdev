@@ -16,26 +16,7 @@ if ( function_exists('register_sidebar') ) {
 		'after_title' => '</h4>',
 	));
 }
-$labels = array(
-    'name' => _x( 'Product Categories', 'taxonomy general name' ),
-    'singular_name' => _x( 'Product Category', 'taxonomy singular name' ),
-    'search_items' =>  __( 'Search Product Categories' ),
-    'all_items' => __( 'All Product Categories' ),
-    'parent_item' => __( 'Parent Category' ),
-    'parent_item_colon' => __( 'Parent Category:' ),
-    'edit_item' => __( 'Edit Product Category' ), 
-    'update_item' => __( 'Update Product Category' ),
-    'add_new_item' => __( 'Add Product Category' ),
-    'new_item_name' => __( 'New Product Category' ),
-    'menu_name' => __( 'Product Categories' )
-  );    
- 
-register_taxonomy('product_categories',array('products'), array(
-    'hierarchical' => true,
-    'labels' => $labels,
-    'query_var' => true,
-    'show_ui' => true
- ));
+
 $labels = array(
     'name' => _x( 'Product Brands', 'taxonomy general name' ),
     'singular_name' => _x( 'Product Brand', 'taxonomy singular name' ),
@@ -55,7 +36,7 @@ register_taxonomy('product_brands',array('products'), array(
     'labels' => $labels,
     'query_var' => true,
     'show_ui' => true,
-    'rewrite' => array('slug' => 'brands'),
+    'rewrite' => array('slug' => 'brands/'),
  ));
 
 
