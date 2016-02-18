@@ -26,15 +26,7 @@ if( $terms ): ?>
 		<h2><?php echo $term->name; ?></h2>
 		<p><?php echo $term->description; ?></p>
 		<a href="<?php echo get_term_link( $term ); ?>">View all '<?php echo $term->name; ?>' posts</a>
-
-	<?php endforeach; ?>
-
-	</ul>
-
-<?php endif; ?>
-
-
-<?php $doctors = get_posts(array(
+		<?php $doctors = get_posts(array(
 							'post_type' => 'product',
 							'meta_query' => array(
 								array(
@@ -76,6 +68,15 @@ if( $terms ): ?>
 									</ul>
 							<?php endif; ?>
     </div>
+
+	<?php endforeach; ?>
+
+	</ul>
+
+<?php endif; ?>
+
+
+
 
 <?php endwhile; endif; ?>   
 
