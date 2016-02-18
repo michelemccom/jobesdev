@@ -20,7 +20,9 @@ get_header();
         <?php
           $args=array(
             'post_type' => 'products',
-
+            'hide_empty'        => 0,
+            'parent'        => 0,
+            'taxonomy'      => 'product_categories'
             'tax_query' => array(
 
 
@@ -35,10 +37,7 @@ get_header();
           ); 
           $the_query = new WP_Query($args);
         if ($the_query->have_posts()) :  while ($the_query->have_posts()) : $the_query->the_post(); 
-        $args=array(
-            'hide_empty'        => 0,
-            'parent'        => 0,
-            'taxonomy'      => 'product_categories');
+       
         $categories=get_categories($args);
          
             foreach($categories as $category) {
@@ -55,7 +54,7 @@ get_header();
     
         <?php endwhile; endif;wp_reset_postdata();?>
      
-        
+        http://www.ileaddesign.co.za/scw/product-brand/brands/fullvision/?product-range-cat=product-range-cat&product-range-subcat=dome-infra-red-12vdc
 
       </div> <!--end of entry-->      
 
