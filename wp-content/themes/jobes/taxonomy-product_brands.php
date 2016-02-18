@@ -40,7 +40,9 @@ get_header();
 
           //get the product category name
           echo "<h3>' .$term_brands->name. ' Products</h3>";
-
+            $slug_products = get_query_var( 'term' );
+              $term_products = get_term_by( 'slug', $slug_products, 'product_categories' );
+              $term_id_products = $term_products->term_id;
           $args = array(
             'posts_per_page' => 50, //remember posts per page should be less or more that what's set in general settings
             'paged' => $paged,
