@@ -39,7 +39,7 @@ get_header();
           if(!$categories){ 
 
           //get the product category name
-          echo "<h3>' .$term_brands->name. ' Products</h3>";
+          echo "<h3>' .$term_brands->name. ' Products hello</h3>";
             $slug_products = get_query_var( 'term' );
               $term_products = get_term_by( 'slug', $slug_products, 'product_categories' );
               $term_id_products = $term_products->term_id;
@@ -100,7 +100,7 @@ get_header();
         <?php } else { 
 
           //output current category name - MOST OF THE ACTION IS HERE
-          echo '<h3>'.$term_brands->name.' Products</h3>';
+          echo '<h3>'.$term_brands->name.' Products NOPE</h3>';
 
           foreach($categories as $category) {
             $product_cat_url = get_term_link( $category->slug, 'product_categories' );
