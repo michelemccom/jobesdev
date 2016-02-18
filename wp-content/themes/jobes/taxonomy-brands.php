@@ -22,7 +22,7 @@ get_header();
             'post_type' => 'products',
             'tax_query' => array(
                 'taxonomy'      => 'brands',
-                'hide_empty'    => 0,
+        
                 'parent'        => $term_id_brands,
                 'terms'         => $term_brands,
                 'field'         => 'slug',
@@ -32,13 +32,12 @@ get_header();
         $categories=get_categories( array(
             'tax_query' => array(
                 'taxonomy'      => 'brands',
-                'hide_empty'    => 0,
+            
                 'parent'        => $term_id_brands,
                 'terms'         => $term_brands,
                 'field'         => 'slug',
               ),
             'orderby' => 'name',
-            'hide_empty'    => 0,
         ) );
          
             foreach($categories as $category) {
