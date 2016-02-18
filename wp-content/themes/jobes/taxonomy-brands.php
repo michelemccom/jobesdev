@@ -20,13 +20,11 @@ get_header();
         <?php
           $args=array(
             'post_type' => 'products',
-            'hide_empty'        => 0,
-            'parent'        => 0,
-                        
+            'parent'        => 0,             
             'tax_query' => array(
                  array(
                 'taxonomy'      => 'brands',
-                'hide_empty'    => 0,
+                
                 'parent'        => $term_id_brands,
                 'terms'         => $term_brands,
                 'field'         => 'slug'
@@ -34,9 +32,16 @@ get_header();
             )
           ); 
         $the_query = new WP_Query($args);
-        if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->the_post(); ?>
-        <li><?php the_title();?></li>
-        
+        if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->the_post(); 
+         $categories=get_categories($args);
+         
+            foreach($categories as $category) {
+                echo '<div class="product-cat">'; 
+                //$thumb_url = get_option('taxonomy_image_plugin');
+                echo '<a class="cat-title" href="http://jobesdev.com/brands/'.$term_brands->slug.'/?cat='.$category->cat_ID.'">' . $category->name.'</a>';
+                echo '</div> <!--end product cat-->';
+            }?>
+
          <?php endwhile; endif;wp_reset_postdata();?>
          
             
