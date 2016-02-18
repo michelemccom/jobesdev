@@ -20,7 +20,7 @@ get_header();
         <?php
           $args=array(
             'post_type' => 'products',
-
+            'hide_empty'        => 0,
             'tax_query' => array(
                 'taxonomy'      => 'brands',
                 'hide_empty'    => 0,
@@ -30,8 +30,7 @@ get_header();
               )
         
           ); 
-
-        $categories=get_categories($args);
+          $categories=get_categories($args);
          
             foreach($categories as $category) {
                 echo '<div class="product-cat">'; 
@@ -39,6 +38,7 @@ get_header();
                 echo '<a class="cat-title" href="http://jobesdev.com/brands/'.$term_brands->slug.'/?cat='.$category->id.'">' . $category->name.'</a>';
                 echo '</div> <!--end product cat-->';
             }?>
+            
 
       </div> <!--end of entry-->      
 
