@@ -14,16 +14,18 @@ get_header(); ?>
 		<?php the_content(); 
 
 
-$brands = get_post_meta($post->ID, "product_categories", true);
 
-var_dump($brands);
-if( $brands ): ?>
+$terms = get_field('product_categories');
+
+if( $terms ): ?>
 
 	<ul>
 
-	<?php foreach( $brands as $brand ): ?>
+	<?php foreach( $terms as $term ): ?>
 
-		<li><a href="<?php echo get_term_link( $brand ); ?>">View all '<?php echo $brand->name; ?>' posts</a></li>
+		<h2><?php echo $term->name; ?></h2>
+		<p><?php echo $term->description; ?></p>
+		<a href="<?php echo get_term_link( $term ); ?>">View all '<?php echo $term->name; ?>' posts</a>
 
 	<?php endforeach; ?>
 
