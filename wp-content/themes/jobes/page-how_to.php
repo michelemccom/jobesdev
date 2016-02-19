@@ -25,7 +25,7 @@ get_header(); ?>
 	    $thumb_id = get_post_thumbnail_id();
 		$thumb_url = wp_get_attachment_image_src($thumb_id,'block', true);?>
 	      <li class="block"> 
-	      	<? php if (!empty($thumb_url)) { ?>
+	      	<?php if (!empty($thumb_url)) { ?>
 	      	<div class="round">
 				<a href="<?php the_permalink(); ?>"><img src="<?php echo $thumb_url[0];?>" width="<?php echo $thumb_url[1];?>" height="<?php echo $$thumb_url[2]; ?>">	</a>
 			</div>
