@@ -35,7 +35,7 @@ get_header();
             foreach($terms as $term) {
                 echo '<div class="product-cat">'; 
                 //$thumb_url = get_option('taxonomy_image_plugin');
-                echo '<a class="cat-title" href="http://jobesdev.com/brands/'.$term_brands->slug.'/?cat='.$term->cat_ID.'">' . $term->name.'</a>';
+                echo '<a class="cat-title" href="http://jobesdev.com/brands/'.$term_brands->slug.'/?product_categories='.$term->slug.'">' . $term->name.'</a>';
                 echo '</div> <!--end product cat-->';
             }?>
 
