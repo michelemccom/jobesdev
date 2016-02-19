@@ -29,11 +29,22 @@ get_header();
                 )
             )
           ); 
-
+        $terms = get_terms( 'product_categories', array(
+            'post_type' => 'products',
+            'parent'        => 0,             
+            'tax_query' => array(
+                 array(
+                'taxonomy'      => 'brands',    
+                'parent'        => $term_id_brands,
+                'terms'         => $term_brands,
+                'field'         => 'slug'
+                )
+            );
+         
             foreach($terms as $term) {
                 echo '<div class="product-cat">'; 
                 //$thumb_url = get_option('taxonomy_image_plugin');
-                echo '<a class="cat-title" href="http://jobesdev.com/brands/'.$term_brands->slug.'/?cat='.$term->slug.'">' . $term->name.'</a>';
+                echo '<a class="cat-title" href="http://jobesdev.com/brands/'.$term_brands->slug.'/?product_categories='.$term->slug.'">' . $term->name.'</a>';
                 echo '</div> <!--end product cat-->';
             }?>
 
