@@ -21,8 +21,15 @@ get_header(); ?>
 	        'orderby' => 'date'
 	        );
 	    $the_query = new WP_Query($args);
-	    if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->the_post(); ?>
-	      <li class="block"> <a href="<?php the_permalink(); ?>"><?php the_title();?><a href="<?php the_permalink(); ?>"></li>
+	    if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->the_post();
+	    $thumb_id = get_post_thumbnail_id();
+		$thumb_url = wp_get_attachment_image_src($thumb_id,'thumbnail-size', true);
+		echo $thumb_url[0]; ?>
+	      <li class="block"> 
+	      	<div class="round">
+				<a href="<?php the_permalink(); ?>"><img src="<?php echo $thumb_url[0];?>" width="<?php echo $thumb_url[1];?>" height="<?php echo $$thumb_url[2]; ?>">	</a>
+			</div>
+	      	<a href="<?php the_permalink(); ?>"><?php the_title();?><a href="<?php the_permalink(); ?>"></li>
 	    <?php endwhile; endif;wp_reset_postdata();?>
 		</ul>	
 	</div>
