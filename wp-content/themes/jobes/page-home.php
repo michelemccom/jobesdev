@@ -83,7 +83,7 @@ get_header(); ?>
 	<div class="divider"></div>
 	<div class="call-out section">
 	
-		<?php echo get_post_meta($post->ID, "call_out_block", true);?>
+		<?php echo wpautop(get_post_meta($post->ID, "call_out_block", true));?>
 	</div>
 </div> <!-- end copy -->
 <?php endwhile; endif; ?>
