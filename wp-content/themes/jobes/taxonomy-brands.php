@@ -12,7 +12,7 @@ get_header();
 $slug = get_query_var('term');
 
 //get the current taxonomy_id
-$term = get_term_by( 'slug', $slug,  'product_brands' );
+$term = get_term_by( 'slug', $slug,  'brands' );
 $term_id = $term->term_id;
 
     //check dept
@@ -21,7 +21,7 @@ $term_id = $term->term_id;
     $args=array(
           'hide_empty'         => 0,  
           'parent'        => $term_id,
-          'taxonomy'            => 'product_brands');
+          'taxonomy'            => 'brands');
             
     $categories=get_categories($args);
 
@@ -38,7 +38,7 @@ $term_id = $term->term_id;
       'order' => 'ASC',
       'tax_query' => array(
         array(
-          'taxonomy' => 'product_brands',
+          'taxonomy' => 'brands',
           'field' => 'slug',
           'terms' => $slug)
         )
