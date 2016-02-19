@@ -534,8 +534,8 @@ form input.submit {	display:block; margin-bottom:1.0em; position:relative; width
 .banner h3 {font-size: 40px; }
 .banner h2 {font-size: 64px; }
 .section {position: relative; margin: 0 auto;}
-.section:after {clear: both;height: 0; display: block;content: ''; visibility: hidden;}
-
+.section:after, .blocks:after {clear: both;height: 0; display: block;content: ''; visibility: hidden;}
+.blocks {list-style: none; text-align: center;}
 .block {
   width: 32%;
   margin-right: 2%;
