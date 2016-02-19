@@ -30,15 +30,17 @@ get_header();
                 )
             )
           ); 
-       $categories = get_terms ( $args );   
-        foreach($categories as $category) {
-                echo '<div class="product-cat">'; 
-                //$thumb_url = get_option('taxonomy_image_plugin');
-                echo '<a class="cat-title" href="http://jobesdev.com/brands/'.$term_brands->slug.'/?cat='.$category->cat_ID.'">' . $category->name.'</a>';
-                echo '</div> <!--end product cat-->';
-            }?>
+       $terms = get_terms( 'product-catergories', 'orderby=count&hide_empty=0' );
+          $count = count($terms);
+          if ( $count > 0 ){
+           echo "<ul>";
+           foreach ( $terms as $term ) {
+             echo "<li>" . $term->name . "</li>";
 
-         <?php endwhile; endif;wp_reset_postdata();?>
+           }
+           echo "</ul>";
+          }
+       endwhile; endif;wp_reset_postdata();?>
          
             
 
