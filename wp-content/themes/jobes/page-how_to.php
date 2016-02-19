@@ -15,7 +15,7 @@ get_header(); ?>
 		<ul class="blocks section">
 		<?php 
 	    $args = array(
-	        'post_type' => 'how_tos',
+	        'post_type' => 'how_to',
 	        'posts_per_page' => -1,
 	        'order' => 'ASC',
 	        'orderby' => 'date'
