@@ -40,7 +40,7 @@ get_header();
            }
            echo "</ul>";
           }
-       endwhile; endif;wp_reset_postdata();?>
+       ?>
          
             
 
