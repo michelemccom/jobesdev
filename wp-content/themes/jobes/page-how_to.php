@@ -24,6 +24,7 @@ get_header(); ?>
 	    if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->the_post();?>
 
 	      <li class="block"> 
+
 	      	 <?php if ( has_post_thumbnail() ) {
 			    $thumb_id = get_post_thumbnail_id();
 				$thumb_url = wp_get_attachment_image_src($thumb_id,'block', true);?>
@@ -33,6 +34,12 @@ get_header(); ?>
 					</div>
 					<?php }
 				} ?>
+
+	      	<?php if (!empty($thumb_url)) { ?>
+	      	<div class="round">
+				<a href="<?php the_permalink(); ?>"><img src="<?php echo $thumb_url[0];?>" width="<?php echo $thumb_url[1];?>" height="<?php echo $$thumb_url[2]; ?>">	</a>
+			</div>
+			<?php } ?>
 	      	<a href="<?php the_permalink(); ?>"><?php the_title();?><a href="<?php the_permalink(); ?>"></li>
 	    <?php endwhile; endif;wp_reset_postdata();?>
 		</ul>	
