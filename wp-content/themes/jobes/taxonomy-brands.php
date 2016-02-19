@@ -30,7 +30,10 @@ get_header();
                 )
             )
           ); 
-       $terms = get_terms( 'product-catergories', 'orderby=count&hide_empty=0' );
+          $slug_brands = get_query_var( 'term' );
+          $term_brands = get_term_by( 'slug', $slug_brands, 'brands' );
+          $term_id_brands = $term_brands->term_id;
+       $terms = get_terms( 'product-categories', 'orderby=count&hide_empty=0' );
           $count = count($terms);
           if ( $count > 0 ){
            echo "<ul>";
