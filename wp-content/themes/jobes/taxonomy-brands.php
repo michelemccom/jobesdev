@@ -39,6 +39,8 @@ get_header();
                 'terms'         => $term_brands,
                 'field'         => 'slug'
                 )
+              )
+            )
             );
          
             foreach($terms as $term) {
