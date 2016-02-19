@@ -15,6 +15,7 @@ get_header();
   $term_id_brands = $term_brands->term_id;
   $slug_cat = get_query_var( 'term' );
   $term_cat = get_term_by( 'slug', $slug_cat, 'product_categories' );
+  
   $term_id_cat = $term_cat->term_id;
 ?>
         <h1><?php echo $term_brands->name; ?></h1>
@@ -40,7 +41,7 @@ get_header();
                 ),
             )
           ); 
-        $categories = get_terms( 'product_categories', 'orderby=count' );
+        $categories = get_terms( 'product_categories', 'orderby=count&hide_empty=1' );
        foreach($categories as $category) {
                 echo '<div class="product-cat">'; 
                 //$thumb_url = get_option('taxonomy_image_plugin');
