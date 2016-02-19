@@ -11,10 +11,10 @@ get_header();
 <?php 
   $slug_brands = get_query_var( 'term' );
   $term_brands = get_term_by( 'slug', $slug_brands, 'brands' );
-  $term_id_brands = $term_brands->term_id;
+  $term_id_brands = $term_brands[0]->term_id;
 ?>
-        <h1><?php echo $term_brands->name; ?></h1>
-        <p><?php echo $term_brands->description; ?></p>
+        <h1><?php echo $term_brands[0]->name; ?></h1>
+        <p><?php echo $term_brands[0]->description; ?></p>
 
         <?php
           $args=array(
@@ -46,7 +46,7 @@ get_header();
             foreach($terms as $term) {
                 echo '<div class="product-cat">'; 
                 //$thumb_url = get_option('taxonomy_image_plugin');
-                echo '<a class="cat-title" href="http://jobesdev.com/brands/'.$term_brands->slug.'/?product_categories='.$term->slug.'">' . $term->name.'</a>';
+                echo '<a class="cat-title" href="http://jobesdev.com/brands/'.$term_brands[0]->slug.'/?product_categories='.$term[0]->slug.'">' . $term[0]->name.'</a>';
                 echo '</div> <!--end product cat-->';
             }?>
 
