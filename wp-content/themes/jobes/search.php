@@ -32,5 +32,4 @@ get_header(); ?>
 
 </div> <!-- end copy -->
 
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>
