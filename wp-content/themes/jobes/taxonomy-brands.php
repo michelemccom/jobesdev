@@ -30,15 +30,17 @@ get_header();
                 )
             )
           ); 
-          $terms = get_terms( 'product_categories');
-         
-            foreach($terms as $term) {
-                echo '<div class="product-cat">'; 
-                //$thumb_url = get_option('taxonomy_image_plugin');
-                echo '<a class="cat-title" href="http://jobesdev.com/brands/'.$term_brands->slug.'/?product_categories='.$term->slug.'">' . $term->name.'</a>';
-                echo '</div> <!--end product cat-->';
-            }?>
-
+          $the_query = new WP_Query($args);
+          if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->the_post();
+                $terms = get_terms( 'product_categories');
+                
+                  foreach($terms as $term) {
+                      echo '<div class="product-cat">'; 
+                      //$thumb_url = get_option('taxonomy_image_plugin');
+                      echo '<a class="cat-title" href="http://jobesdev.com/brands/'.$term_brands->slug.'/?product_categories='.$term->slug.'">' . $term->name.'</a>';
+                      echo '</div> <!--end product cat-->';
+                  }?>
+          <?php endwhile; endif;wp_reset_postdata();?>
 
       </div> <!--end of entry-->      
 
