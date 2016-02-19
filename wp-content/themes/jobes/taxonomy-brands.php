@@ -24,6 +24,7 @@ get_header();
             'tax_query' => array(
                  array(
                 'taxonomy'      => 'brands',    
+                'parent'        => $term_id_brands,
                 'terms'         => $term_brands,
                 'field'         => 'slug'
                 )
