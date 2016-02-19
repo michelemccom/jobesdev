@@ -25,7 +25,7 @@ get_header(); ?>
 				<?php if ($imageText == "image"){
 						$attachment_id = get_post_meta( $post->ID, 'block_one_secondary_image', true ); 
 						$image_attributes_one_s = wp_get_attachment_image_src( $attachment_id, 'full' ); ?>
-						<img src="<?php echo $image_attributes_one_s[0];?>" width="<?php echo $image_attributes_one_s[1];?>" height="<?php echo $image_attributes_one_s[2]; ?>">
+						<span><img src="<?php echo $image_attributes_one_s[0];?>" width="<?php echo $image_attributes_one_s[1];?>" height="<?php echo $image_attributes_one_s[2]; ?>"></span>
 				<?php } elseif ($imageText == "subtitle") { ?>	 
 					<h5><?php echo get_post_meta($post->ID, "block_one_subtitle", true);?></h5>
 				<?php } ?>
@@ -47,7 +47,7 @@ get_header(); ?>
 				<?php if ($imageText == "image"){
 						$attachment_id = get_post_meta( $post->ID, 'block_two_secondary_image', true ); 
 						$image_attributes_two_s = wp_get_attachment_image_src( $attachment_id, 'full' ); ?>
-						<img src="<?php echo $image_attributes_two_s[0];?>" width="<?php echo $image_attributes_two_s[1];?>" height="<?php echo $image_attributes_two_s[2]; ?>">
+						<span><img src="<?php echo $image_attributes_two_s[0];?>" width="<?php echo $image_attributes_two_s[1];?>" height="<?php echo $image_attributes_two_s[2]; ?>"></span>
 				<?php } elseif ($imageText == "subtitle") { ?>	 
 					<h5><?php echo get_post_meta($post->ID, "block_two_subtitle", true);?></h5>
 				<?php } ?>
@@ -69,7 +69,7 @@ get_header(); ?>
 				<?php if ($imageText == "image"){
 						$attachment_id = get_post_meta( $post->ID, 'block_three_secondary_image', true ); 
 						$image_attributes_three_s = wp_get_attachment_image_src( $attachment_id, 'full' ); ?>
-						<img src="<?php echo $image_attributes_three_s[0];?>" width="<?php echo $image_attributes_three_s[1];?>" height="<?php echo $image_attributes_three_s[2]; ?>">
+						<span><img src="<?php echo $image_attributes_three_s[0];?>" width="<?php echo $image_attributes_three_s[1];?>" height="<?php echo $image_attributes_three_s[2]; ?>"></span>
 				<?php } elseif ($imageText == "subtitle") { ?>	 
 					<h5><?php echo get_post_meta($post->ID, "block_three_subtitle", true);?></h5>
 				<?php } ?>
