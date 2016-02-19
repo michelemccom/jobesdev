@@ -38,10 +38,6 @@ get_header();
                 echo '</div> <!--end product cat-->';
             }?>
 
-         <?php endwhile; endif;wp_reset_postdata();?>
-         
-            
-
       </div> <!--end of entry-->      
 
     </article>
