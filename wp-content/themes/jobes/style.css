@@ -512,8 +512,14 @@ form input.submit {	display:block; margin-bottom:1.0em; position:relative; width
 }
 
 /* ================================ Home ================================ */    
-.home .blocks .image-text {margin-bottom: 10px; height: 100px; display: table; text-align: center; width: 100%;}
-.home .blocks  .image-text img, .home .blocks .image-text h5 {display: table-cell; vertical-align: middle; margin: 0 auto;}
+.home .blocks .image-text {margin-bottom: 10px; height: 100px;text-align: center; width: 100%;}
+.image-text:before {    /* create a full-height inline block pseudo=element */
+    content: ' ';
+    display: inline-block;
+    vertical-align: middle;  /* vertical alignment of the inline element */
+    height: 100%;
+}
+.home .blocks  .image-text img, .home .blocks .image-text h5 {display: inline-block; vertical-align: middle; margin: 0 auto;}
 .home .blocks h5 {
   font-size: 32px;
   display: block;
