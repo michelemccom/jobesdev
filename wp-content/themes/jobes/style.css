@@ -541,7 +541,7 @@ form input.submit {	display:block; margin-bottom:1.0em; position:relative; width
   margin-right: 2%;
   float: left;
 }
-.block.three {margin-right: 0;}
+.block.three, .block:nth-child(3n) {margin-right: 0;}
 .round {
     border-radius: 50%;
     overflow: hidden;
