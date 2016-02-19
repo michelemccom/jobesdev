@@ -29,8 +29,7 @@ get_header();
                 )
             )
           ); 
-        $terms = get_terms( 'product_categories', 'orderby=count&hide_empty=0' );
-         
+
             foreach($terms as $term) {
                 echo '<div class="product-cat">'; 
                 //$thumb_url = get_option('taxonomy_image_plugin');
