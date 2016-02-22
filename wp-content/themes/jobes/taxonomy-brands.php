@@ -47,7 +47,15 @@ get_header();
                 endwhile; endif;
                 var_dump($all_terms);
                 var_dump($all_terms["name"]);
-
+// Printing all the keys and values one by one
+$keys = array_keys($all_terms);
+for($i = 0; $i < count($all_terms); $i++) {
+    echo $keys[$i] . "{<br>";
+    foreach($all_terms[$keys[$i]] as $key => $value) {
+        echo $key . " : " . $value . "<br>";
+    }
+    echo "}<br>";
+}
           
               $terms = array_unique($all_terms);
                foreach($terms as $term) {
@@ -56,7 +64,7 @@ get_header();
              
                      
                     } ?>
-  
+        
      
         </ul>
 
