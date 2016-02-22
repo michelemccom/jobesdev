@@ -49,7 +49,7 @@ get_header();
 
                   $terms = array_unique($all_terms);
                     foreach ($terms as $term) {
-                      echo '<li><a href="#'.$term->slug.'" class="foto-filter-button '.$term->slug.'">'.$term.'</a></li>';
+                      echo '<li><a href="'.$term->slug.'" class="foto-filter-button '.$term->slug.'">'.$term.'</a></li>';
                     } ?>
   
             
