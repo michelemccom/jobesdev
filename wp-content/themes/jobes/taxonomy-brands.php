@@ -40,13 +40,11 @@ get_header();
                   if ($posttermsone) {
                     foreach($posttermsone as $term) {
                       $all_termsone = $term->name;
-
                     }
                   }
               $posttermstwo = get_the_terms( $post->ID, 'product_categories' ); 
                 if ($posttermstwo) {
                   foreach($posttermstwo as $term) {
-                
                     $all_termstwo = $term->slug;
 
                   }
@@ -62,7 +60,7 @@ get_header();
                     }
 
                $termsone = array_unique($all_terms);
-               foreach($terms as $term) {
+               foreach($termsone as $term) {
             
                    echo $term['name'].'</a></li>'; 
              
