@@ -40,7 +40,6 @@ get_header();
                   if ($postterms) {
                     foreach($postterms as $term) {
                       $all_terms = $term->name;
-                      $all_terms['slug'][] = $term->slug;
 
                     }
                   }
