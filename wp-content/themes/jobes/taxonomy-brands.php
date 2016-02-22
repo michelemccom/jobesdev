@@ -58,7 +58,7 @@ get_header();
               $termstwo = array_unique($all_termstwo);
               foreach (array_combine($terms, $termstwo) as $term => $termtwo) {
             
-                   echo '<li><a href="http://jobesdev.com/products/?brand='.$term_brands->name.'&product_categories='.$termtwo.'">'. $term.'</a></li>';    
+                   echo '<li><a href="http://jobesdev.com/products/?brands='.$term_brands->slug.'&product_categories='.$termtwo.'">'. $term.'</a></li>';    
                      
               } ?>
         
