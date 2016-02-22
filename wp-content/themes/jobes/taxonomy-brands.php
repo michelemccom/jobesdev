@@ -45,12 +45,12 @@ get_header();
                     }
                   }
                 endwhile; endif;
+                $terms = array_unique($all_terms);
                 $terms = get_terms('product_categories',array(
                   'include'=> implode(',',$term_ids),
                 ));
           
             
-
                foreach($terms as $term) {
             
                    echo '<li><a href="'.$term->slug.'">'.$term->name.'</a></li>'; 
