@@ -54,21 +54,13 @@ get_header();
                 endwhile; endif;
 
 
-  
+              $terms = array_unique($all_terms);
               $termstwo = array_unique($all_termstwo);
-               foreach($termstwo as $term) {
+              foreach (array_combine($terms, $termstwo) as $term => $termtwo) {
             
-                   echo '<li><a href="'.$term.'">' ; 
-             
+                   echo '<li><a href="'.$termtwo.'">'. $term.'</a></li>';    
                      
-                    }
-
-               $terms = array_unique($all_terms);
-                  foreach ($terms as $term) {
-      
-                   echo $term.'</a></li>';    
-                     
-                    } ?>
+              } ?>
         
                
         </ul>
