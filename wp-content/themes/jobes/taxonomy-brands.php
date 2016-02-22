@@ -39,13 +39,15 @@ get_header();
               $postterms = get_the_terms( $post->ID, 'product_categories' ); 
                   if ($postterms) {
                     foreach($postterms as $term) {
-                      $all_terms[] = $term->name;     
+                      $all_terms[]['name'] = $term->name;
+                      $all_terms[]['slug'] = $term->slug;
+
                     }
                   }
                 endwhile; endif;
 
                   $terms = array_unique($all_terms);
-                    foreach ($terms as $term) {
+                    foreach ($terms as $term ) {
                       echo '<li><a href="'.$term->slug.'" class="foto-filter-button '.$term->slug.'">'.$term.'</a></li>';
                     } ?>
   
