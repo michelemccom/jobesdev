@@ -34,13 +34,14 @@ get_header();
           if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->the_post(); ?>
           <li>
               <?php the_title();
-              $terms = get_post_meta($post->ID, "product_categories", false);
-             ?>
+              $cats = get_post_meta($post->ID, "product_categories", false);
+              if ($cats) {
+              foreach($cats as $cat) {?>
                    
-                  <br/> <?php echo $terms; ?>
+                  <br/> <?php echo $cat->name; ?>
                   
                
-           <?php endwhile; endif;wp_reset_postdata();?>
+           <?php } endwhile; endif;wp_reset_postdata();?>
         </ul>
 
       </div> <!--end of entry-->      
