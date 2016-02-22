@@ -48,9 +48,9 @@ get_header();
                $terms = array_map("unserialize", array_unique(array_map("serialize", $all_terms)));
 
                var_dump($terms);
-               foreach($terms as $term) {
+               foreach($terms as $key => $value) {
             
-                   echo '<li><a href="'.$term['slug'].'">'.$term['name'].'</a></li>'; 
+                   echo '<li><a href="'.$value['slug'][0].'">'.$value['name'][0].'</a></li>'; 
              
                      
                     } ?>
