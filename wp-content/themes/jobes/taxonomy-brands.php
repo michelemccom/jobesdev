@@ -35,7 +35,7 @@ get_header();
 
               <?php 
 
-              
+              $term_ids = array();
               $postterms = get_the_terms( $post->ID, 'product_categories' ); 
                   if ($postterms) {
                     foreach($postterms as $term) {
