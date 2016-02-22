@@ -35,20 +35,21 @@ get_header();
 
               <?php 
 
-              $all_terms = array();
+              
               $postterms = get_the_terms( $post->ID, 'product_categories' ); 
                   if ($postterms) {
                     foreach($postterms as $term) {
-                      $all_terms[]['name'] = $term->name;
-                      $all_terms[]['slug'] = $term->slug;
+                      $all_terms['name'][] = $term->name;
+                      $all_terms['slug'][] = $term->slug;
 
                     }
                   }
                 endwhile; endif;
                 var_dump($all_terms);
                   $terms = array_unique($all_terms);
+          
                     foreach ($terms as $term) {
-                      echo '<li><a href="#'.$term['slug']->slug.'" class="foto-filter-button '.$term[1]->slug.'">'.$term['name']->name.'</a></li>';
+                      echo '<li><a href="#'.$term->slug.'" class="foto-filter-button '.$term->slug.'">'.$term->name.'</a></li>';
                     } ?>
   
             
