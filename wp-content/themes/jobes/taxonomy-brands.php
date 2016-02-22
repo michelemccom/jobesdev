@@ -58,8 +58,8 @@ get_header();
                          <a href="<?php bloginfo('name'); ?>/products/?brands='<?php echo $term_brands->slug;?>&product_categories=<?php echo $termtwo; ?>"><img src="<?php echo get_bloginfo('template_url')?>/images/<?php echo $term_brands->slug;?>_<?php echo $termtwo; ?>.jpg"> </a>
                       </div>
 
-                        <a href="<?php bloginfo('name'); ?>/products/?brands=<?php echo $term_brands->slug;?>&product_categories=<?php echo $termtwo; ?>"><?php echo $term;?> </a>
-                      </li>       
+                      
+                    </li>       
                 } ?>
         
                
