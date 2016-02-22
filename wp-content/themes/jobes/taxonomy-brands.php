@@ -39,7 +39,7 @@ get_header();
                    
                   <br/> <?php echo $terms; ?>
                   
-                 <?php }?>
+               
            <?php endwhile; endif;wp_reset_postdata();?>
         </ul>
 
