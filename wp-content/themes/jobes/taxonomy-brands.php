@@ -34,11 +34,10 @@ get_header();
           if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->the_post(); ?>
           <li>
               <?php the_title();
-
-              $terms = get_terms( 'product_categories');
-                 foreach($terms as $term) { ?>
+              $terms = get_post_meta($post->ID, "product_categories", true);
+             ?>
                    
-                  <br/> <?php echo $term->name; ?>
+                  <br/> <?php echo $terms; ?>
                   
                  <?php }?>
            <?php endwhile; endif;wp_reset_postdata();?>
