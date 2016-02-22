@@ -50,9 +50,9 @@ get_header();
 
           
               $terms = array_unique($all_terms);
-               foreach($terms as $key => $value) {
+               foreach($terms as $term) {
             
-                   echo '<li><a href="'.$value.'">'.$value.'</a></li>'; 
+                   echo '<li><a href="'.$term['slug'].'">'.$term['name'].'</a></li>'; 
              
                      
                     } ?>
