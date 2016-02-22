@@ -31,36 +31,20 @@ get_header();
             )
           ); 
           $the_query = new WP_Query($args);
-          if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->the_post(); ?>
+           $all_terms = array();
+          if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->the_post(); 
 
-              <?php 
-
-              
-              $postterms = get_the_terms( $post->ID, 'product_categories' ); 
-                  if ($postterms) {
-                    foreach($postterms as $term) {
-                      $all_terms[] = $term->name;
-
-                    }
-                  }
-
-              $posttermstwo = get_the_terms( $post->ID, 'product_categories' ); 
-                if ($posttermstwo) {
-                  foreach($posttermstwo as $term) {
-                    $all_termstwo[] = $term->slug;
-
-                  }
-                }
-                endwhile; endif;
-
-
-              $terms = array_unique($all_terms);
-              $termstwo = array_unique($all_termstwo);
-              foreach (array_combine($terms, $termstwo) as $term => $termtwo) {
-            
-                   echo '<li><a href="http://jobesdev.com/products/?brands='.$term_brands->slug.'&product_categories='.$termtwo.'">'. $term.'</a></li>';    
-                     
-              } ?>
+   $taxonomy = 'product_categories'; // change this to your taxonomy
+   $terms = wp_get_post_terms( $post->ID, $taxonomy, array( "fields" => "ids" ) );
+   if( $terms ) $all_terms = array_merge($all_terms, $terms);
+endwhile;
+if ($all_terms) :
+   $all_terms = array_unique($all_terms);
+   $terms = trim( implode( ',', (array) $all_terms ), ' ,' );
+   echo '<ul>';
+   wp_list_categories( 'title_li=&taxonomy=' . $taxonomy . '&include=' . $terms );
+   echo '</ul>';
+endif; ?>
         
                
         </ul>
