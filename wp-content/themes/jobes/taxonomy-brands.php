@@ -47,7 +47,7 @@ get_header();
                 endwhile; endif;
 
               
-                $terms = get_terms('product_categories',array(
+                $terms = get_terms( $post->ID, 'product_categories',array(
                   'include'=> implode(',',$term_ids),
                 ));
                 var_dump($terms);
