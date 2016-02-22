@@ -49,10 +49,10 @@ get_header();
                 var_dump($all_terms["name"]);
 
           
-              $terms = array_unique($all_terms[]);
+              $terms = array_unique($all_terms);
                foreach($terms as $key => $value) {
                 foreach ($value as $k => $v) {
-                   echo '<li><a href="'.$v.'">'.$v[.'</a></li>'; 
+                   echo '<li><a href="'.$v.'">'.$v.'</a></li>'; 
                 }
                      
                     } ?>
