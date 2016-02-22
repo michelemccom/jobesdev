@@ -34,11 +34,22 @@ get_header();
           if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->the_post(); ?>
           <li>
               <?php the_title();
-              $cats = get_post_meta($post->ID, "product_categories", false);
-              if ($cats) {
-              foreach($cats as $cat) {?>
-                   
-                  <br/> <?php echo $cat;?>
+
+              $field = get_field_object('product_categories');
+              $value = $field['value'];
+              $choices = $field['choices'];
+
+              if( $value ): ?>
+          
+                <?php foreach( $value as $v ): ?>
+                <br/>
+                  <?php echo $choices[ $v ]; ?>
+           
+                <?php endforeach; ?>
+          
+              <?php endif; ?>
+              
+  
                   </li>
                
            <?php } }
