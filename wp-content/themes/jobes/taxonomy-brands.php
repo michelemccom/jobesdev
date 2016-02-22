@@ -48,20 +48,11 @@ get_header();
                 var_dump($all_terms);
                 var_dump($all_terms["name"]);
 
-                $keys = array_keys($data);
-                $iterations = count($all_terms[$keys[0]]);
-
-                for($i = 0; $i < $iterations; $i++) {
-                    $data = array();
-                    foreach($array as $key => $value) {
-                        $data[$key] = $value[$i];
-                    }
-                    print_r($data);
-                }
-                $terms = array_unique($all_terms['name']);
+          
+              $terms = array_unique($all_terms[]);
                foreach($terms as $key => $value) {
                 foreach ($value as $k => $v) {
-                   echo '<li><a href="'.$v['slug'].'">'.$v['name'].'</a></li>'; 
+                   echo '<li><a href="'.$v.'">'.$v[.'</a></li>'; 
                 }
                      
                     } ?>
