@@ -45,7 +45,7 @@ get_header();
               endwhile;
 
               $array_clean = array_unique($array_out);
-              echo ' ' . implode(', ', $array_clean) . '</li>'; } ?>
+              echo ' <li>' . implode(', ', $array_clean) . '</li>'; ?>
                
      
         </ul>
