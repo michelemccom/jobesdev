@@ -8,7 +8,7 @@ get_header();
 ?>
 
 <div id="copy"> 
-<?php $property_types = array();
+<?php
 
   $slug_brands = get_query_var( 'term' );
   $term_brands = get_term_by( 'slug', $slug_brands, 'brands' );
@@ -35,23 +35,17 @@ get_header();
 
               <?php 
 
-              
-              $postterms = get_the_terms( $post->ID, 'product_categories' ); 
-                  if ($postterms) {
-                    foreach($postterms as $term) {
-                      $all_terms[]['name'] = $term->name;
-                      $all_terms[]['slug'] = $term->slug;
-
-                    }
+        
+              $array_out = array();
+               $terms = get_the_terms( $post->ID, '$array_out = array();');
+                  foreach($terms as $term){
+                      $term_link = get_term_link($term, '$array_out = array();');
+                      $array_out[] = '<a href="'.$term_link.'">'.$term->name.'</a>';
                   }
-                endwhile; endif;
+              endwhile;
 
-                  $terms = array_unique($all_terms);
-                    foreach ($terms as $term ) {
-                      echo '<li><a href="'.$term->slug.'" class="foto-filter-button '.$term->slug.'">'.$term.'</a></li>';
-                    } ?>
-  
-            
+              $array_clean = array_unique($array_out);
+              echo ' ' . implode(', ', $array_clean) . '</li>'; } ?>
                
      
         </ul>
