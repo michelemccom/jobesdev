@@ -53,7 +53,7 @@ get_header();
                  foreach ($term as $value) {
                    echo '<li><a href="'.$value.'">'.$value.'</a></li>'; 
                 
-                    } ?>
+                    } } ?>
         
      
         </ul>
