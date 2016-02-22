@@ -39,24 +39,18 @@ get_header();
               $postterms = get_the_terms( $post->ID, 'product_categories' ); 
                   if ($postterms) {
                     foreach($postterms as $term) {
-                      $all_terms['name'][] = $term->name;
-                      $all_terms['slug'][] = $term->slug;
+                      $all_terms = $term->term_id;
+          
 
                     }
                   }
                 endwhile; endif;
-                var_dump($all_terms);
-                var_dump($all_terms["name"]);
+                $terms = get_terms('product_categories',array(
+                  'include'=> implode(',',$term_ids),
+                ));
           
               $terms = array_unique($all_terms);
-              $keys = array_keys($terms);
-              for($i = 0; $i < count($all_terms); $i++) {
-                  echo $keys[$i] . "{<br>";
-                  foreach($all_terms[$keys[$i]] as $key => $value) {
-                      echo $key . " : " . $value . "<br>";
-                  }
-                  echo "}<br>";
-              }
+
                foreach($terms as $term) {
             
                    echo '<li><a href="'.$term['slug'].'">'.$term['name'].'</a></li>'; 
