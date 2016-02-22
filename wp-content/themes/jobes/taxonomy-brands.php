@@ -43,14 +43,34 @@ get_header();
 
                     }
                   }
+
+              $posttermstwo = get_the_terms( $post->ID, 'product_categories' ); 
+                if ($posttermstwo) {
+                  foreach($posttermstwo as $term) {
+                    $all_termstwo[] = $term->slug;
+
+                  }
+                }
                 endwhile; endif;
-                var_dump($all_terms);
-                  $terms = array_unique($all_terms);
-                    foreach ($terms as $term) {
-                      echo '<li><a href="#'.$term->slug.'" class="foto-filter-button '.$term->slug.'">'.$term.'</a></li>';
-                    } ?>
+
+
   
+              $termstwo = array_unique($all_termstwo);
+               foreach($termstwo as $term) {
             
+                   echo '<li><a href="'.$term.'">' ; 
+             
+                     
+                    }
+
+               $terms = array_unique($all_terms);
+                  oreach ($terms as $term) {
+            
+                   echo $term.'</a></li>'; 
+             
+                     
+                    } ?>
+        
                
      
         </ul>
