@@ -36,24 +36,23 @@ get_header();
               <?php 
 
               
-              $posttermsone = get_the_terms( $post->ID, 'product_categories' ); 
-                  if ($posttermsone) {
-                    foreach($posttermsone as $term) {
-                      $all_termsone = $term->name;
+              $postterms = get_the_terms( $post->ID, 'product_categories' ); 
+                  if ($postterms) {
+                    foreach($postterms as $term) {
+                      $all_terms[] = $term->name;
+
                     }
                   }
-            
                 endwhile; endif;
-  
-
-               $termsone = array_unique($all_termsone);
-               foreach($termsone as $term) {
-            
-                   echo $term['name'].'</a></li>'; 
-             
-                     
+                var_dump($all_terms);
+                  $terms = array_unique($all_terms);
+                    foreach ($terms as $term) {
+                      echo '<li><a href="#'.$term->slug.'" class="foto-filter-button '.$term->slug.'">'.$term.'</a></li>';
                     } ?>
-        
+  
+            
+               
+     
         </ul>
 
       </div> <!--end of entry-->      
