@@ -50,10 +50,16 @@ get_header();
 
                var_dump($terms);
                foreach($terms as $term) {
-                 foreach ($term as $value) {
-                   echo '<li><a href="'.$value.'">'.$value.'</a></li>'; 
+                 foreach ($term['slug'] as $value) {
+                   echo '<li><a href="'.$value.'">'; 
                 
-                    } } ?>
+                    } 
+                  foreach ($term['name'] as $value) {
+                   echo $value.'</a></li>'; 
+                
+                    } 
+
+                  } ?>
         
      
         </ul>
