@@ -36,33 +36,32 @@ get_header();
               <?php 
 
               
-              $postterms = get_the_terms( $post->ID, 'product_categories' ); 
-                  if ($postterms) {
-                    foreach($postterms as $term) {
-                      $all_terms = $term->name;
+              $posttermsone = get_the_terms( $post->ID, 'product_categories' ); 
+                  if ($posttermsone) {
+                    foreach($posttermsone as $term) {
+                      $all_termsone = $term->name;
 
                     }
                   }
-                endwhile; endif;
-      
-              $terms = array_unique($all_terms);
-               foreach($terms as $term) {
+              $posttermstwo = get_the_terms( $post->ID, 'product_categories' ); 
+                if ($posttermstwo) {
+                  foreach($posttermstwo as $term) {
+                
+                    $all_termstwo = $term->slug;
+
+                  }
+                }
+                endwhile;
+  
+              $termstwo = array_unique($all_termstwo);
+               foreach($termstwo as $term) {
             
                    echo '<li><a href="'.$term['slug'].'">' ; 
              
                      
                     }
 
-              $postterms = get_the_terms( $post->ID, 'product_categories' ); 
-                  if ($postterms) {
-                    foreach($postterms as $term) {
-                  
-                      $all_terms = $term->slug;
-
-                    }
-                  }
-                endwhile; endif;
-               $terms = array_unique($all_terms);
+               $termsone = array_unique($all_terms);
                foreach($terms as $term) {
             
                    echo $term['name'].'</a></li>'; 
