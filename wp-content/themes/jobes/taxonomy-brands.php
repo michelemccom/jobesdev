@@ -33,8 +33,7 @@ get_header();
           $the_query = new WP_Query($args);
           if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->the_post(); ?>
           <li>
-              <?php 
-              get_title();
+              <?php the_title();
 
               $terms = get_terms( 'product_categories');
                  foreach($terms as $term) { ?>
