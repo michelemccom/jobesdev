@@ -42,7 +42,7 @@ get_header();
                       $term_link = get_term_link($term, '$array_out = array();');
                       $array_out[] = '<a href="'.$term_link.'">'.$term->name.'</a>';
                   }
-              endwhile;
+              endwhile;endif;
 
               $array_clean = array_unique($array_out);
               echo ' <li>' . implode(', ', $array_clean) . '</li>'; ?>
