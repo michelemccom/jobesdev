@@ -35,27 +35,22 @@ get_header();
 
               <?php 
 
-              $term_ids = array();
+              
               $postterms = get_the_terms( $post->ID, 'product_categories' ); 
                   if ($postterms) {
                     foreach($postterms as $term) {
-                      $all_terms = $term->term_id;
-          
+                      $all_terms['name'][] = $term->name;
+                      $all_terms['slug'][] = $term->slug;
 
                     }
                   }
                 endwhile; endif;
+               $terms = array_map("unserialize", array_unique(array_map("serialize", $all_terms)));
 
-              
-                $terms = get_terms( $post->ID, 'product_categories',array(
-                  'include'=> implode(',',$term_ids),
-                ));
-                var_dump($terms);
-                $terms = array_map("unserialize", array_unique(array_map("serialize", $terms)));
-            
+
                foreach($terms as $term) {
             
-                   echo '<li><a href="'.$term->slug.'">'.$term->name.'</a></li>'; 
+                   echo '<li><a href="'.$term['slug'].'">'.$term['name'].'</a></li>'; 
              
                      
                     } ?>
