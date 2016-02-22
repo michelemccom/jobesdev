@@ -37,15 +37,15 @@ get_header();
 
         
               $array_out = array();
-               $terms = get_the_terms( $post->ID, '$array_out = array();');
+               $terms = get_the_terms( $post->ID, 'product_categories');
                   foreach($terms as $term){
-                      $term_link = get_term_link($term, '$array_out = array();');
+                      $term_link = get_term_link($term, 'product_categories');
                       $array_out[] = '<a href="'.$term_link.'">'.$term->name.'</a>';
                   }
-              endwhile;endif;
+              endwhile; endif;
 
               $array_clean = array_unique($array_out);
-              echo ' <li>' . implode(', ', $array_clean) . '</li>'; ?>
+              echo ' ' . implode(', ', $array_clean) . '</li>'; ?>
                
      
         </ul>
