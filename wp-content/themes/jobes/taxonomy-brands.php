@@ -51,7 +51,7 @@ get_header();
 
                   }
                 }
-                endwhile;
+                endwhile; endif;
   
               $termstwo = array_unique($all_termstwo);
                foreach($termstwo as $term) {
@@ -69,7 +69,6 @@ get_header();
                      
                     } ?>
         
-     
         </ul>
 
       </div> <!--end of entry-->      
