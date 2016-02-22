@@ -35,19 +35,10 @@ get_header();
           <li>
               <?php the_title();
 
-              $field = get_field_object('product_categories');
-              $value = $field['value'];
-              $choices = $field['choices'];
-
-              if( $value ): ?>
-          
-                <?php foreach( $value as $v ): ?>
-                <br/>
-                  <?php echo $choices[ $v ]; ?>
-           
-                <?php endforeach; ?>
-          
-              <?php endif; ?>
+               $terms = get_the_terms( $post->ID, 'product_categories' ); 
+                foreach($terms as $term) {
+                  echo '<br/>'.$term->name;
+                } ?>
               
   
                   </li>
