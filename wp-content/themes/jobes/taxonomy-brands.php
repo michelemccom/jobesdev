@@ -42,24 +42,11 @@ get_header();
                       $all_termsone = $term->name;
                     }
                   }
-              $posttermstwo = get_the_terms( $post->ID, 'product_categories' ); 
-                if ($posttermstwo) {
-                  foreach($posttermstwo as $term) {
-                    $all_termstwo = $term->slug;
-
-                  }
-                }
+            
                 endwhile; endif;
   
-              $termstwo = array_unique($all_termstwo);
-               foreach($termstwo as $term) {
-            
-                   echo '<li><a href="'.$term['slug'].'">' ; 
-             
-                     
-                    }
 
-               $termsone = array_unique($all_terms);
+               $termsone = array_unique($all_termsone);
                foreach($termsone as $term) {
             
                    echo $term['name'].'</a></li>'; 
