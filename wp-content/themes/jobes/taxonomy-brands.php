@@ -49,10 +49,8 @@ get_header();
 
                var_dump($terms);
                foreach($terms as $key => $value) {
-            
-                   echo '<li><a href="'.$value['slug'][0].'">'.$value['name'][0].'</a></li>'; 
-             
-                     
+                   echo '<li><a href="'.$key['slug'][0].'">'.$key['name'][0].'</a></li>'; 
+                
                     } ?>
         
      
