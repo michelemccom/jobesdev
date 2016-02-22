@@ -45,6 +45,7 @@ get_header();
                     }
                   }
                 endwhile; endif;
+                var_dump($all_terms);
                 $terms = array_unique($all_terms);
                 $terms = get_terms('product_categories',array(
                   'include'=> implode(',',$term_ids),
