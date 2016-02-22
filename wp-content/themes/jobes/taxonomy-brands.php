@@ -41,9 +41,10 @@ endwhile; endif;
 if ($all_terms) :
    $all_terms = array_unique($all_terms);
    $terms = trim( implode( ',', (array) $all_terms ), ' ,' );
-   echo '<ul>';
-   wp_list_categories( 'title_li=&taxonomy=' . $taxonomy . '&include=' . $terms );
-   echo '</ul>';
+   var_dump($terms);
+   foreach ($terms as $term) {
+
+     }
 endif; ?>
         
                
