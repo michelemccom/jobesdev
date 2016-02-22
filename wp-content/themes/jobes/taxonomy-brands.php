@@ -49,7 +49,7 @@ get_header();
                   'include'=> implode(',',$term_ids),
                 ));
           
-              $terms = array_unique($all_terms);
+            
 
                foreach($terms as $term) {
             
