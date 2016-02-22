@@ -42,8 +42,10 @@ get_header();
        $all_terms = array_unique($all_terms);
        $terms = trim( implode( ',', (array) $all_terms ), ' ,' );
        var_dump($terms);
-       foreach ($terms as $term) {
-          echo $term->name;
+       foreach ($terms as $id) {
+         $term = get_term( $id, $taxonomy );
+          $slug = $term->slug;
+          echo $slug;
          }
     endif; ?>
         
