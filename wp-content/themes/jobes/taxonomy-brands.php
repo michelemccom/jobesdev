@@ -41,7 +41,7 @@ endwhile; endif;
 if ($all_terms) :
    $all_terms = array_unique($all_terms);
    foreach ($allterms as $term) {
-    echo term->name;
+    echo $term;
    }
 
 endif; ?>
