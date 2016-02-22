@@ -58,7 +58,7 @@ get_header();
               $termstwo = array_unique($all_termstwo);
                foreach($termstwo as $term) {
             
-                   $listitem .= '<li><a href="'.$term.'">' ; 
+                   echo '<li><a href="'.$term.'">' ; 
              
                      
                     }
@@ -66,16 +66,11 @@ get_header();
                $terms = array_unique($all_terms);
                   foreach ($terms as $term) {
       
-                   $listitem .= $term.'</a></li>'; 
-             
+                   echo $term.'</a></li>';    
                      
-                    }
-
-                    echo $listitem ?>
-
+                    } ?>
         
                
-     
         </ul>
 
       </div> <!--end of entry-->      
