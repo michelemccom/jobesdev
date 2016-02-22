@@ -58,18 +58,21 @@ get_header();
               $termstwo = array_unique($all_termstwo);
                foreach($termstwo as $term) {
             
-                   echo '<li><a href="'.$term.'">' ; 
+                   $listitem .= '<li><a href="'.$term.'">' ; 
              
                      
                     }
 
                $terms = array_unique($all_terms);
-                  oreach ($terms as $term) {
-            
-                   echo $term.'</a></li>'; 
+                  foreach ($terms as $term) {
+      
+                   $listitem .= $term.'</a></li>'; 
              
                      
-                    } ?>
+                    }
+
+                    echo $listitem ?>
+
         
                
      
