@@ -51,9 +51,9 @@ get_header();
           
               $terms = array_unique($all_terms);
                foreach($terms as $key => $value) {
-                foreach ($value as $k => $v) {
-                   echo '<li><a href="'.$v.'">'.$v.'</a></li>'; 
-                }
+            
+                   echo '<li><a href="'.$value.'">'.$value.'</a></li>'; 
+             
                      
                     } ?>
   
