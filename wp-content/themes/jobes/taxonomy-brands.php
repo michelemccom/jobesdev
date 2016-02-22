@@ -42,7 +42,7 @@ get_header();
                       $all_terms[] = $term->name;
                     }
                   }
-                endwhile;
+                endwhile; endif;
 
                   $terms = array_unique($all_terms);
                     foreach ($terms as $term) {
@@ -51,8 +51,7 @@ get_header();
   
                   </li>
                
-           <?php
-           endwhile; endif;wp_reset_postdata();?>
+     
         </ul>
 
       </div> <!--end of entry-->      
