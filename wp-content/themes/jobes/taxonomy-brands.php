@@ -48,9 +48,8 @@ get_header();
                 var_dump($all_terms);
                 var_dump($all_terms["name"]);
                   $terms = array_unique($all_terms);
-
-                    foreach ($terms as $term) {
-                      echo '<li><a href="#'.$term->slug.'" class="foto-filter-button '.$term->slug.'">'.$term->name.'</a></li>';
+               foreach($terms as $key => $value) {
+                      echo '<li><a href="'.$value['slug'].'">'.$value['name'].'</a></li>';
                     } ?>
   
             
