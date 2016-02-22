@@ -32,7 +32,7 @@ get_header();
           ); 
           $the_query = new WP_Query($args);
           if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->the_post(); ?>
-          <li>
+
               <?php 
 
               
@@ -40,16 +40,19 @@ get_header();
                   if ($postterms) {
                     foreach($postterms as $term) {
                       $all_terms[] = $term->name;
+                      $all_terms[]['name'] = $term->name;
+                      $all_terms[]['slug'] = $term->slug;
+
                     }
                   }
                 endwhile; endif;
 
                   $terms = array_unique($all_terms);
                     foreach ($terms as $term) {
-                      echo '<a href="#'.$term->slug.'" class="foto-filter-button '.$term->slug.'">'.$term.'</a>';
+                      echo '<li><a href="#'.$term->slug.'" class="foto-filter-button '.$term->slug.'">'.$term.'</a></li>';
                     } ?>
   
-                  </li>
+            
                
      
         </ul>
