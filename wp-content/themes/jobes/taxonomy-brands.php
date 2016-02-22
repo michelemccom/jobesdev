@@ -37,15 +37,15 @@ get_header();
    $taxonomy = 'product_categories'; // change this to your taxonomy
    $terms = wp_get_post_terms( $post->ID, $taxonomy, array( "fields" => "ids" ) );
    if( $terms ) $all_terms = array_merge($all_terms, $terms);
-endwhile; endif;
-if ($all_terms) :
-   $all_terms = array_unique($all_terms);
-   $terms = trim( implode( ',', (array) $all_terms ), ' ,' );
-   var_dump($terms);
-   foreach ($terms as $term) {
-
-     }
-endif; ?>
+    endwhile; endif;
+    if ($all_terms) :
+       $all_terms = array_unique($all_terms);
+       $terms = trim( implode( ',', (array) $all_terms ), ' ,' );
+       var_dump($terms);
+       foreach ($terms as $term) {
+          echo $term->name;
+         }
+    endif; ?>
         
                
         </ul>
