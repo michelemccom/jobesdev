@@ -34,7 +34,7 @@ get_header();
           if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->the_post(); ?>
           <li>
               <?php the_title();
-              $terms = get_post_meta($post->ID, "product_categories", true);
+              $terms = get_post_meta($post->ID, "product_categories", false);
              ?>
                    
                   <br/> <?php echo $terms; ?>
