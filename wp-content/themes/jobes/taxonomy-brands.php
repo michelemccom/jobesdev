@@ -49,7 +49,7 @@ get_header();
 
                var_dump($terms);
                foreach($terms as list($a, $b) {
-                   echo '<li><a href="'.$$a.'">'.$b.'</a></li>'; 
+                   echo '<li><a href="'.$a.'">'.$b.'</a></li>'; 
                 
                     } ?>
         
