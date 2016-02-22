@@ -33,7 +33,7 @@ get_header();
           $the_query = new WP_Query($args);
           if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->the_post(); ?>
           <li>
-              <?php the_title();
+              <?php 
 
               
               $postterms = get_the_terms( $post->ID, 'product_categories' ); 
@@ -46,7 +46,7 @@ get_header();
 
                   $terms = array_unique($all_terms);
                     foreach ($terms as $term) {
-                      echo '<br/><a href="#'.$term->slug.'" class="foto-filter-button '.$term->slug.'">'.$term.'</a>';
+                      echo '<a href="#'.$term->slug.'" class="foto-filter-button '.$term->slug.'">'.$term.'</a>';
                     } ?>
   
                   </li>
