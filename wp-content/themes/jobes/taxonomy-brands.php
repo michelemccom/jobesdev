@@ -51,7 +51,7 @@ get_header();
                   'include'=> implode(',',$term_ids),
                 ));
                 var_dump($terms);
-                $terms = array_unique($all_terms);
+                $terms = array_map("unserialize", array_unique(array_map("serialize", $terms)));
             
                foreach($terms as $term) {
             
