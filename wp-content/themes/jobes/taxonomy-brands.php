@@ -38,10 +38,11 @@ get_header();
               if ($cats) {
               foreach($cats as $cat) {?>
                    
-                  <br/> <?php echo $cat->name; ?>
-                  
+                  <br/> <?php echo $cat->name;?>
+                  </li>
                
-           <?php } endwhile; endif;wp_reset_postdata();?>
+           <?php } }
+           endwhile; endif;wp_reset_postdata();?>
         </ul>
 
       </div> <!--end of entry-->      
