@@ -46,6 +46,7 @@ get_header();
 
        foreach ($terms as $id) {
          $term = get_term( $id, $taxonomy );
+         echo $terms;
           $slug = $term->slug;
           echo $slug;
          }
