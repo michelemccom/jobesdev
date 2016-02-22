@@ -38,7 +38,7 @@ get_header();
               if ($cats) {
               foreach($cats as $cat) {?>
                    
-                  <br/> <?php echo $cat->name;?>
+                  <br/> <?php echo $cat;?>
                   </li>
                
            <?php } }
