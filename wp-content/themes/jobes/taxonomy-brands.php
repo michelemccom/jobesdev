@@ -39,10 +39,7 @@ get_header();
               $postterms = get_the_terms( $post->ID, 'product_categories' ); 
                   if ($postterms) {
                     foreach($postterms as $term) {
-                      $all_terms[] = $term->name;
-                      $all_terms[]['name'] = $term->name;
-                      $all_terms[]['slug'] = $term->slug;
-
+                      $all_terms[] = $term->name;     
                     }
                   }
                 endwhile; endif;
