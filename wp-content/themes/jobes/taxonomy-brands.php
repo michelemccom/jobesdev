@@ -52,7 +52,7 @@ get_header();
   
                   </li>
                
-           <?php } }
+           <?php
            endwhile; endif;wp_reset_postdata();?>
         </ul>
 
