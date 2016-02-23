@@ -545,6 +545,7 @@ form input.submit {	display:block; margin-bottom:1.0em; position:relative; width
 .brand-header .brand-tagline {
   float: left;
   width: auto;
+  overflow: hidden;
   margin-left: 3%;
 }
 .brand-header .brand-tagline h2 {
