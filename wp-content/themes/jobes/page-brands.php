@@ -25,8 +25,10 @@ if( $terms ): ?>
 
 	
 		<li class="block">
-		 <?php if ( has_post_thumbnail() ) {
-			   $circle = get_field('brand_image', $term );
+
+		 <?php
+		 var_dump($term);
+		  $circle = get_field('brand_image', $term );
 		    if (!empty($circle)) { ?>
 		      	<div class="round">
 					<a href="<?php the_permalink(); ?>"><img src="<?php echo $circle;?>">	</a>
