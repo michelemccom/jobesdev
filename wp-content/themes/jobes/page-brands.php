@@ -15,7 +15,7 @@ get_header(); ?>
 
 
 
-$terms = get_the_terms('brands');
+$terms = get_terms('brands');
 
 if( $terms ): ?>
 
