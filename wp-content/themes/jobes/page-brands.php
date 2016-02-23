@@ -15,7 +15,7 @@ get_header(); ?>
 
 
 
-$terms = get_the_terms( get_the_ID(), 'brands');
+$terms = get_the_terms('brands');
 
 if( $terms ): ?>
 
