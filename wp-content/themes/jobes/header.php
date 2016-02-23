@@ -39,7 +39,8 @@ filter: none;
 </head>
 
 <body <?php body_class(); ?> 
-    <?php if (is_tax('brands')) {  
+    <?php $classes = get_body_class();
+if (in_array('tax-brands',$classes)) {
         $terms = get_the_terms( get_the_ID(), 'brands');
         if( $terms ){
         $term = array_pop($terms);
