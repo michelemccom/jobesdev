@@ -58,7 +58,7 @@ get_header();
                 foreach (array_combine($terms, $termstwo) as $term => $termtwo) { ?>
                     <li class="block">
                      <div class="round">
-                         <a href="<<?php echo get_option('home'); ?>/products/?brands='<?php echo $term_brands->slug;?>&product_categories=<?php echo $termtwo; ?>"><img src="<?php echo get_bloginfo('template_url')?>/images/<?php echo $term_brands->slug;?>_<?php echo $termtwo; ?>.jpg"> </a>
+                         <a href="<?php echo get_option('home'); ?>/products/?brands='<?php echo $term_brands->slug;?>&product_categories=<?php echo $termtwo; ?>"><img src="<?php echo get_bloginfo('template_url')?>/images/<?php echo $term_brands->slug;?>_<?php echo $termtwo; ?>.jpg"> </a>
                       </div>
 
                         <a href="<?php echo get_option('home'); ?>/products/?brands=<?php echo $term_brands->slug;?>&product_categories=<?php echo $termtwo; ?>"><?php echo $term;?> </a>
