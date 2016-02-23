@@ -41,7 +41,7 @@ filter: none;
 <body <?php body_class(); ?> 
     <?php if (is_tax('brand')) {  
         $terms = get_terms('brands');
-        if( $terms ): ?>
+        if( $terms ){ ?>
             <?php foreach( $terms as $term ):
                 $image = get_field('brand_background', $term );
                 if (!empty($image)){ ?> 
@@ -49,10 +49,10 @@ filter: none;
                 <?php } else {  ?> 
                     style="background-image: url(<?php echo get_bloginfo('template_url')?>/images/jobes_bg.png);"
                 <?php } 
-            endif;
-        } else {  ?> 
-            style="background-image: url(<?php echo get_bloginfo('template_url')?>/images/jobes_bg.png);" 
-        <?php } ?>
+        }
+    } else {  ?> 
+        style="background-image: url(<?php echo get_bloginfo('template_url')?>/images/jobes_bg.png);" 
+    <?php } ?>
     ><!--closing body tag-->
 
 <div id="page">
