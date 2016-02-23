@@ -521,8 +521,8 @@ form input.submit {	display:block; margin-bottom:1.0em; position:relative; width
 
 /* ================================ Brands ================================ */    
 
-.brands-header {position: relative;}
-.brands-header .logo-circle { 
+.brand-header {position: relative;}
+.brand-header .logo-circle { 
   border-radius: 50%;
   overflow: hidden;
   width: 100%;
@@ -534,21 +534,21 @@ form input.submit {	display:block; margin-bottom:1.0em; position:relative; width
   display: table;
   float: left;
 }
-.brands-header .logo-circle span{ display: table-cell; vertical-align: middle; width: 100%; height: 100%;}
-.brands-header .logo-circle img {
+.brand-header .logo-circle span{ display: table-cell; vertical-align: middle; width: 100%; height: 100%;}
+.brand-header .logo-circle img {
   display: block;
   min-width: 100%;
   min-height: 100%;
   display: table-cell;
   vertical-align: middle;
 }
-.brands-header .logo-circle h1 {display: none; text-indent: -10000px;}
-.brand-tagline {
+.brand-header .logo-circle h1 {display: none; text-indent: -10000px;}
+.brand-header .brand-tagline {
   float: left;
   width: auto;
   margin-left: 3%;
 }
-.brand-tagline h2 {font-size:34px; margin:0;}
+.brand-header .brand-tagline h2 {font-size:34px; margin:0;}
 /* ================================ Misc ================================ */		
 .banner  > *  {
   font-size: 30px;
