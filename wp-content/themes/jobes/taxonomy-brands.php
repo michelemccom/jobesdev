@@ -17,15 +17,18 @@ get_header();
 <div class="brand-header">
   <?php $logo = get_field('brand_logo', $term_brands );
           if (!empty($logo)){?>
-            <div class="image-text">
+            <div class="logo-circle">
               <span>
+                <h1><?php echo $term_brands->name; ?></h1>
                 <img src="<?php echo $logo;?>" alt="<?php echo $term->name;?>">
-                
               </span>
             </div>
           <?php } ?>
+          <div class="brand-tagline">
+            <h2><?php get_field('brand_tagline', $term_brands );?></h2>
+          </div>
 </div>
-        <h1><?php echo $term_brands->name; ?></h1>
+
         <p><?php echo $term_brands->description; ?></p>
         <ul class="blocks section">
         <?php
