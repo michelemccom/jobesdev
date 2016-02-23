@@ -32,7 +32,7 @@ echo $query['product_categories'];
  	  <?php /* If this is a paged archive */ } elseif (isset($_GET['paged']) && !empty($_GET['paged'])) { ?>
 		<h4>Blog Archives</h4>
  	  <?php } ?>
- 	  <ul class="blocks section"
+ 	  <ul class="blocks section">
 		<?php while (have_posts()) : the_post(); ?>
 		<li class="block"> 
 	      	 <?php if ( has_post_thumbnail() ) {
