@@ -33,8 +33,8 @@ if( $terms ): ?>
 		      	<div class="round">
 					<a href="<?php the_permalink(); ?>"><img src="<?php echo $circle;?>">	</a>
 				</div>
-				<?php }
-			}
+			
+			<?php }
 			$logo = get_post_meta($term->ID, "brand_logo", true);
 			if (!empty($logo)){?>
 				<div class="image-text">
