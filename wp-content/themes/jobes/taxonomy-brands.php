@@ -63,7 +63,7 @@ get_header();
             }
           }
           endwhile; endif;
-          if (!empty($all_terms[])) {
+          if (!empty($all_terms[0])) {
           $terms = array_unique($all_terms);
           $termstwo = array_unique($all_termstwo);
             foreach (array_combine($terms, $termstwo) as $term => $termtwo) { ?>
