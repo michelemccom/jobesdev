@@ -44,16 +44,15 @@ filter: none;
         if( $terms ): ?>
             <?php foreach( $terms as $term ):
                 $image = get_field('brand_background', $term );
-                 
-         if (!empty($image)){ ?> 
-            style="background-image: url('<?php echo $image; ?>')" 
-            <?php } else {  ?> 
-            style="background-image: url(<?php echo get_bloginfo('template_url')?>/images/jobes_bg.png);" }
-            <?php } ?>
-        <?php } else {  ?> 
-        style="background-image: url(<?php echo get_bloginfo('template_url')?>/images/jobes_bg.png);" } 
-        <?php endif;
-    } ?>
+                if (!empty($image)){ ?> 
+                    style="background-image: url('<?php echo $image; ?>')" 
+                <?php } else {  ?> 
+                    style="background-image: url(<?php echo get_bloginfo('template_url')?>/images/jobes_bg.png);"
+                <?php } 
+            endif;
+        } else {  ?> 
+            style="background-image: url(<?php echo get_bloginfo('template_url')?>/images/jobes_bg.png);" 
+        <?php } ?>
     ><!--closing body tag-->
 
 <div id="page">
