@@ -106,7 +106,7 @@ get_header();
               <img src="<?php echo $thumb_url[0];?>" width="<?php echo $thumb_url[1];?>" height="<?php echo $$thumb_url[2]; ?>">
             </div>
             <?php } ?>
-                <h4><a href="<?php the_permalink(); ?>"><?php the_title();?></a></h4>
+                <h4><?php the_title();?></h4>
 
                 </li>
 
