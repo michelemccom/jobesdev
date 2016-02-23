@@ -521,7 +521,7 @@ form input.submit {	display:block; margin-bottom:1.0em; position:relative; width
 
 /* ================================ Brands ================================ */    
 
-.brand-header {position: relative;}
+.brand-header {position: relative; width: 94%; padding: 0 3%;}
 .brand-header .logo-circle { 
   border-radius: 50%;
   overflow: hidden;
@@ -547,7 +547,7 @@ form input.submit {	display:block; margin-bottom:1.0em; position:relative; width
   width: auto;
   margin-left: 3%;
 }
-.brand-header .brand-tagline h2 {margin:0;}
+.brand-header .brand-tagline h2 {margin:0; font-size: 64px;}
 /* ================================ Misc ================================ */		
 .banner  > *, .brand-header .brand-tagline h2  {
   font-size: 30px;
