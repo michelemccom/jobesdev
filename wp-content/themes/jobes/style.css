@@ -526,7 +526,7 @@ form input.submit {	display:block; margin-bottom:1.0em; position:relative; width
   border-radius: 50%;
   overflow: hidden;
   width: 260px;
-  max-height: 260px;
+  height: 260px;
   margin: 0 auto 15px;
   background: #fff;
   display: table;
