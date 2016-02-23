@@ -26,7 +26,7 @@ get_header(); ?>
 						<div class="image-text">
 							<span>
 								<img src="<?php echo $logo;?>" alt="<?php echo $term->name;?>">
-								<?php echo $term->name;?>
+								
 							</span>
 						</div>
 					<?php } ?>
