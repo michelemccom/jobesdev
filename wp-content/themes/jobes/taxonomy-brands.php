@@ -15,7 +15,15 @@ get_header();
   $term_id_brands = $term_brands->term_id;
 ?>
 <div class="brand-header">
-
+  <?php $logo = get_field('brand_logo', $term );
+          if (!empty($logo)){?>
+            <div class="image-text">
+              <span>
+                <img src="<?php echo $logo;?>" alt="<?php echo $term->name;?>">
+                
+              </span>
+            </div>
+          <?php } ?>
 </div>
         <h1><?php echo $term_brands->name; ?></h1>
         <p><?php echo $term_brands->description; ?></p>

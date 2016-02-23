@@ -38,17 +38,21 @@ filter: none;
 <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?> <?php if (is_singular('brand')) {  
-        $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ) ); 
+<body <?php body_class(); ?> <?php if (is_tax('brand')) {  
+    $terms = get_terms('brands');
+        if( $terms ): ?>
+            <?php foreach( $terms as $term ):
+                $image = get_field('brand_background', $term );
+                 
          if (!empty($image)){ ?> 
-            style="background-image: url('<?php echo $image[0]; ?>')" 
+            style="background-image: url('<?php echo $image; ?>')" 
             <?php } else {  ?> 
             style="background-image: url(<?php echo get_bloginfo('template_url')?>/images/jobes_bg.png);" }
             <?php } ?>
         <?php } else {  ?> 
         style="background-image: url(<?php echo get_bloginfo('template_url')?>/images/jobes_bg.png);" } 
     <?php } ?>
-    >
+    ><!--closing body tag-->
 
 <div id="page">
 
