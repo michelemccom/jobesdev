@@ -44,6 +44,7 @@ filter: none;
         if( $terms ){ ?>
             <?php foreach( $terms as $term ){
                 echo $term->ID;
+                echo $term->name;
                 $image = get_field('brand_background', $term );
                 if (!empty($image)){ ?> 
                     style="background-image: url('<?php echo $image; ?>')" 
