@@ -33,12 +33,14 @@ get_header(); ?>
 					<?php }
 				} ?>
 
-	      	<?php if (!empty($thumb_url)) { ?>
-	      	<div class="round">
-				<a href="<?php the_permalink(); ?>"><img src="<?php echo $thumb_url[0];?>" width="<?php echo $thumb_url[1];?>" height="<?php echo $$thumb_url[2]; ?>">	</a>
-			</div>
-			<?php } ?>
-	      	<h4><a href="<?php the_permalink(); ?>"><?php the_title();?></a></li></h4>
+		      	<?php if (!empty($thumb_url)) { ?>
+		      	<div class="round">
+					<a href="<?php the_permalink(); ?>"><img src="<?php echo $thumb_url[0];?>" width="<?php echo $thumb_url[1];?>" height="<?php echo $$thumb_url[2]; ?>">	</a>
+				</div>
+				<?php } ?>
+		      	<h4><a href="<?php the_permalink(); ?>"><?php the_title();?></a></h4>
+
+	      	</li>
 	    <?php endwhile; endif;wp_reset_postdata();?>
 		</ul>	
 	</div>
