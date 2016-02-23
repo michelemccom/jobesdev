@@ -25,7 +25,7 @@ get_header();
             </div>
           <?php } ?>
           <div class="brand-tagline">
-            <h2><?php echo get_field('brand_tagline', $term_brands );?></h2>
+            <h2><?php echo get_field('brand_tagline', $taxonomy . '_' . $term_brands );?></h2>
           </div>
 </div>
 
