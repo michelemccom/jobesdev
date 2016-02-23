@@ -43,15 +43,12 @@ filter: none;
         $terms = get_terms('brands');
         if( $terms ){
         $term = array_pop($terms);
-
-                $image = get_field('brand_background', $term );
-                if (!empty($image)){ ?> 
-                    style="background-image: url('<?php echo $image; ?>')" 
-                <?php } else {  ?> 
-                    style="background-image: url(<?php echo get_bloginfo('template_url')?>/images/jobes_bg.png);"
-                <?php } 
-            
-          
+            $image = get_field('brand_background', $term );
+            if (!empty($image)){ ?> 
+                style="background-image: url('<?php echo $image; ?>')" 
+            <?php } else {  ?> 
+                style="background-image: url(<?php echo get_bloginfo('template_url')?>/images/jobes_bg.png);"
+            <?php } 
         }
     } else {  ?> 
         style="background-image: url(<?php echo get_bloginfo('template_url')?>/images/jobes_bg.png);" 
