@@ -8,15 +8,18 @@ get_header();
 ?>
 
 <div id="copy"> 
-<?php $property_types = array();
+<?php
 
   $slug_brands = get_query_var( 'term' );
   $term_brands = get_term_by( 'slug', $slug_brands, 'brands' );
   $term_id_brands = $term_brands->term_id;
 ?>
+<div class="brand-header">
+
+</div>
         <h1><?php echo $term_brands->name; ?></h1>
         <p><?php echo $term_brands->description; ?></p>
-        <ul>
+        <ul class="blocks section">
         <?php
           $args=array(
             'post_type' => 'products',

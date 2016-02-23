@@ -32,7 +32,7 @@ $labels = array(
   );    
  
 register_taxonomy('brands',array('products'), array(
-    'hierarchical' => true,
+    'hierarchical' => false,
     'labels' => $labels,
     'query_var' => true,
     'show_ui' => true
@@ -82,6 +82,7 @@ add_theme_support( 'post-thumbnails' );
 
 if ( function_exists( 'add_image_size' ) ) { 
 	add_image_size( 'block', 280, 280, true );
+  add_image_size( 'logo', 280, 90 );
 }
 
 // Add Menu Support

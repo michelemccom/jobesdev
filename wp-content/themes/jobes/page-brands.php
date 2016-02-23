@@ -15,7 +15,7 @@ get_header(); ?>
 
 
 
-$terms = get_field('product_categories');
+$terms = get_the_terms( get_the_ID(), 'brands');
 
 if( $terms ): ?>
 
@@ -23,10 +23,24 @@ if( $terms ): ?>
 
 	<?php foreach( $terms as $term ): ?>
 
-		<h2><?php echo $term->name; ?></h2>
-		<p><?php echo $term->description; ?></p>
-		<a href="<?php echo get_term_link( $term ); ?>">View all '<?php echo $term->name; ?>' posts</a>
+	
+		<li class="block">
+		 <?php if ( has_post_thumbnail() ) {
+			   $circle = get_field('brand_image', $term ) 	
+		    if (!empty($circle)) { ?>
+		      	<div class="round">
+					<a href="<?php the_permalink(); ?>"><img src="<?php echo $circle;?>">	</a>
+				</div>
+				<?php }
+			}
+			$logo = get_post_meta($term->ID, "brand_logo", true);
+			if (!empty($logo)){?>
+				<div class="image-text">
+					<span><img src="<?php echo $logo;?>" ?>"></span>
+				</div>
+			<?php } ?>
 
+		</li>
 	<?php endforeach; ?>
 
 	</ul>
