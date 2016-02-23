@@ -18,13 +18,16 @@ get_header(); ?>
 					<?php $circle = get_field('brand_image', $term );
 				    if (!empty($circle)) { ?>
 				      	<div class="round">
-							<a href="<?php the_permalink();echo'/'.$term->slug; ?>"><img src="<?php echo $circle;?> alt="<?php echo $term->name;?>""></a>
+							<a href="<?php the_permalink(); echo $term->slug; ?>"><img src="<?php echo $circle;?>" alt="<?php echo $term->name;?>"></a>
 						</div>
 					<?php }
 					$logo = get_field('brand_logo', $term );
 					if (!empty($logo)){?>
 						<div class="image-text">
-							<span><img src="<?php echo $logo;?>" alt="<?php echo $term->name;?>"><?php echo $term->name;?></span>
+							<span>
+								<img src="<?php echo $logo;?>" alt="<?php echo $term->name;?>">
+								<?php echo $term->name;?>
+							</span>
 						</div>
 					<?php } ?>
 				</li>
