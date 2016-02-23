@@ -5,11 +5,12 @@
  */
 
 get_header();
-$url = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+$url = $_SERVER["REQUEST_URI"];
 $parts = parse_url($url);
 parse_str($parts['query'], $query);
-echo $query['brands'];
-echo $query['product_categories'];
+$pbrand = $query['brands'];
+$pcat = $query['product_categories'];
+echo $pbrand.'-'$pcat;
 ?>
 
 <div id="copy"> 
