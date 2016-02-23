@@ -525,10 +525,8 @@ form input.submit {	display:block; margin-bottom:1.0em; position:relative; width
 .brand-header .logo-circle { 
   border-radius: 50%;
   overflow: hidden;
-  width: 100%;
-  height: auto;
-  max-width: 300px;
-  max-height: 300px;
+  width: 260px;
+  height: 260px;
   margin: 0 auto 15px;
   background: #fff;
   display: table;
@@ -541,6 +539,7 @@ form input.submit {	display:block; margin-bottom:1.0em; position:relative; width
   min-height: 100%;
   display: table-cell;
   vertical-align: middle;
+  margin: 0 auto;
 }
 .brand-header .logo-circle h1 {display: none; text-indent: -10000px;}
 .brand-header .brand-tagline {
