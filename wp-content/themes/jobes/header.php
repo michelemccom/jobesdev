@@ -39,7 +39,7 @@ filter: none;
 </head>
 
 <body <?php body_class(); ?> 
-    <?php if (is_tax('brand')) {  
+    <?php if (is_tax('brands')) {  
         $terms = get_terms('brands');
         if( $terms ){ ?>
             <?php foreach( $terms as $term ){
