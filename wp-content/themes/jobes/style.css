@@ -543,7 +543,7 @@ form input.submit {	display:block; margin-bottom:1.0em; position:relative; width
 }
 .brand-header .logo-circle h1 {display: none; text-indent: -10000px;}
 .brand-header .brand-tagline {
-  float: left;
+
   width: auto;
   overflow: hidden;
   margin-left: 3%;
