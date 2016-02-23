@@ -10,7 +10,7 @@ $parts = parse_url($url);
 parse_str($parts['query'], $query);
 $pbrand = $query['brands'];
 $pcat = $query['product_categories'];
-echo $pbrand.'-'$pcat;
+echo $pbrand.'-'.$pcat;
 ?>
 
 <div id="copy"> 
