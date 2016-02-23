@@ -19,7 +19,7 @@ $terms = get_terms('brands');
 
 if( $terms ): ?>
 
-	<ul>
+	<ul class="blocks section">
 
 	<?php foreach( $terms as $term ): ?>
 
@@ -35,7 +35,7 @@ if( $terms ): ?>
 				</div>
 			
 			<?php }
-			$logo = get_post_meta($term->ID, "brand_logo", true);
+			$logo = get_field('brand_logo', $term );
 			if (!empty($logo)){?>
 				<div class="image-text">
 					<span><img src="<?php echo $logo;?>" ?>"></span>
