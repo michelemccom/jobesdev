@@ -38,8 +38,9 @@ filter: none;
 <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?> <?php if (is_tax('brand')) {  
-    $terms = get_terms('brands');
+<body <?php body_class(); ?> 
+    <?php if (is_tax('brand')) {  
+        $terms = get_terms('brands');
         if( $terms ): ?>
             <?php foreach( $terms as $term ):
                 $image = get_field('brand_background', $term );
@@ -51,7 +52,8 @@ filter: none;
             <?php } ?>
         <?php } else {  ?> 
         style="background-image: url(<?php echo get_bloginfo('template_url')?>/images/jobes_bg.png);" } 
-    <?php } ?>
+        <?php endif;
+    } ?>
     ><!--closing body tag-->
 
 <div id="page">
