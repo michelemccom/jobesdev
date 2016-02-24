@@ -13,24 +13,9 @@ $pcat = $query['product_categories'];
 $ptitle = $pbrand.'-'.$pcat;
 
 $ptitle = preg_replace('/[^a-z]/', " ", $ptitle); ?>
-<h1 class="page-title"><?php echo $ptitle; ?></h1>
 <div id="copy"> 
-	<?php 
-	    $args = array(
-	        'post_type' => 'brand_cat_desc',
-	        'posts_per_page' => -1,
-	        'order' => 'ASC',
-	        'orderby' => 'date',
-	        'name' => $pbrand.'-'.$pcat
-	        );
-	    $the_query = new WP_Query($args);
-	    if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->the_post();
-	    	the_content();
-
-	    endwhile; endif;wp_reset_postdata();?>
-		<?php if (have_posts()) : ?>
-
- 	  <?php $post = $posts[0]; // Hack. Set $post so that the_date() works. ?>
+	<h1 class="page-title"><?php echo $ptitle; ?></h1>
+	<?php $post = $posts[0]; // Hack. Set $post so that the_date() works. ?>
  	  <?php /* If this is a category archive */ if (is_category()) { ?>
 		<h4>&#8216;<?php single_cat_title(); ?>&#8217; Category</h4>
  	  <?php /* If this is a tag archive */ } elseif( is_tag() ) { ?>
@@ -46,6 +31,22 @@ $ptitle = preg_replace('/[^a-z]/', " ", $ptitle); ?>
  	  <?php /* If this is a paged archive */ } elseif (isset($_GET['paged']) && !empty($_GET['paged'])) { ?>
 		<h4>Blog Archives</h4>
  	  <?php } ?>
+	<?php 
+	    $args = array(
+	        'post_type' => 'brand_cat_desc',
+	        'posts_per_page' => -1,
+	        'order' => 'ASC',
+	        'orderby' => 'date',
+	        'name' => $pbrand.'-'.$pcat
+	        );
+	    $the_query = new WP_Query($args);
+	    if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->the_post();
+	    	the_content();
+
+	    endwhile; endif;wp_reset_postdata();?>
+		<?php if (have_posts()) : ?>
+
+ 	  
  	  <ul class="blocks section">
 		<?php while (have_posts()) : the_post(); ?>
 		<li class="block"> 
