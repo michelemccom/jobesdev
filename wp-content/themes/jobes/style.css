@@ -501,14 +501,18 @@ body.search .hentry p strong { display:none; }
 .search h1 {margin-bottom: 40px;}
 .search .divider:last-child{display: none;}
 /* ================================ Form ================================ */
-input{border: 1px solid #205131; padding: 0 3px; height: 35px; color: #205131;}
-textarea {border: 1px solid #205131; padding: 3px; color: #205131; height: 150px;}
+input, textarea {border: 1px solid #205131; color: #205131; box-sizing:border-box; max-width: 350px; width: 100%; margin: 0 0 10px 0;}
+input {padding: 0 3px; height: 35px;}
+textarea { height: 150px; padding: 3px;}
 input[type="submit"] {
   border: 0;
   background: #205131;
   color: #fff;
   text-transform: uppercase;
   height: 40px;
+  width: auto;
+  padding: 0 15px;
+  margin: 0;
 }
 ::-webkit-input-placeholder { 
      opacity: 1 !important;
