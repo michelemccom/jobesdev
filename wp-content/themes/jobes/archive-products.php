@@ -16,7 +16,7 @@ $ptitle = preg_replace('/[^a-z]/', " ", $ptitle); ?>
 <div id="copy"> 
 
 
-	<?php if (!empty($pbrand)) {?>
+
 		<h1 class="page-title"><?php echo $ptitle; ?></h1>
 	   <?php $args = array(
 	        'post_type' => 'brand_cat_desc',
@@ -31,8 +31,6 @@ $ptitle = preg_replace('/[^a-z]/', " ", $ptitle); ?>
 
 	    endwhile; endif;wp_reset_postdata();?>
 		<?php if (have_posts()) : ?>
-
- 	  
  	  	<ul class="blocks section">
 			<?php while (have_posts()) : the_post(); ?>
 			<li class="block"> 
@@ -50,8 +48,8 @@ $ptitle = preg_replace('/[^a-z]/', " ", $ptitle); ?>
 			<?php endwhile; ?>
 		</ul>
 		<?php endif;?>
-		}
-	</div>
+		
+</div>
 
 
 <?php get_footer(); ?>
