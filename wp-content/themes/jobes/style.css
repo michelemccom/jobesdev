@@ -437,7 +437,7 @@ form#site_search:after {
 }
 
 form#site_search input {	
-	width: 300px;
+	width: 220px;
 	-webkit-border-radius: 17px;
 	-moz-border-radius: 17px;
 	border-radius: 17px; 
