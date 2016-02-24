@@ -12,7 +12,7 @@ $pbrand = $query['brands'];
 $pcat = $query['product_categories'];
 $ptitle = $pbrand.'-'.$pcat;
 
-$ptitle = preg_replace('/[^a-z]/', " ", ucfirst($ptitle)); ?>
+$ptitle = preg_replace('/[^a-z]/', " ", $ptitle); ?>
 <h1 class="page-title"><?php echo $ptitle; ?></h1>
 <div id="copy"> 
 	<?php 
