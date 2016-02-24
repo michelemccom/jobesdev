@@ -12,6 +12,7 @@ get_header();
     <h2>Whoops.</h2>
     <h6>Looks like you're in the woods</h6>
    
+   <p>Find what you're looking for at <a href="/">home</a>.</p>
 
 </div>
 
