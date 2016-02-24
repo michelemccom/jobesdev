@@ -520,7 +520,7 @@ form input.submit {	display:block; margin-bottom:1.0em; position:relative; width
   display: block;
   color: #df002b;
 }
-
+.call-out img {margin-bottom: 20px}
 /* ================================ Brands ================================ */    
 
 .brand-header {position: relative; width: 94%; padding: 0 3%;}
