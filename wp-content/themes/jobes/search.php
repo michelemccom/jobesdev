@@ -19,7 +19,6 @@ get_header(); ?>
             <?php the_excerpt(); ?>
         </div>
         <div class="divider"></div>
-
 		<?php endwhile; ?>
 
 		 <?php pagination( $wp_query, "/" ); ?>
