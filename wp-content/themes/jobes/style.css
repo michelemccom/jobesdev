@@ -560,7 +560,7 @@ form input.submit {	display:block; margin-bottom:1.0em; position:relative; width
   vertical-align: middle;
 }
 /* ================================ BioZome ================================ */    
-.biozome-quotes blockquote {width: 31%;padding: 10px 2%; float: left;}
+.biozome-quotes blockquote {width: 31%;padding: 10px 2%; float: left; margin: 0;}
 
 /* ================================ Misc ================================ */		
 .banner  > *{
