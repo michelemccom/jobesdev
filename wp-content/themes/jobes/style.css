@@ -577,6 +577,11 @@ input[type="submit"] {
 .biozome-quotes blockquote {width: 30%;padding: 10px 1.5%; float: left; margin: 0;}
 .biozome-quotes blockquote p {color: #205131}
 .biozome-quotes blockquote.big-quote {font-size: 19px;}
+
+/* ================================ 404 ================================ */    
+.error404 h2 {font-size: 68px;}
+.error404 h6 {font-size: 32px;}
+
 /* ================================ Misc ================================ */		
 .banner  > *{
   font-size: 30px;
