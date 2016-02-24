@@ -514,7 +514,6 @@ form input.submit {	display:block; margin-bottom:1.0em; position:relative; width
 }
 
 /* ================================ Home ================================ */    
-
 .home .blocks h5 {
   font-size: 32px;
   display: block;
@@ -560,6 +559,9 @@ form input.submit {	display:block; margin-bottom:1.0em; position:relative; width
   display: table-cell;
   vertical-align: middle;
 }
+/* ================================ BioZome ================================ */    
+.biozome-quotes blockquote {width: 31%;padding: 10px 2%; float: left;}
+
 /* ================================ Misc ================================ */		
 .banner  > *{
   font-size: 30px;
