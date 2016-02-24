@@ -31,7 +31,7 @@ $ptitle = preg_replace('/[^a-z]/', " ", $ptitle); ?>
  	  <?php /* If this is a paged archive */ } elseif (isset($_GET['paged']) && !empty($_GET['paged'])) { ?>
 		<h4>Blog Archives</h4>
  	  <?php } ?>
-	<?php 
+	<?php if (!empty($pbrand)) {
 	    $args = array(
 	        'post_type' => 'brand_cat_desc',
 	        'posts_per_page' => -1,
@@ -47,27 +47,44 @@ $ptitle = preg_replace('/[^a-z]/', " ", $ptitle); ?>
 		<?php if (have_posts()) : ?>
 
  	  
- 	  <ul class="blocks section">
-		<?php while (have_posts()) : the_post(); ?>
-		<li class="block"> 
-	      	 <?php if ( has_post_thumbnail() ) {
-			    $thumb_id = get_post_thumbnail_id();
-				$thumb_url = wp_get_attachment_image_src($thumb_id,'block', true);?>
-			      	<?php if (!empty($thumb_url[0])) { ?>
-			      	<div class="round">
-						<a href="<?php the_permalink(); ?>"><img src="<?php echo $thumb_url[0];?>">	</a>
-					</div>
-					<?php }
-				} ?>
-
-	     
-	      	<h4><?php the_title();?></h4>
-
+ 	  	<ul class="blocks section">
+			<?php while (have_posts()) : the_post(); ?>
+			<li class="block"> 
+		      	<?php if ( has_post_thumbnail() ) {
+				    $thumb_id = get_post_thumbnail_id();
+					$thumb_url = wp_get_attachment_image_src($thumb_id,'block', true);?>
+				      	<?php if (!empty($thumb_url[0])) { ?>
+				      	<div class="round">
+							<a href="<?php the_permalink(); ?>"><img src="<?php echo $thumb_url[0];?>">	</a>
+						</div>
+						<?php }
+					} ?>
+			     <h4><?php the_title();?></h4>
 	      	</li>
-	
+			<?php endwhile; ?>
+		</ul>
+		<?php endif;?>
+		} else {
+		<?php if (have_posts()) : ?>
+		<ul class="blocks section">
+		<?php while (have_posts()) : the_post(); ?>
+			<li class="block"> 
+		      	<?php if ( has_post_thumbnail() ) {
+				    $thumb_id = get_post_thumbnail_id();
+					$thumb_url = wp_get_attachment_image_src($thumb_id,'block', true);?>
+				      	<?php if (!empty($thumb_url[0])) { ?>
+				      	<div class="round">
+							<a href="<?php the_permalink(); ?>"><img src="<?php echo $thumb_url[0];?>">	</a>
+						</div>
+						<?php }
+					} ?>
+			     <h4><?php the_title();?></h4>
+	      	</li>
+		<?php endwhile; ?>
+		</ul>
+		<?php endif;?>
 
-		<?php endwhile; endif;?>
-
+		}
 	</div>
 
 
