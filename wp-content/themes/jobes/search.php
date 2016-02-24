@@ -18,6 +18,7 @@ get_header(); ?>
             <h4 id="post-<?php the_ID(); ?>"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h4>
             <?php the_excerpt(); ?>
         </div>
+        <div class="divider"></div>
 
 		<?php endwhile; ?>
 
