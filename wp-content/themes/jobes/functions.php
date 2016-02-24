@@ -143,10 +143,4 @@ function trim_content($text, $max_length){
      force_balance_tags( $text );
      return $text;   
 }
-function filter_search($query) {
-    if ($query->is_search) {
-  $query->set('post_type', array('program_listings', 'post', 'knowledge_base', 'profile_cct', 'pages'));
-    };
-    return $query;
-};
-add_filter('pre_get_posts', 'filter_search');
+
