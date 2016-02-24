@@ -498,6 +498,7 @@ body.search .hentry p strong { display:none; }
 #copy ul.paging li a, #copy ul.paging li.active { display: block; width:15px; text-align:center; }
 #copy ul.paging li.active, #copy ul.paging li.active a { background-color: #fff; border-color: #000; }	
 
+.search .divider:last-child{display: none;}
 /* ================================ Form ================================ */
 
 form label { display:block; margin-bottom:0.3em; }
