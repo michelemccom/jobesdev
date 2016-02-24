@@ -30,6 +30,7 @@ get_header();
 
   <p><?php echo $term_brands->description; ?></p>
   <ul class="blocks section">
+    <span>
   <?php
     $args=array(
       'post_type' => 'products',
@@ -114,7 +115,7 @@ get_header();
 
           }?>
   
-         
+        </span> 
   </ul>
 
 </div> <!-- end copy -->

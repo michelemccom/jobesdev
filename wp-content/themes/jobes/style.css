@@ -501,7 +501,7 @@ body.search .hentry p strong { display:none; }
 .search h1 {margin-bottom: 40px;}
 .search .divider:last-child{display: none;}
 /* ================================ Form ================================ */
-input, textarea {border: 1px solid #205131; color: #205131; box-sizing:border-box; max-width: 350px; width: 100%; margin: 0 0 10px 0;}
+input, textarea {border: 1px solid #205131; color: #205131; box-sizing:border-box; max-width: 400px; width: 100%; margin: 0 0 10px 0;}
 input {padding: 0 3px; height: 35px;}
 textarea { height: 150px; padding: 5px 3px;}
 input[type="submit"] {
@@ -570,7 +570,7 @@ input[type="submit"] {
   vertical-align: middle;
 }
 
-/* ================================ BioZome ================================ */ 
+/* ================================ Contact ================================ */ 
 .wpcf7 {float: left;width: 50%; margin-right: 3%;}
 
 /* ================================ BioZome ================================ */    
@@ -592,9 +592,10 @@ input[type="submit"] {
 .section {position: relative; margin: 0 auto;}
 .section:after, .blocks:after,.brand-header:after {clear: both;height: 0; display: block;content: ''; visibility: hidden;}
 #copy .blocks {list-style: none; text-align: center; margin: 0 auto; padding: 0;}
+#copy .blocks span {display: inline-block; margin: 0 auto; width: auto;}
 .block {
-  width: 32%;
-  margin-right: 2%;
+  width: 280;
+  margin-right: 30px;
   float: left;
   margin-bottom: 30px;
 }
