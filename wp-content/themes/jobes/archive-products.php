@@ -14,25 +14,10 @@ $ptitle = $pbrand.'-'.$pcat;
 
 $ptitle = preg_replace('/[^a-z]/', " ", $ptitle); ?>
 <div id="copy"> 
-	<h1 class="page-title"><?php echo $ptitle; ?></h1>
-	<?php $post = $posts[0]; // Hack. Set $post so that the_date() works. ?>
- 	  <?php /* If this is a category archive */ if (is_category()) { ?>
-		<h4>&#8216;<?php single_cat_title(); ?>&#8217; Category</h4>
- 	  <?php /* If this is a tag archive */ } elseif( is_tag() ) { ?>
-		<h4>Posts Tagged &#8216;<?php single_tag_title(); ?>&#8217;</h4>
- 	  <?php /* If this is a daily archive */ } elseif (is_day()) { ?>
-		<h4>Archive for <?php the_time('F jS, Y'); ?></h4>
- 	  <?php /* If this is a monthly archive */ } elseif (is_month()) { ?>
-		<h4>Archive for <?php the_time('F, Y'); ?></h4>
- 	  <?php /* If this is a yearly archive */ } elseif (is_year()) { ?>
-		<h4>Archive for <?php the_time('Y'); ?></h4>
-	  <?php /* If this is an author archive */ } elseif (is_author()) { ?>
-		<h4>Author Archive</h4>
- 	  <?php /* If this is a paged archive */ } elseif (isset($_GET['paged']) && !empty($_GET['paged'])) { ?>
-		<h4>Blog Archives</h4>
- 	  <?php } ?>
-	<?php if (!empty($pbrand)) {
-	    $args = array(
+
+	<?php if (!empty($pbrand)) {?>
+		<h1 class="page-title"><?php echo $ptitle; ?></h1>
+	    <?php $args = array(
 	        'post_type' => 'brand_cat_desc',
 	        'posts_per_page' => -1,
 	        'order' => 'ASC',
@@ -65,7 +50,24 @@ $ptitle = preg_replace('/[^a-z]/', " ", $ptitle); ?>
 		</ul>
 		<?php endif;?>
 		} else {
-		<?php if (have_posts()) : ?>
+
+		<?php if (have_posts()) : 
+		 $post = $posts[0]; // Hack. Set $post so that the_date() works. ?>
+	 	  <?php /* If this is a category archive */ if (is_category()) { ?>
+			<h4>&#8216;<?php single_cat_title(); ?>&#8217; Category</h4>
+	 	  <?php /* If this is a tag archive */ } elseif( is_tag() ) { ?>
+			<h4>Posts Tagged &#8216;<?php single_tag_title(); ?>&#8217;</h4>
+	 	  <?php /* If this is a daily archive */ } elseif (is_day()) { ?>
+			<h4>Archive for <?php the_time('F jS, Y'); ?></h4>
+	 	  <?php /* If this is a monthly archive */ } elseif (is_month()) { ?>
+			<h4>Archive for <?php the_time('F, Y'); ?></h4>
+	 	  <?php /* If this is a yearly archive */ } elseif (is_year()) { ?>
+			<h4>Archive for <?php the_time('Y'); ?></h4>
+		  <?php /* If this is an author archive */ } elseif (is_author()) { ?>
+			<h4>Author Archive</h4>
+	 	  <?php /* If this is a paged archive */ } elseif (isset($_GET['paged']) && !empty($_GET['paged'])) { ?>
+			<h4>Blog Archives</h4>
+	 	  <?php } ?>
 		<ul class="blocks section">
 		<?php while (have_posts()) : the_post(); ?>
 			<li class="block"> 
