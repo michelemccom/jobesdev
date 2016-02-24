@@ -14,7 +14,19 @@ echo $pbrand.'-'.$pcat;
 ?>
 
 <div id="copy"> 
+	<?php 
+	    $args = array(
+	        'post_type' => 'brand_cat_desc',
+	        'posts_per_page' => -1,
+	        'order' => 'ASC',
+	        'orderby' => 'date',
+	        'name' => $pbrand.'-'.$pcat
+	        );
+	    $the_query = new WP_Query($args);
+	    if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->the_post();
+	    	the_content();
 
+	    endwhile; endif;wp_reset_postdata();?>
 		<?php if (have_posts()) : ?>
 
  	  <?php $post = $posts[0]; // Hack. Set $post so that the_date() works. ?>
