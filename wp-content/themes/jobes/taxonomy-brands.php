@@ -71,7 +71,6 @@ get_header();
                  <div class="round">
                      <a href="<?php echo get_option('home'); ?>/products/?brands=<?php echo $term_brands->slug;?>&product_categories=<?php echo $termtwo; ?>"><img src="<?php echo get_bloginfo('template_url')?>/images/<?php echo $term_brands->slug;?>-<?php echo $termtwo; ?>.jpg"> </a>
                   </div>
-
                    <h4><a href="<?php echo get_option('home'); ?>/products/?brands=<?php echo $term_brands->slug;?>&product_categories=<?php echo $termtwo; ?>"><?php echo $term;?> </a></h4>
                 </li>       
             <?php } 
