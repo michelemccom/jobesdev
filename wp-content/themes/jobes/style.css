@@ -561,7 +561,8 @@ form input.submit {	display:block; margin-bottom:1.0em; position:relative; width
 }
 /* ================================ BioZome ================================ */    
 .biozome-quotes blockquote {width: 31%;padding: 10px 2%; float: left; margin: 0;}
-
+.biozome-quotes blockquote p {color: #205131}
+.biozome-quotes blockquote.big-quote {font-size: 18px;}
 /* ================================ Misc ================================ */		
 .banner  > *{
   font-size: 30px;
