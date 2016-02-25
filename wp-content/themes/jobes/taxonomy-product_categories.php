@@ -76,10 +76,25 @@ get_header();
           $termstwo = array_unique($all_termstwo);
             foreach (array_combine($terms, $termstwo) as $term => $termtwo) { ?>
                 <li>
+
                  <div>
                      <a href="<?php echo get_option('home'); ?>/products/?brands=<?php echo $term_brands->slug;?>&product_categories=<?php echo $termtwo; ?>"><img src="<?php echo get_bloginfo('template_url')?>/images/<?php echo $term_brands->slug;?>-<?php echo $termtwo; ?>.jpg"> </a>
                   </div>
                    <h4><a href="<?php echo get_option('home'); ?>/products/?brands=<?php echo $term_brands->slug;?>&product_categories=<?php echo $termtwo; ?>"><?php echo $term;?> </a></h4>
+
+                    <?php
+                      $args = array(
+                            'post_type' => 'brand_cat_desc',
+                            'posts_per_page' => -1,
+                            'order' => 'ASC',
+                            'orderby' => 'date',
+                            'name' => $term.'-'.$term_brands
+                            );
+                        $the_query = new WP_Query($args);
+                        if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->the_post();
+                          the_content();
+
+                        endwhile; endif;wp_reset_postdata();?>
                    <?php 
                   $termsID = array_unique($all_termsID);
                   foreach ($termsID as $termID) {
