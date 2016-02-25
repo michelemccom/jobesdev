@@ -628,7 +628,7 @@ min-width: 100%;
 min-height: 100%;
 }
 .blocks .image-text {margin-bottom: 10px; height: 100px; display: table; text-align: center; width: 100%;}
-.blocks .image-text img, .home .blocks .image-text h5, .home .blocks .image-text span {display: table-cell; vertical-align: middle; margin: 0 auto; }
+.blocks .image-text img, .home .blocks .image-text h5, .home .blocks .image-text span { max-height: 100px; display: table-cell; vertical-align: middle; margin: 0 auto; }
 .block h4 {height: 50px;}
 .block h4 a {color: #df002b; font-size: 16px; text-transform: uppercase;}
 .divider {
