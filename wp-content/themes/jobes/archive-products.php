@@ -13,8 +13,8 @@ $pcat = $query['product_categories'];
 $ptitle = $pbrand.'-'.$pcat;
 
 $ptitle = preg_replace('/[^a-z]/', " ", $ptitle); ?>
-<div id="copy"> 
 	<?php if (have_posts()) : ?>
+
 	<?php if (!empty($pbrand)) { ?>
 	<h1 class="page-title"><?php echo $ptitle; ?></h1>
 	<?php } else {
@@ -51,6 +51,7 @@ $ptitle = preg_replace('/[^a-z]/', " ", $ptitle); ?>
     	the_content();
 
     endwhile; endif;wp_reset_postdata();?>
+<div id="copy"> 
 	  	<ul class="blocks section">
 		<?php while (have_posts()) : the_post(); ?>
 		<li class="block"> 
