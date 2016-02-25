@@ -45,16 +45,23 @@ if (in_array('tax-brands',$classes)) {
     $slug_brands = get_query_var( 'term' );
     $term_brands = get_term_by( 'slug', $slug_brands, 'brands' );
     $term_id_brands = $term_brands->term_id;
-    $image = get_field('brand_background', $term_id_brands );
-    var_dump($image);
-    if (!empty($image)){ ?> 
-        style="background-image: url('<?php echo $image; ?>')" 
-    <?php } else {  ?> 
-        style="background-image: url(<?php echo get_bloginfo('template_url')?>/images/jobes_bg.png);"
-    <?php } 
-} else {  ?> 
-    style="background-image: url(<?php echo get_bloginfo('template_url')?>/images/jobes_bg.png);" 
-<?php } ?>
+    var_dump($term_id_brands);
+
+        $terms = get_the_terms( $term_id_brands, 'brands');
+        if( $terms ){
+
+        $term = array_pop($terms);
+        var_dump($term;)
+            $image = get_field('brand_background', $term );
+            if (!empty($image)){ ?> 
+                style="background-image: url('<?php echo $image; ?>')" 
+            <?php } else {  ?> 
+                style="background-image: url(<?php echo get_bloginfo('template_url')?>/images/jobes_bg.png);"
+            <?php } 
+        }
+    } else {  ?> 
+        style="background-image: url(<?php echo get_bloginfo('template_url')?>/images/jobes_bg.png);" 
+    <?php } ?>
 ><!--closing body tag-->
 
 <div id="page">
