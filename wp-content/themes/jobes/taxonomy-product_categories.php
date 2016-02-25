@@ -63,12 +63,10 @@ get_header();
           $termstwo = array_unique($all_termstwo);
             foreach (array_combine($terms, $termstwo) as $term => $termtwo) { ?>
                 <li>
-                  <?php $termsID = array_unique($all_termsID);
-                
-                  foreach ($termsID as $termID) {
-                      var_dump($termID);?>
                     <div class="brand-header">
-                      <?php $logo = get_post_meta($termID,'brand_logo',true );
+                      <?php $brandID = get_the_terms( $post->ID, 'brands' ); 
+
+                      $logo = get_field('brand_logo', $term );
                       var_dump($logo);
                         if (!empty($logo)){?>
                           <div class="logo-circle">
@@ -94,7 +92,8 @@ get_header();
                       the_content();
 
                     endwhile; endif;wp_reset_postdata();
-               
+                 foreach ($termsID as $termID) {
+                      var_dump($termID);
                     
                   $args=array(
                     'post_type' => 'products',
