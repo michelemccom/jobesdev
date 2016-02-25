@@ -64,11 +64,12 @@ get_header();
             foreach (array_combine($terms, $termstwo) as $term => $termtwo) { ?>
                 <li>
                     <div class="brand-header">
-                      <?php $brandID = get_the_terms( $post->ID, 'brands' ); 
-          
-                      $bID = array_pop($brandID);
-                      var_dump($bID);
-                      $logo = get_field('brand_logo', $bID );
+                  <?php $termsID = array_unique($all_termsID);
+                
+                  foreach ($termsID as $termID) {
+                      var_dump($termID);
+
+                      $logo = get_field('brand_logo', $termID );
                       
                         if (!empty($logo)){?>
                           <div class="logo-circle">
@@ -79,6 +80,7 @@ get_header();
                           </div>
                         <?php } ?>
                         <h4><a href="<?php echo get_option('home'); ?>/brands/<?php echo $termtwo; ?>"><?php echo $term;?> </a></h4>
+                      <?php } ?>
                     </div>
                     
     
