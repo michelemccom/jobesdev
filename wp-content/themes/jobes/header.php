@@ -40,7 +40,7 @@ filter: none;
     <?php $classes = get_body_class();
  
 if (in_array('tax-brands',$classes)) {
-        $terms = get_the_terms('brands');
+        $terms = get_the_terms(get_the_ID(),'brands');
         var_dump($terms);
         if( $terms ){
         $term = array_pop($terms);
