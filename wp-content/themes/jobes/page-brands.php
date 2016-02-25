@@ -22,7 +22,6 @@ get_header(); ?>
 						</div>
 					<?php }
 					$logo = get_field('brand_logo', $term);
-					var_dump($logo);
 					$size = 'logo'; // (thumbnail, medium, large, full or custom size)
 					$image = wp_get_attachment_image_src( $attachment_id, $size );
 
@@ -30,7 +29,6 @@ get_header(); ?>
 						<div class="image-text">
 							<span>
 								<img src="<?php echo $image[0]; ?>" />
-								
 							</span>
 						</div>
 					<?php } ?>
