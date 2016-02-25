@@ -87,7 +87,7 @@ get_header();
                             'posts_per_page' => -1,
                             'order' => 'ASC',
                             'orderby' => 'date',
-                            'name' => $term.'-'.$term_brands->slug
+                            'name' => $term.'-'.$term_pcats->slug
                             );
                         $the_query = new WP_Query($args);
                         if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->the_post();
@@ -145,8 +145,8 @@ get_header();
               'tax_query' => array(
                    array(
                   'taxonomy'      => 'brands',    
-                  'parent'        => $term_id_brands,
-                  'terms'         => $term_brands,
+                  'parent'        => $term_id_pcats,
+                  'terms'         => $term_pcats,
                   'field'         => 'slug'
                   )
               )
