@@ -143,4 +143,3 @@ function trim_content($text, $max_length){
      force_balance_tags( $text );
      return $text;   
 }
-
