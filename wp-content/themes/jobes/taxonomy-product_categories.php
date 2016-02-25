@@ -66,7 +66,7 @@ get_header();
 
                  <div>
                   <?php $termsID = array_unique($all_termsID);
-                  var_dump($termsID);
+                  var_dump($$all_termsID);
                   foreach ($termsID as $termID) {
                       var_dump($termID);?>
                     <div class="brand-header">
