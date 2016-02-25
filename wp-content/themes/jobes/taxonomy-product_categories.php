@@ -71,7 +71,7 @@ get_header();
                       $term_ID = get_term_by( 'slug', $termtwo, 'brands' );
                       $termID = $term_ID->term_id;
                       var_dump($termID);
-                      $image = get_post_meta($post->ID, "brand_logo", true); ?>
+                      $image = get_post_meta($post->ID, "brand_logo", true); 
                       
                         if (!empty($logo)){?>
                           <div class="logo-circle">
