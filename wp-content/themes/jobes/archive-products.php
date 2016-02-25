@@ -14,7 +14,8 @@ $ptitle = $pbrand.'-'.$pcat;
 
 $ptitle = preg_replace('/[^a-z]/', " ", $ptitle); ?>
 <div id="copy"> 
-	<?php if (!empty($ptitle)) { ?>
+	<?php if (have_posts()) : ?>
+	<?php if (!empty($pbrand)) { ?>
 	<h1 class="page-title"><?php echo $ptitle; ?></h1>
 	<?php } else {
 		 $post = $posts[0]; // Hack. Set $post so that the_date() works. ?>
@@ -46,7 +47,6 @@ $ptitle = preg_replace('/[^a-z]/', " ", $ptitle); ?>
     	the_content();
 
     endwhile; endif;wp_reset_postdata();?>
-	<?php if (have_posts()) : ?>
 	  	<ul class="blocks section">
 		<?php while (have_posts()) : the_post(); ?>
 		<li class="block"> 
