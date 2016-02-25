@@ -537,8 +537,8 @@ input[type="submit"] {
 .brand-header .logo-circle { 
   border-radius: 50%;
   overflow: hidden;
-  width: 260px;
-  height: 260px;
+  width: 240px;
+  height: 240px;
   margin: 0 auto 15px;
   background: #fff;
   display: table;
@@ -557,7 +557,7 @@ input[type="submit"] {
 .brand-header .logo-circle h1 {display: none; text-indent: -10000px;}
 .brand-header .brand-tagline {
   width: auto;
-  height: 280px;
+  height: 240px;
   display: table;
 }
 .brand-header .brand-tagline h2 {
