@@ -62,7 +62,12 @@ $ptitle = preg_replace('/[^a-z]/', " ", $ptitle); ?>
 		     <h4><?php the_title();?></h4>
       	</li>
 		<?php endwhile; ?>
+
 	</ul>
+	<div class="blognav">
+			<div class="alignleft"><?php next_posts_link('&laquo; More Products') ?></div>
+			<div class="alignright"><?php previous_posts_link('More Products &raquo;') ?></div>
+		</div>
 	<?php endif;?>
 	
 </div>
