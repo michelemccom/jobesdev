@@ -81,9 +81,9 @@ get_header();
                   </div>
                    <h4><a href="<?php echo get_option('home'); ?>/products/?brands=<?php echo $term_brands->slug;?>&product_categories=<?php echo $termtwo; ?>"><?php echo $term;?> </a></h4>
                    <?php 
-                  $terms = array_unique($all_termsID);
+                  $termsID = array_unique($all_termsID);
                   foreach ($termsID as $termID) {
-                   
+      
 
                    $args=array(
                     'post_type' => 'products',
