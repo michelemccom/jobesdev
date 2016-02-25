@@ -22,9 +22,9 @@ get_header(); ?>
 						</div>
 					<?php }
 					$logo = get_field('brand_logo');
+					var_dump($logo);
 					$size = 'logo'; // (thumbnail, medium, large, full or custom size)
 
-					
 					if (!empty($logo)){?>
 						<div class="image-text">
 							<span>
