@@ -13,10 +13,11 @@ get_header();
   $term_id_pcats = $term_pcats->term_id;
 ?>
 
-  <h1 class="page-title"><?php echo $term_pcats->name; ?></h1>
 
-  <p><?php echo $term_pcats->description; ?></p>
   <div id="copy"> 
+    <h1 class="page-title"><?php echo $term_pcats->name; ?></h1>
+
+    <p><?php echo $term_pcats->description; ?></p>
   <ul class="section">
     <span>
   <?php
