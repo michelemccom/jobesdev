@@ -17,27 +17,6 @@ if ( function_exists('register_sidebar') ) {
 	));
 }
 
-$labels = array(
-    'name' => _x( 'Product Brands', 'taxonomy general name' ),
-    'singular_name' => _x( 'Product Brand', 'taxonomy singular name' ),
-    'search_items' =>  __( 'Search Product Brands' ),
-    'all_items' => __( 'All Product Brands' ),
-    'parent_item' => __( 'Parent Brand' ),
-    'parent_item_colon' => __( 'Parent Brand:' ),
-    'edit_item' => __( 'Edit Product Brand' ), 
-    'update_item' => __( 'Update Product Brand' ),
-    'add_new_item' => __( 'Add Product Brand' ),
-    'new_item_name' => __( 'New Product Brand' ),
-    'menu_name' => __( 'Product Brands' )
-  );    
- 
-register_taxonomy('brands',array('products'), array(
-    'hierarchical' => false,
-    'labels' => $labels,
-    'query_var' => true,
-    'show_ui' => true
- ));
-
 // Remove some Admin menu items
 function remove_admin_menu_item(){
 	global $menu;
