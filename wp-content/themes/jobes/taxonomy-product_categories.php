@@ -66,14 +66,15 @@ get_header();
 
                  <div>
                   <?php $termsID = array_unique($all_termsID);
-      
-                  foreach ($termsID as $termID) {?>
+                  var_dump($$all_termsID);
+                  foreach ($termsID as $termID) {
+                      var_dump($termID);?>
                     <div class="brand-header">
                       <?php $logo = get_field('brand_logo', $termID );
-                      var_dump($logo);
                         if (!empty($logo)){?>
                           <div class="logo-circle">
                             <span>
+                              <h1><?php echo $term; ?></h1>
                               <img src="<?php echo $logo;?>" alt="<?php echo $term;?>">
                             </span>
                           </div>
@@ -94,7 +95,8 @@ get_header();
                       the_content();
 
                     endwhile; endif;wp_reset_postdata();
-      
+               
+                    
                   $args=array(
                     'post_type' => 'products',
                     'parent'        => 0,             
@@ -136,7 +138,7 @@ get_header();
 
                   <?php endwhile; ?>
                 </ul>
-                  <?php endif;wp_reset_postdata();?>
+                  <?php endif;wp_reset_postdata(); ?>
                 </li>       
             <?php } 
           } else {
