@@ -63,10 +63,10 @@ get_header();
 
             }
           }
-          $posttermsID = get_the_terms( $post->ID, 'brands' ); 
+        $posttermsID = get_the_terms( $post->ID, 'brands' ); 
           if ($posttermsID) {
             foreach($posttermsID as $term) {
-              $all_termsID[] = $term->term_id;
+              $all_termsID[] = $term->ID;
 
             }
           }
