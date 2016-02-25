@@ -65,8 +65,9 @@ get_header();
                 <li>
                     <div class="brand-header">
                       <?php $brandID = get_the_terms( $post->ID, 'brands' ); 
-
-                      $logo = get_field('brand_logo', $term->term_id );
+          
+                      $bID = array_pop($brandID);
+                      $logo = get_field('brand_logo', $bID );
                       
                         if (!empty($logo)){?>
                           <div class="logo-circle">
