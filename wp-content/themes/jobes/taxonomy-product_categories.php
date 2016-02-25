@@ -136,7 +136,8 @@ get_header();
 
                   <?php endwhile; ?>
                   </ul>
-                  <?php endif;wp_reset_postdata(); ?>
+                  <?php endif;wp_reset_postdata();
+                  } ?>
                 </li>       
             <?php } 
           } ?>
