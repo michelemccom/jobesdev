@@ -63,6 +63,13 @@ get_header();
 
             }
           }
+          $posttermsID = get_the_terms( $post->ID, 'brands' ); 
+          if ($posttermsID) {
+            foreach($posttermsID as $term) {
+              $all_termsID[] = $term->term_id;
+
+            }
+          }
           endwhile; endif;
           if (!empty($all_terms[0])) {
           $terms = array_unique($all_terms);
@@ -73,6 +80,48 @@ get_header();
                      <a href="<?php echo get_option('home'); ?>/products/?brands=<?php echo $term_brands->slug;?>&product_categories=<?php echo $termtwo; ?>"><img src="<?php echo get_bloginfo('template_url')?>/images/<?php echo $term_brands->slug;?>-<?php echo $termtwo; ?>.jpg"> </a>
                   </div>
                    <h4><a href="<?php echo get_option('home'); ?>/products/?brands=<?php echo $term_brands->slug;?>&product_categories=<?php echo $termtwo; ?>"><?php echo $term;?> </a></h4>
+                   <?php 
+                  $terms = array_unique($all_termsID);
+                  foreach ($termsID as $termID) {
+                   
+
+                   $args=array(
+                    'post_type' => 'products',
+                    'parent'        => 0,             
+                    'tax_query' => array(
+                         array(
+                        'taxonomy'      => 'brands',    
+                        'parent'        => $termID,
+                        'terms'         => $termtwo,
+                        'field'         => 'slug'
+                        )
+                    )
+                  ); 
+                  $the_query = new WP_Query($args);
+                  if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->the_post(); ?>
+                    <li class="block"> 
+                       <?php if ( has_post_thumbnail() ) {
+                      $thumb_id = get_post_thumbnail_id();
+                    $thumb_url = wp_get_attachment_image_src($thumb_id,'block', true);?>
+                          <?php if (!empty($thumb_url[0])) { ?>
+                          <div class="round">
+                        <a href="<?php the_permalink(); ?>"><img src="<?php echo $thumb_url[0];?>"> </a>
+                      </div>
+                      <?php }
+                    } ?>
+
+                      <?php if (!empty($thumb_url)) { ?>
+                      <div class="round">
+                    <img src="<?php echo $thumb_url[0];?>" width="<?php echo $thumb_url[1];?>" height="<?php echo $$thumb_url[2]; ?>">
+                  </div>
+                  <?php } ?>
+                      <h4><?php the_title();?></h4>
+
+                      </li>
+
+                  <?php endwhile; endif;wp_reset_postdata(); 
+
+                }?>
                 </li>       
             <?php } 
           } else {
