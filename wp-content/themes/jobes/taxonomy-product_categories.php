@@ -70,16 +70,18 @@ get_header();
                      <?php
                       $term_ID = get_term_by( 'slug', $termtwo, 'brands' );
                       $termID = $term_ID->term_id;
-                      var_dump($termID);
-                      $image = get_post_meta($post->ID, "brand_logo", true); 
-                      
-                        if (!empty($logo)){?>
-                          <div class="logo-circle">
-                            <span>
+                     $logo = get_field('brand_logo', $term);
+      
+                      $size = 'logo'; // (thumbnail, medium, large, full or custom size)
+                      $image = wp_get_attachment_image_src( $logo, $size );
+
+                      if (!empty($image)){?>
+                        <div class="image-text">
+                          <span>
+                            <img src="<?php echo $image[0]; ?>" />
                             
-                            <img src="<?php echo $image; ?>" alt='' />
-                            </span>
-                          </div>
+                          </span>
+                        </div>
                         <?php } ?>
                         <h4><a href="<?php echo get_option('home'); ?>/brands/<?php echo $termtwo; ?>"><?php echo $term;?> </a></h4>
                     </div>
