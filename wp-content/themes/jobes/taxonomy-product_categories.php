@@ -66,15 +66,13 @@ get_header();
 
                  <div>
                   <?php $termsID = array_unique($all_termsID);
-                  var_dump($$all_termsID);
-                  foreach ($termsID as $termID) {
-                      var_dump($termID);?>
+      
+                  foreach ($termsID as $termID) {?>
                     <div class="brand-header">
                       <?php $logo = get_field('brand_logo', $termID );
                         if (!empty($logo)){?>
                           <div class="logo-circle">
                             <span>
-                              <h1><?php echo $term; ?></h1>
                               <img src="<?php echo $logo;?>" alt="<?php echo $term;?>">
                             </span>
                           </div>
