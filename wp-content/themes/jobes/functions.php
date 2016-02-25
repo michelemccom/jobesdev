@@ -143,3 +143,14 @@ function trim_content($text, $max_length){
      force_balance_tags( $text );
      return $text;   
 }
+
+function searchfilter($query) {
+
+    if ($query->is_search && !is_admin() ) {
+        $query->set('post_type',array('post','page', 'how-to'));
+    }
+
+return $query;
+}
+
+add_filter('pre_get_posts','searchfilter');
