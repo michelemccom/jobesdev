@@ -64,12 +64,13 @@ get_header();
           $termstwo = array_unique($all_termstwo);
             foreach (array_combine($terms, $termstwo) as $term => $termtwo) { ?>
                 <li>
+                  <?php $termsID = array_unique($all_termsID);
+                
+                  foreach ($termsID as $termID) {
+                      var_dump($termID);?>
                     <div class="brand-header">
-                      <?php 
-                      $termsID = array_unique($all_termsID);
-          
-                      $bID = array_pop($termsID);
-                      $logo = get_field('brand_logo', $bID );
+                    
+                      <?php $logo = get_field('brand_logo', $termID );
                       
                         if (!empty($logo)){?>
                           <div class="logo-circle">
