@@ -82,7 +82,7 @@ get_header();
                   </div>
                    <h4><a href="<?php echo get_option('home'); ?>/products/?brands=<?php echo $term_brands->slug;?>&product_categories=<?php echo $termtwo; ?>"><?php echo $term;?> </a></h4>
 
-                    <?php
+                    <?php echo $term.'-'.$term_brands;
                       $args = array(
                             'post_type' => 'brand_cat_desc',
                             'posts_per_page' => -1,
