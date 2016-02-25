@@ -14,7 +14,7 @@ get_header();
 ?>
 
 <div id="copy"> 
-  <h1 class="page-title"><?php echo $term_pcats->name; ?>?></h1>
+  <h1 class="page-title"><?php echo $term_pcats->name; ?></h1>
 
   <p><?php echo $term_pcats->description; ?></p>
   <ul class="section">
@@ -62,15 +62,13 @@ get_header();
           if (!empty($all_terms[0])) {
           $terms = array_unique($all_terms);
           $termstwo = array_unique($all_termstwo);
+          $termsID = array_unique($all_termsID);
             foreach (array_combine($terms, $termstwo) as $term => $termtwo) { ?>
                 <li>
-                  <?php $termsID = array_unique($all_termsID);
                 
-                  foreach ($termsID as $termID) {
-                      var_dump($termID);?>
                     <div class="brand-header">
-                    
-                      <?php $logo = get_field('brand_logo', $termID );
+                     <?php $termID = get_term_by( 'slug', 'termtwo', 'brands' );
+                     $logo = get_field('brand_logo', $termID );
                       
                         if (!empty($logo)){?>
                           <div class="logo-circle">
@@ -137,7 +135,7 @@ get_header();
                   <?php endwhile; ?>
                   </ul>
                   <?php endif;wp_reset_postdata();
-                  } ?>
+                   ?>
                 </li>       
             <?php } 
           } ?>
