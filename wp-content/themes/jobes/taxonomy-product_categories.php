@@ -101,10 +101,17 @@ get_header();
                     'post_type' => 'products',
                     'parent'        => 0,             
                     'tax_query' => array(
+                        'relation' => 'AND',
                          array(
                         'taxonomy'      => 'brands',    
                         'parent'        => $termID,
                         'terms'         => $termtwo,
+                        'field'         => 'slug'
+                        )
+                          array(
+                        'taxonomy'      => 'product_categories',    
+                        'parent'        => $term_id_pcats,
+                        'terms'         => $term_pcats,
                         'field'         => 'slug'
                         )
                     )
