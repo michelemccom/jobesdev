@@ -64,7 +64,7 @@ get_header();
             foreach (array_combine($terms, $termstwo) as $term => $termtwo) { ?>
                 <li>
 
-                 <div>
+             00
                   <?php $termsID = array_unique($all_termsID);
                 
                   foreach ($termsID as $termID) {
@@ -83,7 +83,7 @@ get_header();
                         <h4><a href="<?php echo get_option('home'); ?>/products/brands/<?php echo $termtwo; ?>"><?php echo $term;?> </a></h4>
                     </div>
                     
-                  </div>
+    
                   <?php $args = array(
                     'post_type' => 'brand_cat_desc',
                     'posts_per_page' => -1,
@@ -139,8 +139,9 @@ get_header();
 
                   <?php endwhile; ?>
                 </ul>
-                <?php } ?>
+
                   <?php endif;wp_reset_postdata(); ?>
+                    <?php } ?>
                 </li>       
             <?php } 
           } else {
