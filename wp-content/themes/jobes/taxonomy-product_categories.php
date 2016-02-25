@@ -71,14 +71,15 @@ get_header();
                       $term_ID = get_term_by( 'slug', $termtwo, 'brands' );
                       $termID = $term_ID->term_id;
                       var_dump($termID);
-                    $image = get_field('brand_logo', $termID);
-                     $size = 'logo';
+                      $logo = get_field('brand_logo', $termID);
+                      var_dump($logo);
+                      $size = 'logo';
                       
                         if (!empty($logo)){?>
                           <div class="logo-circle">
                             <span>
                             
-                              <?php echo wp_get_attachment_image( $image, $size ); ?>
+                              <?php echo wp_get_attachment_image( $logo, $size ); ?>
                             </span>
                           </div>
                         <?php } ?>

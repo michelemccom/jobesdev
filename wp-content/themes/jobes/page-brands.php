@@ -21,14 +21,14 @@ get_header(); ?>
 							<a href="<?php the_permalink(); echo $term->slug; ?>"><img src="<?php echo $circle;?>" alt="<?php echo $term->name;?>"></a>
 						</div>
 					<?php }
-					$image = get_field('brand_logo');
+					$logo = get_field('brand_logo');
 					$size = 'logo'; // (thumbnail, medium, large, full or custom size)
 
 					
 					if (!empty($logo)){?>
 						<div class="image-text">
 							<span>
-								<?php echo wp_get_attachment_image( $image, $size ); ?>
+								<?php echo wp_get_attachment_image( $logo, $size ); ?>
 								
 							</span>
 						</div>
