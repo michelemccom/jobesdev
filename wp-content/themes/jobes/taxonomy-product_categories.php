@@ -83,8 +83,8 @@ get_header();
                           </span>
                         </div>
                         <?php } ?>
-                        <h4><a href="<?php echo get_option('home'); ?>/brands/<?php echo $termtwo; ?>"><?php echo $term;?> </a></h4>
-                    </div>
+                        <h4 class="page-title"><a href="<?php echo get_option('home'); ?>/brands/<?php echo $termtwo; ?>"><?php echo $term;?> </a></h4>
+                   
                     
     
                   <?php $args = array(
@@ -98,10 +98,10 @@ get_header();
                     if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->the_post();
                       the_content();
 
-                    endwhile; endif;wp_reset_postdata();
+                    endwhile; endif;wp_reset_postdata(); ?>
             
-                    
-                  $args=array(
+                     </div>
+                 <?php $args=array(
                     'post_type' => 'products',
                     'parent'        => 0,             
                     'tax_query' => array(
