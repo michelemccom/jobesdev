@@ -47,6 +47,7 @@ if (in_array('tax-brands',$classes)) {
     $term_id_brands = $term_brands->term_id;
 
         $terms = get_the_terms( $term_id_brands, 'brands');
+        var_dump($terms);
         if( $terms ){
         $term = array_pop($terms);
         var_dump($term);
