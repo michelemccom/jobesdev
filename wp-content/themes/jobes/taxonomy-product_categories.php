@@ -61,15 +61,13 @@ get_header();
           if (!empty($all_terms[0])) {
           $terms = array_unique($all_terms);
           $termstwo = array_unique($all_termstwo);
-            foreach (array_combine($terms, $termstwo) as $term => $termtwo) { ?>
+          $termsID = array_unique($all_termsID);
+            foreach (array_combine($terms, $termstwo, $termsID) as $term => $termtwo =>$termID) { ?>
                 <li>
                     <div class="brand-header">
-                  <?php $termsID = array_unique($all_termsID);
-                
-                  foreach ($termsID as $termID) {
-                      var_dump($termID);
+      
 
-                      $logo = get_field('brand_logo', $termID );
+                     <?php $logo = get_field('brand_logo', $termID );
                       
                         if (!empty($logo)){?>
                           <div class="logo-circle">
