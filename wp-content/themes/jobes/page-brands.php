@@ -25,7 +25,7 @@ get_header(); ?>
 					if (!empty($logo)){?>
 						<div class="image-text">
 							<span>
-								<img src="<?php echo $logo;?>" alt="<?php echo $term->name;?>">
+								<img src="<?php echo $logo['url']; ?>" alt="<?php echo $logo['alt']; ?>" />
 								
 							</span>
 						</div>
