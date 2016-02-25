@@ -73,7 +73,7 @@ get_header();
           $termsID = array_unique($all_termsID);
 
 
-            foreach ($result) { ?>
+        ?>
                 <li>
                     <div class="brand-header">
                       <?php 
@@ -146,7 +146,7 @@ get_header();
                   <?php endif;wp_reset_postdata(); ?>
                 </li>    
                 <div class="divider"></div>   
-            <?php } 
+            <?php 
           } ?>
         </span> 
   </ul>
