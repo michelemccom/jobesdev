@@ -11,15 +11,6 @@ get_header();
   $slug_pcats = get_query_var( 'term' );
   $term_pcats = get_term_by( 'slug', $slug_pcats, 'product_categories' );
   $term_id_pcats = $term_pcats->term_id;
-  function mergeArrays($terms, $termstwo, $termsID) {
-              $result = array();
-
-              foreach ( $terms as $key=>$name ) {
-                  $result[] = array( 'name' => $name, 'slug' => $termstwo[$key], 'pid' => $termsID[ $key ] );
-              }
-
-              return $result;
-          }
 ?>
 
 <div id="copy"> 
@@ -70,24 +61,24 @@ get_header();
           if (!empty($all_terms[0])) {
           $terms = array_unique($all_terms);
           $termstwo = array_unique($all_termstwo);
-          $termsID = array_unique($all_termsID);
-
-
-        ?>
+            foreach (array_combine($terms, $termstwo) as $term => $termtwo) { ?>
                 <li>
                     <div class="brand-header">
                       <?php 
-                      $logo = get_field('brand_logo', $result[0]['pid'] );
+                      $termsID = array_unique($all_termsID);
+          
+                      $bID = array_pop($termsID);
+                      $logo = get_field('brand_logo', $bID );
                       
                         if (!empty($logo)){?>
                           <div class="logo-circle">
                             <span>
-                              <h1><?php echo $result[0]['name']; ?></h1>
-                              <img src="<?php echo $logo;?>" alt="<?php echo $result[0]['name'];?>">
+                              <h1><?php echo $term; ?></h1>
+                              <img src="<?php echo $logo;?>" alt="<?php echo $term;?>">
                             </span>
                           </div>
                         <?php } ?>
-                        <h4><a href="<?php echo get_option('home'); ?>/brands/<?php echo $result[0]['slug']; ?>"><?php echo $result[0]['name'];?> </a></h4>
+                        <h4><a href="<?php echo get_option('home'); ?>/brands/<?php echo $termtwo; ?>"><?php echo $term;?> </a></h4>
                     </div>
                     
     
@@ -96,7 +87,7 @@ get_header();
                     'posts_per_page' => -1,
                     'order' => 'ASC',
                     'orderby' => 'date',
-                    'name' => $result[0]['name'].'-'.$term_pcats->slug
+                    'name' => $term.'-'.$term_pcats->slug
                     );
                     $the_query = new WP_Query($args);
                     if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->the_post();
@@ -112,7 +103,7 @@ get_header();
                         'relation' => 'AND',
                          array(
                         'taxonomy'      => 'brands', 
-                        'terms'         => $result[0]['slug'],
+                        'terms'         => $termtwo,
                         'field'         => 'slug'
                         ),
                           array(
@@ -144,9 +135,8 @@ get_header();
                   <?php endwhile; ?>
                   </ul>
                   <?php endif;wp_reset_postdata(); ?>
-                </li>    
-                <div class="divider"></div>   
-            <?php 
+                </li>       
+            <?php } 
           } ?>
         </span> 
   </ul>
