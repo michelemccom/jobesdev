@@ -25,9 +25,9 @@ get_header(); ?>
 				<?php if ($imageText == "image"){
 						$attachment_id = get_post_meta( $post->ID, 'block_one_secondary_image', true ); 
 						$image_attributes_one_s = wp_get_attachment_image_src( $attachment_id, 'full' ); ?>
-						<span><img src="<?php echo $image_attributes_one_s[0];?>" width="<?php echo $image_attributes_one_s[1];?>" height="<?php echo $image_attributes_one_s[2]; ?>"></span>
+						<span><a href="<?php echo get_post_meta($post->ID, "block_one_link", true);?>"><img src="<?php echo $image_attributes_one_s[0];?>" width="<?php echo $image_attributes_one_s[1];?>" height="<?php echo $image_attributes_one_s[2]; ?>"></a></span>
 				<?php } elseif ($imageText == "subtitle") { ?>	 
-					<h5><?php echo get_post_meta($post->ID, "block_one_subtitle", true);?></h5>
+					<h5><a href="<?php echo get_post_meta($post->ID, "block_one_link", true);?>"><?php echo get_post_meta($post->ID, "block_one_subtitle", true);?></a></h5>
 				<?php } ?>
 				</div>
 			<?php } ?>
@@ -47,9 +47,9 @@ get_header(); ?>
 				<?php if ($imageText == "image"){
 						$attachment_id = get_post_meta( $post->ID, 'block_two_secondary_image', true ); 
 						$image_attributes_two_s = wp_get_attachment_image_src( $attachment_id, 'full' ); ?>
-						<span><img src="<?php echo $image_attributes_two_s[0];?>" width="<?php echo $image_attributes_two_s[1];?>" height="<?php echo $image_attributes_two_s[2]; ?>"></span>
+						<span><a href="<?php echo get_post_meta($post->ID, "block_two_link", true);?>"><img src="<?php echo $image_attributes_two_s[0];?>" width="<?php echo $image_attributes_two_s[1];?>" height="<?php echo $image_attributes_two_s[2]; ?>"></a></span>
 				<?php } elseif ($imageText == "subtitle") { ?>	 
-					<h5><?php echo get_post_meta($post->ID, "block_two_subtitle", true);?></h5>
+					<h5><a href="<?php echo get_post_meta($post->ID, "block_two_link", true);?>"><?php echo get_post_meta($post->ID, "block_two_subtitle", true);?></a><a href="<?php echo get_post_meta($post->ID, "block_two_link", true);?>"></h5>
 				<?php } ?>
 				</div>
 			<?php } ?>
@@ -69,9 +69,9 @@ get_header(); ?>
 				<?php if ($imageText == "image"){
 						$attachment_id = get_post_meta( $post->ID, 'block_three_secondary_image', true ); 
 						$image_attributes_three_s = wp_get_attachment_image_src( $attachment_id, 'full' ); ?>
-						<span><img src="<?php echo $image_attributes_three_s[0];?>" width="<?php echo $image_attributes_three_s[1];?>" height="<?php echo $image_attributes_three_s[2]; ?>"></span>
+						<span><a href="<?php echo get_post_meta($post->ID, "block_three_link", true);?>"><img src="<?php echo $image_attributes_three_s[0];?>" width="<?php echo $image_attributes_three_s[1];?>" height="<?php echo $image_attributes_three_s[2]; ?>"></a></span>
 				<?php } elseif ($imageText == "subtitle") { ?>	 
-					<h5><?php echo get_post_meta($post->ID, "block_three_subtitle", true);?></h5>
+					<h5><a href="<?php echo get_post_meta($post->ID, "block_three_link", true);?>"><?php echo get_post_meta($post->ID, "block_three_subtitle", true);?></a></h5>
 				<?php } ?>
 				</div>
 			<?php } ?>
