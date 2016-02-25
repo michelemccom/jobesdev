@@ -8,27 +8,14 @@ get_header();
 ?>
 <?php
 
-  $slug_brands = get_query_var( 'term' );
-  $term_brands = get_term_by( 'slug', $slug_brands, 'product_categories' );
-  $term_id_brands = $term_brands->term_id;
+  $slug_pcats = get_query_var( 'term' );
+  $term_pcats = get_term_by( 'slug', $slug_pcats, 'product_categories' );
+  $term_id_pcats = $term_pcats->term_id;
 ?>
-<div class="brand-header">
-  <?php $logo = get_field('brand_logo', $term_brands );
-          if (!empty($logo)){?>
-            <div class="logo-circle">
-              <span>
-                <h1><?php echo $term_brands->name; ?></h1>
-                <img src="<?php echo $logo;?>" alt="<?php echo $term->name;?>">
-              </span>
-            </div>
-          <?php } ?>
-          <div class="brand-tagline">
-            <h2><?php echo get_field('brand_tagline', $term_brands );?></h2>
-          </div>
-</div>
+
 <div id="copy"> 
 
-  <p><?php echo $term_brands->description; ?></p>
+  <p><?php echo $term_pcats->description; ?></p>
   <ul class="section">
     <span>
   <?php
@@ -38,8 +25,8 @@ get_header();
       'tax_query' => array(
            array(
           'taxonomy'      => 'product_categories',    
-          'parent'        => $term_id_brands,
-          'terms'         => $term_brands,
+          'parent'        => $term_id_pcats,
+          'terms'         => $term_pcats,
           'field'         => 'slug'
           )
       )
@@ -78,9 +65,23 @@ get_header();
                 <li>
 
                  <div>
-                     <a href="<?php echo get_option('home'); ?>/products/?brands=<?php echo $term_brands->slug;?>&product_categories=<?php echo $termtwo; ?>"><img src="<?php echo get_bloginfo('template_url')?>/images/<?php echo $term_brands->slug;?>-<?php echo $termtwo; ?>.jpg"> </a>
+                  <?php $termsID = array_unique($all_termsID);
+                     foreach ($termsID as $termID) {?>
+                     <div class="brand-header">
+                          <?php $logo = get_field('brand_logo', $termID );
+                                  if (!empty($logo)){?>
+                                    <div class="logo-circle">
+                                      <span>
+                                        <h1><?php echo $term; ?></h1>
+                                        <img src="<?php echo $logo;?>" alt="<?php echo $term;?>">
+                                      </span>
+                                    </div>
+                                  <?php } ?>
+                                  <h4><a href="<?php echo get_option('home'); ?>/products/?brands=<?php echo $termtwo; ?>"><?php echo $term;?> </a></h4>
+                        </div>
+                        <?php } ?>
                   </div>
-                   <h4><a href="<?php echo get_option('home'); ?>/products/?brands=<?php echo $term_brands->slug;?>&product_categories=<?php echo $termtwo; ?>"><?php echo $term;?> </a></h4>
+              
                     <?php $args = array(
                             'post_type' => 'brand_cat_desc',
                             'posts_per_page' => -1,
@@ -94,7 +95,7 @@ get_header();
 
                         endwhile; endif;wp_reset_postdata();?>
                    <?php 
-                  $termsID = array_unique($all_termsID);
+                  
                   foreach ($termsID as $termID) {
       
 
