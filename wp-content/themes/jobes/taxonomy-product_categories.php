@@ -96,6 +96,7 @@ get_header();
 
                     endwhile; endif;wp_reset_postdata();?>
                   <?php foreach ($termsID as $termID) {
+                    var_dump($termID);
                   $args=array(
                     'post_type' => 'products',
                     'parent'        => 0,             
