@@ -487,7 +487,7 @@ h1.page-title {
   margin: 0 auto 50px;
 }
 
-
+#copy img {max-width: 100%; height: auto;}
 /* ================================ Search ================================ */		
 
 body.search .post { margin-bottom:3.0em; }	
@@ -529,7 +529,7 @@ input[type="submit"] {
   display: block;
   color: #df002b;
 }
-.call-out img {margin-bottom: 40px}
+.call-out img {margin-bottom: 40px; max-width: 100%; height: auto;}
 /* ================================ Brands ================================ */    
 
 .brand-header {position: relative; width: 94%; padding: 0 3%;}
