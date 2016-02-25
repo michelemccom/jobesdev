@@ -10,7 +10,7 @@ get_header(); ?>
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 		<h1 class="page-title"><?php the_title(); ?></h1>
 		<?php the_content(); 
-		$terms = get_terms( 'brands', 'orderby=count&hide_empty=1' );
+		$terms = get_terms('brands');
 		if( $terms ): ?>
 			<ul class="blocks section">
 			<?php foreach( $terms as $term ): ?>
@@ -21,15 +21,11 @@ get_header(); ?>
 							<a href="<?php the_permalink(); echo $term->slug; ?>"><img src="<?php echo $circle;?>" alt="<?php echo $term->name;?>"></a>
 						</div>
 					<?php }
-					$logo = get_field('brand_logo', $term);
-					var_dump($logo);
-					$size = 'logo'; // (thumbnail, medium, large, full or custom size)
-					$image = wp_get_attachment_image_src( $logo, $size );
-
-					if (!empty($image)){?>
+					$logo = get_field('brand_logo', $term );
+					if (!empty($logo)){?>
 						<div class="image-text">
 							<span>
-								<img src="<?php echo $image[1]; ?>" />
+								<img src="<?php echo $logo;?>" alt="<?php echo $term->name;?>">
 								
 							</span>
 						</div>
