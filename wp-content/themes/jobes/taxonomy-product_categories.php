@@ -82,7 +82,7 @@ get_header();
                         <?php } ?>
                         <h4><a href="<?php echo get_option('home'); ?>/products/brands/<?php echo $termtwo; ?>"><?php echo $term;?> </a></h4>
                     </div>
-                    <?php } ?>
+                    
                   </div>
                   <?php $args = array(
                     'post_type' => 'brand_cat_desc',
@@ -139,6 +139,7 @@ get_header();
 
                   <?php endwhile; ?>
                 </ul>
+                <?php } ?>
                   <?php endif;wp_reset_postdata(); ?>
                 </li>       
             <?php } 
