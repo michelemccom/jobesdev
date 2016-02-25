@@ -7,7 +7,6 @@
 get_header();
 ?>
 
-<div id="copy"> 
 
 		<?php if (have_posts()) : ?>
 
@@ -27,7 +26,7 @@ get_header();
  	  <?php /* If this is a paged archive */ } elseif (isset($_GET['paged']) && !empty($_GET['paged'])) { ?>
 		<h4>Blog Archives</h4>
  	  <?php } ?>
-
+<div id="copy"> 
 		<?php while (have_posts()) : the_post(); ?>
 		<div <?php post_class() ?>>
             <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
@@ -70,6 +69,5 @@ get_header();
 ?>
 
 	</div>
-
 
 <?php get_footer(); ?>
