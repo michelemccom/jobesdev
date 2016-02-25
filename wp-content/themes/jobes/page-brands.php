@@ -24,7 +24,7 @@ get_header(); ?>
 					$logo = get_field('brand_logo');
 					$size = 'logo'; // (thumbnail, medium, large, full or custom size)
 					$image = wp_get_attachment_image_src( $logo, $size );
-
+					var_dump($image);
 					if (!empty($image)){?>
 						<div class="image-text">
 							<span>
