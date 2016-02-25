@@ -33,7 +33,9 @@ $ptitle = preg_replace('/[^a-z]/', " ", $ptitle); ?>
 		<h4>Author Archive</h4>
  	  <?php /* If this is a paged archive */ } elseif (isset($_GET['paged']) && !empty($_GET['paged'])) { ?>
 		<h4>Blog Archives</h4>
- 	  <?php } 
+ 	  <?php } else {?>
+ 	  	<h1 class="page-title"><?php echo the_title(); ?></h1>
+ 	 <?php }
 	}
 	$args = array(
         'post_type' => 'brand_cat_desc',
