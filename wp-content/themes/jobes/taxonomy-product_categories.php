@@ -83,7 +83,7 @@ get_header();
                           </span>
                         </div>
                         <?php } ?>
-                        <h4 class="page-title"><a href="<?php echo get_option('home'); ?>/brands/<?php echo $termtwo; ?>"><?php echo $term;?> </a></h4>
+                        <h3 class="page-title"><a href="<?php echo get_option('home'); ?>/brands/<?php echo $termtwo; ?>"><?php echo $term;?> </a></h3>
                    
                     
     
