@@ -92,9 +92,7 @@ get_header();
                       the_content();
 
                     endwhile; endif;wp_reset_postdata();
-              $termsID = array_unique($all_termsID);
-                 foreach ($termsID as $termID) {
-                      var_dump($termID);
+            
                     
                   $args=array(
                     'post_type' => 'products',
@@ -102,8 +100,7 @@ get_header();
                     'tax_query' => array(
                         'relation' => 'AND',
                          array(
-                        'taxonomy'      => 'brands',    
-                        'parent'        => $termID,
+                        'taxonomy'      => 'brands', 
                         'terms'         => $termtwo,
                         'field'         => 'slug'
                         ),
@@ -121,25 +118,21 @@ get_header();
                   <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
                     <li class="block"> 
                        <?php if ( has_post_thumbnail() ) {
-                      $thumb_id = get_post_thumbnail_id();
-                    $thumb_url = wp_get_attachment_image_src($thumb_id,'block', true);?>
+                        $thumb_id = get_post_thumbnail_id();
+                        $thumb_url = wp_get_attachment_image_src($thumb_id,'block', true);?>
                           <?php if (!empty($thumb_url[0])) { ?>
-                          <div class="round">
-                        <a href="<?php the_permalink(); ?>"><img src="<?php echo $thumb_url[0];?>"> </a>
-                      </div>
-                      <?php }
-                    } ?>
-
-          
+                            <div class="round">
+                              <a href="<?php the_permalink(); ?>"><img src="<?php echo $thumb_url[0];?>"> </a>
+                            </div>
+                          <?php }
+                        } ?>
                       <h4><?php the_title();?></h4>
 
                       </li>
 
                   <?php endwhile; ?>
-                </ul>
-
+                  </ul>
                   <?php endif;wp_reset_postdata(); ?>
-                    <?php } ?>
                 </li>       
             <?php } 
           } ?>
