@@ -67,7 +67,6 @@ get_header();
                       <?php $brandID = get_the_terms( $post->ID, 'brands' ); 
           
                       $bID = array_pop($brandID);
-                      var_dump($bID);
                       $logo = get_field('brand_logo', $bID );
                       
                         if (!empty($logo)){?>

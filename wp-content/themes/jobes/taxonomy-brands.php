@@ -37,12 +37,12 @@ get_header();
       'parent'        => 0,             
       'tax_query' => array(
            array(
-          'taxonomy'      => 'brands',    
-          'parent'        => $term_id_brands,
+          'taxonomy'      => 'brands',  
           'terms'         => $term_brands,
           'field'         => 'slug'
           )
-      )
+      ),
+       'posts_per_page' => -1,
     ); 
     $the_query = new WP_Query($args);
     if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->the_post(); ?>
@@ -86,7 +86,8 @@ get_header();
                   'terms'         => $term_brands,
                   'field'         => 'slug'
                   )
-              )
+              ),
+               'posts_per_page' => -1,
             ); 
             $the_query = new WP_Query($args);
             if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->the_post(); ?>
