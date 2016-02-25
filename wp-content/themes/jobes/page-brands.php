@@ -15,6 +15,7 @@ get_header(); ?>
 		$terms = get_terms('brands');
 		if( $terms ): ?>
 			<ul class="blocks section">
+				<span>
 			<?php foreach( $terms as $term ): ?>
 				<li class="block">
 					<?php $circle = get_field('brand_image', $term );
@@ -34,6 +35,7 @@ get_header(); ?>
 					<?php } ?>
 				</li>
 			<?php endforeach; ?>
+		</span>
 			</ul>
 		<?php endif; ?>
 	<?php endwhile; endif; ?>   
