@@ -583,7 +583,7 @@ input[type="submit"] {
 .error404 h2 {font-size: 68px; margin-bottom: 10px;}
 .error404 h5 {font-size: 32px; margin-bottom: 50px;}
 .error404 p {color: #205131;}
-.error404 p.red {color:#df002b; }
+.error404 p.red {color:#df002b; margin-bottom: 5px; }
 .error404 #copy img {max-width: 313px; width: 40%; margin-right: 2%; float: left;}
 
 /* ================================ Misc ================================ */		
