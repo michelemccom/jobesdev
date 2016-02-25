@@ -14,6 +14,7 @@ get_header();
 ?>
 
 <div id="copy"> 
+  <h1 class="page-title"><?php the_title(); ?></h1>
 
   <p><?php echo $term_pcats->description; ?></p>
   <ul class="section">
