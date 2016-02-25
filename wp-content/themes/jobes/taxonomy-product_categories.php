@@ -67,7 +67,7 @@ get_header();
                       <?php $brandID = get_the_terms( $post->ID, 'brands' ); 
 
                       $logo = get_field('brand_logo', $term );
-                      var_dump($logo);
+                      var_dump($brandID);
                         if (!empty($logo)){?>
                           <div class="logo-circle">
                             <span>
@@ -92,6 +92,7 @@ get_header();
                       the_content();
 
                     endwhile; endif;wp_reset_postdata();
+              $termsID = array_unique($all_termsID);
                  foreach ($termsID as $termID) {
                       var_dump($termID);
                     
