@@ -14,7 +14,7 @@ get_header();
 ?>
 
 <div id="copy"> 
-  <h1 class="page-title"><?php the_title(); ?></h1>
+  <h1 class="page-title"><?php echo $term_pcats->name; ?>?></h1>
 
   <p><?php echo $term_pcats->description; ?></p>
   <ul class="section">
