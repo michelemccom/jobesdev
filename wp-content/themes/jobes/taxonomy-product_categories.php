@@ -70,6 +70,7 @@ get_header();
                   foreach ($termsID as $termID) {?>
                     <div class="brand-header">
                       <?php $logo = get_field('brand_logo', $termID );
+                      var_dump($logo);
                         if (!empty($logo)){?>
                           <div class="logo-circle">
                             <span>
@@ -92,9 +93,8 @@ get_header();
                     if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->the_post();
                       the_content();
 
-                    endwhile; endif;wp_reset_postdata();?>
-                  <?php foreach ($termsID as $termID) {
-                    var_dump($termID);
+                    endwhile; endif;wp_reset_postdata();
+      
                   $args=array(
                     'post_type' => 'products',
                     'parent'        => 0,             
