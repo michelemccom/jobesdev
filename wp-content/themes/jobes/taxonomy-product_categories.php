@@ -79,7 +79,7 @@ get_header();
                             </span>
                           </div>
                         <?php } ?>
-                        <h4><a href="<?php echo get_option('home'); ?>/products/?brands=<?php echo $termtwo; ?>"><?php echo $term;?> </a></h4>
+                        <h4><a href="<?php echo get_option('home'); ?>/products/brands/<?php echo $termtwo; ?>"><?php echo $term;?> </a></h4>
                     </div>
                     <?php } ?>
                   </div>
