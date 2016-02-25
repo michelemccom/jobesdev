@@ -29,7 +29,7 @@ get_header(); ?>
 					if (!empty($image)){?>
 						<div class="image-text">
 							<span>
-								<img src="<?php echo $image[0]; ?>" />
+								<img src="<?php echo $image[1]; ?>" />
 								
 							</span>
 						</div>
