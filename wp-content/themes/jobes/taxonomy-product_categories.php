@@ -66,7 +66,8 @@ get_header();
 
                  <div>
                   <?php $termsID = array_unique($all_termsID);
-                     foreach ($termsID as $termID) {?>
+                     foreach ($termsID as $termID) {
+                      var_dump($termsID);?>
                      <div class="brand-header">
                           <?php $logo = get_field('brand_logo', $termID );
                                   if (!empty($logo)){?>
