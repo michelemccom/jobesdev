@@ -107,7 +107,7 @@ get_header();
                         'parent'        => $termID,
                         'terms'         => $termtwo,
                         'field'         => 'slug'
-                        )
+                        ),
                           array(
                         'taxonomy'      => 'product_categories',    
                         'parent'        => $term_id_pcats,
