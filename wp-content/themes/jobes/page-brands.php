@@ -10,7 +10,7 @@ get_header(); ?>
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 		<h1 class="page-title"><?php the_title(); ?></h1>
 		<?php the_content(); 
-		$terms = get_terms('brands');
+		$terms = get_terms( 'brands', 'orderby=count&hide_empty=1' );
 		if( $terms ): ?>
 			<ul class="blocks section">
 			<?php foreach( $terms as $term ): ?>
