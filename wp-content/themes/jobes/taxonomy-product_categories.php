@@ -133,7 +133,8 @@ get_header();
                   </ul>
                   <?php endif;wp_reset_postdata();
                    ?>
-                </li>       
+                </li>  
+                <div class="divider"></div>     
             <?php } 
           } ?>
         </span> 
