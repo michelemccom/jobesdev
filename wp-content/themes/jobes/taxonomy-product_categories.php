@@ -73,14 +73,13 @@ get_header();
                       $termID = $term_ID->term_id;
                 
                   
-                     $logo =  the_field('brand_logo', 'brands_'.$termID); 
-                      var_dump($logo);
-                      
+                 
+                
                         if (!empty($logo)){?>
                           <div class="logo-circle">
                             <span>
                               <h1><?php echo $term; ?></h1>
-                              <img src="<?php echo $logo;?>" alt="<?php echo $term;?>">
+                              <img src="<?php echo the_field('brand_logo', 'brands_'.$termID); ;?>" alt="<?php echo $term;?>">
                             </span>
                           </div>
                         <?php } ?>
