@@ -71,9 +71,10 @@ get_header();
                      <?php
                       $term_ID = get_term_by( 'slug', $termtwo, 'brands' );
                       $termID = $term_ID->term_id;
+                       $id = $termtwo.'_'.$termID;
+
                   
-                  
-                     $logo = get_field('brand_logo', $term );
+                     $logo = get_field('brand_logo', $id );
                       var_dump($logo);
                       
                         if (!empty($logo)){?>
