@@ -71,23 +71,20 @@ get_header();
                      <?php
                       $term_ID = get_term_by( 'slug', $termtwo, 'brands' );
                       $termID = $term_ID->term_id;
-                      $terms = get_the_terms(  get_the_ID(), 'brands');
-
-
-              // we will use the first term to load ACF data from
-            
-                
-                $terms = array_pop($terms);
-                $image = get_field('brand_logo', $term );
-                 if (!empty($image)){?>
-                        <div class="image-text">
-                          <span>
-                            <img src="<?php echo $image; ?>" />
-                            
-                          </span>
-                        </div>
-                        <?php } ?>
-                        <h3 class="page-title"><a href="<?php echo get_option('home'); ?>/brands/<?php echo $termtwo; ?>"><?php echo $term;?> </a></h3>
+                 
+                $brandID = get_the_terms( $termID, 'brands' ); 
+          
+                      $bID = array_pop($brandID);
+                      $logo = get_field('brand_logo', $bID );
+                      
+                        if (!empty($logo)){?>
+                          <div class="logo-circle">
+                            <span>
+                              <h1><?php echo $term; ?></h1>
+                              <img src="<?php echo $logo;?>" alt="<?php echo $term;?>">
+                            </span>
+                          </div>
+                        <?php } ?>title"><a href="<?php echo get_option('home'); ?>/brands/<?php echo $termtwo; ?>"><?php echo $term;?> </a></h3>
                    
                     
     
