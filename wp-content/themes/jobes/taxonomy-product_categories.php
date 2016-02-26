@@ -70,19 +70,19 @@ get_header();
                     <div class="brand-header">
                      <?php
                       $term_ID = get_term_by( 'slug', $termtwo, 'brands' );
-                      $termID = $term_ID->term_id;
+                      $termID = $term_ID->term_id; ?>
                 
                   
                  
                 
-                        if (!empty($logo)){?>
+                  
                           <div class="logo-circle">
                             <span>
                               <h1><?php echo $term; ?></h1>
                               <img src="<?php echo the_field('brand_logo', 'brands_'.$termID); ;?>" alt="<?php echo $term;?>">
                             </span>
                           </div>
-                        <?php } ?>
+                      
                         <h3 class="page-title"><a href="<?php echo get_option('home'); ?>/brands/<?php echo $termtwo; ?>"><?php echo $term;?> </a></h3>
                    
                     
