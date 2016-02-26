@@ -218,18 +218,18 @@ add_action( 'add_meta_boxes', 'gpj_change_meta_box');
     }
 
     // remove old meta box
-add_action( 'admin_menu', 'gpj_remove_meta_box');
-function gpj_remove_meta_box() {
+add_action( 'admin_menu', 'gpj2_remove_meta_box');
+function gpj2_remove_meta_box() {
    remove_meta_box('tagsdiv-brands', 'where', 'normal');
 } 
 
-add_action( 'add_meta_boxes', 'gpj_change_meta_box');
-    function gpj_change_meta_box() {
+add_action( 'add_meta_boxes', 'gpj2_change_meta_box');
+    function gpj2_change_meta_box() {
     remove_meta_box('tagsdiv-brands', 'where', 'normal');
-    add_meta_box( 'gpj-brands', 'Brands','gpj_mytaxonomy_metabox','products' ,'side','core');
+    add_meta_box( 'gpj-brands', 'Brands','gpj2_mytaxonomy_metabox','products' ,'side','core');
 }  
 
-    function gpj_mytaxonomy_metabox($post) {  
+    function gpj2_mytaxonomy_metabox($post) {  
 
         $taxonomy = 'brands';  
 
@@ -280,18 +280,18 @@ add_action( 'add_meta_boxes', 'gpj_change_meta_box');
 //make tax's checkbox Categories
 
 // remove old meta box
-add_action( 'admin_menu', 'gpj_remove_meta_box');
-function gpj_remove_meta_box() {
+add_action( 'admin_menu', 'gpj3_remove_meta_box');
+function gpj3_remove_meta_box() {
    remove_meta_box('tagsdiv-product_categories', 'products', 'normal');
 } 
 
-add_action( 'add_meta_boxes', 'gpj_change_meta_box');
-    function gpj_change_meta_box() {
+add_action( 'add_meta_boxes', 'gpj3_change_meta_box');
+    function gpj3_change_meta_box() {
     remove_meta_box('tagsdiv-product_categories', 'products', 'normal');
-    add_meta_box( 'gpj-product_categories', 'Product Categories','gpj_mytaxonomy_metabox','products' ,'side','core');
+    add_meta_box( 'gpj-product_categories', 'Product Categories','gpj3_mytaxonomy_metabox','products' ,'side','core');
 }  
 
-    function gpj_mytaxonomy_metabox($post) {  
+    function gpj3_mytaxonomy_metabox($post) {  
 
         $taxonomy = 'product_categories';  
 
