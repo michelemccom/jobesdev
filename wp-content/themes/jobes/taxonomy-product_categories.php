@@ -71,8 +71,8 @@ get_header();
                      <?php
                       $term_ID = get_term_by( 'slug', $termtwo, 'brands' );
                       $termID = $term_ID->term_id;
-                 
-                $brandID = get_the_terms( $termID, 'brands' ); 
+                  
+               $brandID = get_the_terms( $termID, 'brands' ); 
           
                       $bID = array_pop($brandID);
                       $logo = get_field('brand_logo', $bID );
@@ -84,7 +84,8 @@ get_header();
                               <img src="<?php echo $logo;?>" alt="<?php echo $term;?>">
                             </span>
                           </div>
-                        <?php } ?>title"><a href="<?php echo get_option('home'); ?>/brands/<?php echo $termtwo; ?>"><?php echo $term;?> </a></h3>
+                        <?php } ?>
+                        <h3 class="page-title"><a href="<?php echo get_option('home'); ?>/brands/<?php echo $termtwo; ?>"><?php echo $term;?> </a></h3>
                    
                     
     
