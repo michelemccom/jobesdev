@@ -178,7 +178,7 @@ function exclude_page_templates_from_search($query) {
         $query->set('meta_query', $meta_query);
     }
 }
-add_filter('pre_get_posts','exclude_page_templates_from_search')
+add_filter('pre_get_posts','exclude_page_templates_from_search');
 
 
 
