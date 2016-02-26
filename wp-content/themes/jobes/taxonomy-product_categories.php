@@ -71,7 +71,7 @@ get_header();
                      <?php
                       $term_ID = get_term_by( 'slug', $termtwo, 'brands' );
                       $termID = $term_ID->term_id;
-                      $terms = get_the_terms(  $termID, 'brands');
+                      $terms = get_the_terms(  get_the_ID(), 'brands');
 
 
               // we will use the first term to load ACF data from
