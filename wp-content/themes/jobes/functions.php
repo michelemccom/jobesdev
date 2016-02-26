@@ -156,7 +156,7 @@ return $query;
 add_filter('pre_get_posts','searchfilter');
 
 
-//make tax's checkbox
+//make tax's checkbox Brands
 
 // remove old meta box
 add_action( 'admin_menu', 'gpj_remove_meta_box');
@@ -216,3 +216,125 @@ add_action( 'add_meta_boxes', 'gpj_change_meta_box');
 </div>
 <?php
     }
+
+    // remove old meta box
+add_action( 'admin_menu', 'gpj_remove_meta_box');
+function gpj_remove_meta_box() {
+   remove_meta_box('tagsdiv-brands', 'where', 'normal');
+} 
+
+add_action( 'add_meta_boxes', 'gpj_change_meta_box');
+    function gpj_change_meta_box() {
+    remove_meta_box('tagsdiv-brands', 'where', 'normal');
+    add_meta_box( 'gpj-brands', 'Brands','gpj_mytaxonomy_metabox','products' ,'side','core');
+}  
+
+    function gpj_mytaxonomy_metabox($post) {  
+
+        $taxonomy = 'brands';  
+
+        // all terms of ctax
+        $all_ctax_terms = get_terms($taxonomy,array('hide_empty' => 0)); 
+
+        // all the terms currenly assigned to the post
+        $all_post_terms = get_the_terms( $post->ID,$taxonomy );  
+
+        // name for each input, notice the extra []
+        $name = 'tax_input[' . $taxonomy . '][]';  
+
+        // make an array of the ids of all terms attached to the post
+        $array_post_term_ids = array();
+        if ($all_post_terms) {
+            foreach ($all_post_terms as $post_term) {
+                $post_term_id = $post_term->term_id;
+                $array_post_term_ids[] = $post_term_id;
+            }
+        }
+
+        ?>
+
+<div id="taxonomy-<?php echo $taxonomy; ?>" class="categorydiv"> 
+
+        <input type="hidden" name="<?php echo $name; ?>" value="0" />
+
+        <ul>
+            <?php   foreach($all_ctax_terms as $term){
+                    if (in_array($term->term_id, $array_post_term_ids)) {
+                        $checked = "checked = ''";
+                    }
+                    else {
+                        $checked = "";
+                    }
+                $id = $taxonomy.'-'.$term->term_id;
+                echo "<li id='$id'>";
+                echo "<input type='checkbox' name='{$name}'id='in-$id'"
+                . $checked ."value='$term->slug' /><label> $term->name</label><br />";
+               echo "</li>";
+            }?>
+       </ul>
+</div>
+<?php
+    }
+
+
+//make tax's checkbox Categories
+
+// remove old meta box
+add_action( 'admin_menu', 'gpj_remove_meta_box');
+function gpj_remove_meta_box() {
+   remove_meta_box('tagsdiv-product_categories', 'products', 'normal');
+} 
+
+add_action( 'add_meta_boxes', 'gpj_change_meta_box');
+    function gpj_change_meta_box() {
+    remove_meta_box('tagsdiv-product_categories', 'products', 'normal');
+    add_meta_box( 'gpj-product_categories', 'Product Categories','gpj_mytaxonomy_metabox','products' ,'side','core');
+}  
+
+    function gpj_mytaxonomy_metabox($post) {  
+
+        $taxonomy = 'product_categories';  
+
+        // all terms of ctax
+        $all_ctax_terms = get_terms($taxonomy,array('hide_empty' => 0)); 
+
+        // all the terms currenly assigned to the post
+        $all_post_terms = get_the_terms( $post->ID,$taxonomy );  
+
+        // name for each input, notice the extra []
+        $name = 'tax_input[' . $taxonomy . '][]';  
+
+        // make an array of the ids of all terms attached to the post
+        $array_post_term_ids = array();
+        if ($all_post_terms) {
+            foreach ($all_post_terms as $post_term) {
+                $post_term_id = $post_term->term_id;
+                $array_post_term_ids[] = $post_term_id;
+            }
+        }
+
+        ?>
+
+<div id="taxonomy-<?php echo $taxonomy; ?>" class="categorydiv"> 
+
+        <input type="hidden" name="<?php echo $name; ?>" value="0" />
+
+        <ul>
+            <?php   foreach($all_ctax_terms as $term){
+                    if (in_array($term->term_id, $array_post_term_ids)) {
+                        $checked = "checked = ''";
+                    }
+                    else {
+                        $checked = "";
+                    }
+                $id = $taxonomy.'-'.$term->term_id;
+                echo "<li id='$id'>";
+                echo "<input type='checkbox' name='{$name}'id='in-$id'"
+                . $checked ."value='$term->slug' /><label> $term->name</label><br />";
+               echo "</li>";
+            }?>
+       </ul>
+</div>
+<?php
+    }
+
