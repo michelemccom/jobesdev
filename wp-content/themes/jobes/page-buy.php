@@ -20,7 +20,7 @@ $pbrand = $query['brand'];?>
 	        'post_type' => 'where',
 	        'posts_per_page' => -1,
 	        'order' => 'ASC',
-	        'orderby' => 'date',
+	        'orderby' => 'title',
 	         'tax_query' => array(
            
 	             array(
