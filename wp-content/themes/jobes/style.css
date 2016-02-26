@@ -566,11 +566,12 @@ box-shadow: -1px -1px 30px 2px rgba(0,0,0,0.5);
   margin: -5px auto 0;
 }
 .brand-header .logo-circle h1 {display: none; text-indent: -10000px;}
-.brand-header .brand-tagline,.brand-header .brand-desc {
+.brand-header .brand-tagline, .brand-header .brand-desc {
   width: auto;
   height: 255px;
   display: table;
 }
+.brand-header .brand-tagline {margin-bottom: 20px;}
 .brand-header .brand-tagline h2 {
   margin:0; 
   font-size: 50px;  
