@@ -23,19 +23,13 @@
 	    	<h5>Connect</h5>
 	    	<ul>
 	    		<li class="facebook">
-	                <a target="_blank" title="facebook" href="https://www.facebook.com/">Facebook</a>
+	                <a target="_blank" title="facebook" href="https://www.facebook.com/EasyGardenerInc/">Facebook</a>
 	            </li>
 	            <li class="googleplus">
-	                <a target="_blank" title="google plus" href="https://www.google.com/">Facebook</a>
-	            </li>
-	            <li class="twitter">
-	                <a target="_blank" title="twitter" href="https://www.twitter.com/">Facebook</a>
-	            </li>
-	            <li class="pinterest">
-	                <a target="_blank" title="pinterest" href="https://www.pinterest.com/">Facebook</a>
+	                <a target="_blank" title="google plus" href="https://plus.google.com/+EasyGardenerWaco/videos">Facebook</a>
 	            </li>
 	            <li class="youtube">
-	                <a target="_blank" title="youtube" href="https://www.youtube.com/">Facebook</a>
+	                <a target="_blank" title="youtube" href="https://www.youtube.com/channel/UCOMfc4VE74AtIi41fhxK23Q">Facebook</a>
 	            </li>
 	    	</ul>
 	    </div>
