@@ -2,6 +2,7 @@
 /**
  * @package WordPress
  * @subpackage Jobes
+ * Template Name: Where to Buy
  */
 
 get_header(); ?>

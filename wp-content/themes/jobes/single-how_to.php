@@ -15,5 +15,5 @@ get_header(); ?>
 		<?php edit_post_link('Edit this entry.', '<p>', '</p>'); ?>
 	
 	<?php endwhile; endif; ?>   
-</div>s
+</div>
 <?php get_footer(); ?>
