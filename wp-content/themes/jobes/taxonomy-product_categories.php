@@ -75,16 +75,11 @@ get_header();
 
 
               // we will use the first term to load ACF data from
-              if( !empty($terms) ) {
+            
                 
                 $term = array_pop($terms);
-
                 $image = get_field('brand_logo', $term );
-              }
-                      var_dump($termID);
-                      var_dump($attachment_id);
-                      var_dump($image);
-                      if (!empty($image)){?>
+                 if (!empty($image)){?>
                         <div class="image-text">
                           <span>
                             <img src="<?php echo $image; ?>" />
