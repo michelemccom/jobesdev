@@ -163,12 +163,21 @@ function exclude_page_templates_from_search($query) {
             $query->set(
                 'meta_query',
                 array(
-          array(
-              'key' => '_wp_page_template',
-              'value' => 'single-products.php',
-              'compare' => '!='
+// set OR, default is AND
+                'relation' => 'OR',
+// remove pages with foo.php template from results
+                array(
+                    'key' => '_wp_page_template',
+                    'value' => 'single-products.php',
+                    'compare' => '!='
+                ),
+// show all entries that do not have a key '_wp_page_template'
+                array(
+                    'key' => '_wp_page_template',
+                    'value' => 'single-brand_cat_desc.php',
+                    'compare' => '!='
+                )
               )
-          )
       );
     }
 
