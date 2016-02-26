@@ -10,9 +10,11 @@ get_header(); ?>
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 	
 <div id="copy"> 
-	<h1 class="page-title"><?php the_title(); ?></h1>
-		<?php the_content(); 
-		$terms = get_terms('brands');
+	<div class="brand-header">
+		<h1 class="page-title"><?php the_title(); ?></h1>
+		<?php the_content(); ?>
+	</div>
+		<?php $terms = get_terms('brands');
 		if( $terms ): ?>
 			<ul class="blocks section">
 				<span>
