@@ -172,7 +172,7 @@ add_action( 'add_meta_boxes', 'gpj_change_meta_box');
 
     function gpj_mytaxonomy_metabox($post) {  
 
-        $taxonomy = 'mens_rings';  
+        $taxonomy = 'brands';  
 
         // all terms of ctax
         $all_ctax_terms = get_terms($taxonomy,array('hide_empty' => 0)); 
