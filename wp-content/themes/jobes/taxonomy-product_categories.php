@@ -79,7 +79,7 @@ get_header();
                 
                 $term = array_pop($terms);
 
-                $custom_field = get_field('brand_logo', $term );
+                $image = get_field('brand_logo', $term );
               }
                       var_dump($termID);
                       var_dump($attachment_id);
@@ -87,7 +87,7 @@ get_header();
                       if (!empty($image)){?>
                         <div class="image-text">
                           <span>
-                            <img src="<?php echo $image[0]; ?>" />
+                            <img src="<?php echo $image; ?>" />
                             
                           </span>
                         </div>
