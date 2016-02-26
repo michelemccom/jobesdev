@@ -10,7 +10,12 @@ $parts = parse_url($url);
 parse_str($parts['query'], $query);
 $pbrand = $query['brands'];
 $pcat = $query['product_categories'];
+if ($pbrand == "jobes") {
+	$pbrand = $pbrand;    
+	$pbrand = substr($pbrand,0,4).','.substr($pbrand,4,1);
+}
 $ptitle = $pbrand.'-'.$pcat;
+
 
 $ptitle = preg_replace('/[^a-z]/', " ", $ptitle); ?>
 	<?php if (have_posts()) : ?>
