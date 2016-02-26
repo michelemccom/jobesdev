@@ -43,7 +43,7 @@ if (in_array('tax-brands',$classes)) {
     $term_id = get_queried_object_id();
     
 
-        $image = the_field('brand_background', 'brands_'.$termID);
+        $image = the_field('brand_background', 'brands_'.$term_id);
         if (!empty($image)){ ?> 
             style="background-image: url('<?php echo $image; ?>')" 
         <?php } else {  ?> 
