@@ -158,8 +158,9 @@ function cpt_archive_items_limit( $query ) {
 function exclude_page_templates_from_search($query) {
     global $wp_the_query;
     if ( ($wp_the_query === $query) && (is_search()) && ( ! is_admin()) ) {
-        $meta_query = 
-            array(
+        $query->set(
+                'meta_query',
+                array(
 // set OR, default is AND
                 'relation' => 'OR',
 // remove pages with foo.php template from results
@@ -174,8 +175,8 @@ function exclude_page_templates_from_search($query) {
                     'value' => 'single-brand_cat_desc.php',
                     'compare' => 'NOT EXISTS'
                 )
+              )
             );
-        $query->set('meta_query', $meta_query);
     }
 }
 add_filter('pre_get_posts','exclude_page_templates_from_search');
