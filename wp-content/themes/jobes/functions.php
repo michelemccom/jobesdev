@@ -143,6 +143,16 @@ function trim_content($text, $max_length){
      force_balance_tags( $text );
      return $text;   
 }
+//change limit of products showing
+add_action( 'pre_get_posts', 'cpt_archive_items_limit' );
+function cpt_archive_items_limit( $query ) {
+
+  if( $query->is_main_query() && !is_admin() && is_post_type_archive( 'products' ) ) {
+    $query->set( 'posts_per_page', '99' );
+  }
+
+}
+
 //search filter
 function searchfilter($query) {
 
