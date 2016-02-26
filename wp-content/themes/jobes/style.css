@@ -560,7 +560,7 @@ input[type="submit"] {
 .brand-header .logo-circle h1 {display: none; text-indent: -10000px;}
 .brand-header .brand-tagline {
   width: auto;
-  height: 240px;
+  height: 255px;
   display: table;
 }
 .brand-header .brand-tagline h2 {
