@@ -12,7 +12,7 @@ $pbrand = $query['brands'];
 $pcat = $query['product_categories'];
 if ($pbrand == "jobes") {
 	$pbrand = $pbrand;    
-	$pbrand = substr($pbrand,0,4)."'".substr($pbrand,4,1);
+	$pbrand = substr_replace($pbrand, '\'', 2, 0);;
 }
 $ptitle = $pbrand.'-'.$pcat;
 
