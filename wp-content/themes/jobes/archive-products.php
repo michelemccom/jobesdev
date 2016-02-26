@@ -10,13 +10,10 @@ $parts = parse_url($url);
 parse_str($parts['query'], $query);
 $pbrand = $query['brands'];
 $pcat = $query['product_categories'];
-if ($pbrand == "jobes" || "jobes-organics") {
-	$pbrand = $pbrand;    
+if (($pbrand == "jobes") || ($pbrand == "jobes-organics")) { 
 	$pbrand = substr_replace($pbrand, "'", 4, 0);;
 }
 $ptitle = $pbrand.'-'.$pcat;
-
-
 $ptitle =  str_replace('-', ' ', $ptitle ); ?>
 	<?php if (have_posts()) : ?>
 <div id="copy"> 
