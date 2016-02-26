@@ -71,9 +71,16 @@ get_header();
                      <?php
                       $term_ID = get_term_by( 'slug', $termtwo, 'brands' );
                       $termID = $term_ID->term_id;
-                      global $post;
-                      $attachment_id = get_post_meta( $termID, 'brand_logo' ); 
-                      $image = wp_get_attachment_image_src( $attachment_id, 'logo' );
+                      $terms = get_the_terms(  $termID, 'brands');
+
+
+              // we will use the first term to load ACF data from
+              if( !empty($terms) ) {
+                
+                $term = array_pop($terms);
+
+                $custom_field = get_field('brand_logo', $term );
+              }
                       var_dump($termID);
                       var_dump($attachment_id);
                       var_dump($image);
