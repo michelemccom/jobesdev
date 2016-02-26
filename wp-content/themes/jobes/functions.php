@@ -160,24 +160,24 @@ function exclude_page_templates_from_search($query) {
     global $wp_the_query;
     if ( ($wp_the_query === $query) && (is_search()) && ( ! is_admin()) ) {
 
-            $query->set(
-                'meta_query',
-                array(
+      $query->set(
+        'meta_query',
+          array(
 // set OR, default is AND
-                'relation' => 'OR',
+          'relation' => 'OR',
 // remove pages with foo.php template from results
-                array(
-                    'key' => '_wp_page_template',
-                    'value' => 'single-products.php',
-                    'compare' => '!='
-                ),
+          array(
+              'key' => '_wp_page_template',
+              'value' => 'single-products.php',
+              'compare' => '!='
+          ),
 // show all entries that do not have a key '_wp_page_template'
-                array(
-                    'key' => '_wp_page_template',
-                    'value' => 'single-brand_cat_desc.php',
-                    'compare' => '!='
-                )
-              )
+          array(
+              'key' => '_wp_page_template',
+              'value' => 'single-brand_cat_desc.php',
+              'compare' => '!='
+          )
+        )
       );
     }
 
