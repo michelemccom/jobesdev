@@ -25,10 +25,10 @@ get_header();
           <div class="brand-tagline">
             <h2><?php echo get_field('brand_tagline', $term_brands );?></h2>
           </div>
+           <p><?php echo $term_brands->description; ?></p>
 </div>
 <div id="copy"> 
 
-  <p><?php echo $term_brands->description; ?></p>
   <ul class="blocks section">
     <span>
   <?php
