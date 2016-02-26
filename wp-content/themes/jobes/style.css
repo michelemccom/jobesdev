@@ -649,6 +649,21 @@ min-height: 100%;
     background:      -o-linear-gradient(left, hsla(0,0%,0%,0) 0%,  rgba(32,81,49,.9) 50%, hsla(0,0%,0%,0) 100%);
     background:         linear-gradient(left, hsla(0,0%,0%,0) 0%,  rgba(32,81,49,.9) 50%, hsla(0,0%,0%,0) 100%);
 }
+
+.btn { 
+  display: inline-block;
+  background: #205131;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+.btn a {
+  display: block;
+  color: #fff; 
+  text-transform: uppercase;
+}
+
+}
 /* ================================ Responsive ================================ */
 /* All Mobile Sizes (devices and browser) */
 @media only screen and (max-width: 768px) {

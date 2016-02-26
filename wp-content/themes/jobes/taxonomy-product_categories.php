@@ -78,18 +78,22 @@ get_header();
                             </span>
                           </div>
                           <div class="brand-desc">
-                            <?php $args = array(
-                              'post_type' => 'brand_cat_desc',
-                              'posts_per_page' => -1,
-                              'order' => 'ASC',
-                              'orderby' => 'date',
-                              'name' => $term.'-'.$term_pcats->slug
-                              );
-                              $the_query = new WP_Query($args);
-                              if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->the_post();
-                                the_content();
+                            <span>
+                              <h3 class="page-title"><a href="<?php echo get_option('home'); ?>/brands/<?php echo $termtwo; ?>"><?php echo $term;?> </a></h3>
+                              <?php $args = array(
+                                'post_type' => 'brand_cat_desc',
+                                'posts_per_page' => -1,
+                                'order' => 'ASC',
+                                'orderby' => 'date',
+                                'name' => $term.'-'.$term_pcats->slug
+                                );
+                                $the_query = new WP_Query($args);
+                                if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->the_post();
+                                  the_content();
 
-                              endwhile; endif;wp_reset_postdata(); ?>
+                                endwhile; endif;wp_reset_postdata(); ?>
+                                <div class="btn"><a href="/where-to-buy/?brand=<?php echo $termtwo; ?>">Where to Buy</a></div>
+                              </span>
                           </div>
                     </div>
                  <?php $args=array(
