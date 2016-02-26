@@ -71,10 +71,8 @@ get_header();
                      <?php
                       $term_ID = get_term_by( 'slug', $termtwo, 'brands' );
                       $termID = $term_ID->term_id;
-                     $logo = get_field('brand_logo', $term);
-      
-                      $size = 'logo'; // (thumbnail, medium, large, full or custom size)
-                      $image = wp_get_attachment_image_src( $logo, $size );
+                      $attachment_id = get_post_meta( $termID, 'brand_logo', true ); 
+                      $image = wp_get_attachment_image_src( $attachment_id, 'logo' ); ?>
 
                       if (!empty($image)){?>
                         <div class="image-text">
