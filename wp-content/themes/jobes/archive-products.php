@@ -17,7 +17,7 @@ if ($pbrand == "jobes") {
 $ptitle = $pbrand.'-'.$pcat;
 
 
-$ptitle =  str_replace($ptitle, "-", " " ); ?>
+$ptitle =  str_replace('-', ' ', $ptitle ); ?>
 	<?php if (have_posts()) : ?>
 <div id="copy"> 
 	<div class="brand-header">
