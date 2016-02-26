@@ -71,8 +71,9 @@ get_header();
                      <?php
                       $term_ID = get_term_by( 'slug', $termtwo, 'brands' );
                       $termID = $term_ID->term_id;
-                      $attachment_id = get_post_meta( $termID, 'brand_logo', true ); 
+                      $attachment_id = get_post_meta( $termID, 'brand_logo' ); 
                       $image = wp_get_attachment_image_src( $attachment_id, 'logo' );
+                      var_dump($termID);
                       var_dump($attachment_id);
                       var_dump($image);
                       if (!empty($image)){?>
