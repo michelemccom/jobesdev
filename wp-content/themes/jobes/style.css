@@ -536,7 +536,7 @@ input[type="submit"] {
 .call-out img {margin-bottom: 40px; max-width: 100%; height: auto;}
 /* ================================ Brands/Categories ================================ */    
 
-.brand-header {position: relative; width: 94%; padding: 0 3%; margin-bottom: }
+.brand-header {position: relative; width: 94%; padding: 0 3%; margin-bottom:50px; }
 .brand-header .logo-circle { 
   border-radius: 50%;
   overflow: hidden;
