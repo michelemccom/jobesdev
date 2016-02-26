@@ -577,8 +577,7 @@ box-shadow: -1px -1px 30px 2px rgba(0,0,0,0.5);
   vertical-align: middle;
 }
 .tax-product_categories .brand-header {margin-bottom: 50px;}
-
-.tax-product_categories ul.section li:last-child .divider {display: none;}
+.tax-product_categories ul.section .divider:last-child {display: none;}
 /* ================================ Contact ================================ */ 
 .wpcf7 {float: left;width: 50%; margin-right: 3%;}
 
