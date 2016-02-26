@@ -10,7 +10,7 @@ $parts = parse_url($url);
 parse_str($parts['query'], $query);
 $pbrand = $query['brands'];
 $pcat = $query['product_categories'];
-if ($pbrand == "jobes") {
+if ($pbrand == "jobes" || "jobes-organics") {
 	$pbrand = $pbrand;    
 	$pbrand = substr_replace($pbrand, "'", 4, 0);;
 }
