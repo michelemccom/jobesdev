@@ -547,6 +547,9 @@ input[type="submit"] {
   display: table;
   float: left;
   margin-right: 3%;
+  -webkit-box-shadow: 5px 5px 12px -4px rgba(0,0,0,0.75), -5px -5px 12px -4px rgba(0,0,0,0.75);;
+  -moz-box-shadow: 5px 5px 12px -4px rgba(0,0,0,0.75), -5px -5px 12px -4px rgba(0,0,0,0.75);;
+  box-shadow: 5px 5px 12px -4px rgba(0,0,0,0.75),-5px -5px 12px -4px rgba(0,0,0,0.75);;
 }
 .brand-header .logo-circle span{ display: table-cell; vertical-align: middle; width: 100%; height: 100%;}
 .brand-header .logo-circle img {
@@ -558,7 +561,7 @@ input[type="submit"] {
   margin: -5px auto 0;
 }
 .brand-header .logo-circle h1 {display: none; text-indent: -10000px;}
-.brand-header .brand-tagline {
+.brand-header .brand-tagline,.brand-header .brand-desc {
   width: auto;
   height: 255px;
   display: table;
