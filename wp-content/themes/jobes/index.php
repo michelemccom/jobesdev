@@ -6,14 +6,13 @@
 
 get_header(); ?>
 
-
+<div id="copy"> 
 	<?php if (have_posts()) : ?>
 		<?php while (have_posts()) : the_post(); ?>
 
         <div <?php post_class() ?> id="post-<?php the_ID(); ?>">
             <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
             
-<div id="copy"> 
             <p class="postmetadata">By: <?php the_author_posts_link(); ?> on <?php the_time('l, F jS, Y') ?> at <?php the_time() ?></p>
             
             <div class="entry">
@@ -43,5 +42,5 @@ get_header(); ?>
 
 	<?php endif; ?>
 
-	</div>
+</div>
 <?php get_footer(); ?>

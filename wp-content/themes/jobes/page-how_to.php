@@ -6,11 +6,11 @@
  */
 
 get_header(); ?>
-
+<div id="copy"> 
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 	
 <h1 class="page-title"><?php the_title(); ?></h1>
-<div id="copy"> 
+
 	<div class="post" id="post-<?php the_ID(); ?>">
 
 		<?php the_content(); ?>
@@ -46,8 +46,8 @@ get_header(); ?>
 	    <?php endwhile; endif;wp_reset_postdata();?>
 		</ul>	
 	</div>
-	</div> <!-- end copy -->
 
-	<?php endwhile; endif; ?>   
+	<?php endwhile; endif; ?>  
+</div> <!-- end copy --> 
 
 <?php get_footer(); ?>
