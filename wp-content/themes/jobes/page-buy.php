@@ -9,7 +9,7 @@ get_header();
 $url = $_SERVER["REQUEST_URI"];
 $parts = parse_url($url);
 parse_str($parts['query'], $query);
-$pbrand = $query['brands'];?>
+$pbrand = $query['brand'];?>
 <div id="copy"> 
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 		<h1 class="page-title"><?php the_title(); ?></h1>
