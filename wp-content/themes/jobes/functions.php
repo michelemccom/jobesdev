@@ -226,7 +226,7 @@ function gpj2_remove_meta_box() {
 add_action( 'add_meta_boxes', 'gpj2_change_meta_box');
     function gpj2_change_meta_box() {
     remove_meta_box('tagsdiv-brands', 'where', 'normal');
-    add_meta_box( 'gpj-brands', 'Brands','gpj2_mytaxonomy_metabox','products' ,'side','core');
+    add_meta_box( 'gpj-brands', 'Brands','gpj2_mytaxonomy_metabox','where' ,'side','core');
 }  
 
     function gpj2_mytaxonomy_metabox($post) {  
