@@ -5,13 +5,12 @@
  */
 
 get_header();
-?>
-<?php
 
   $slug_brands = get_query_var( 'term' );
   $term_brands = get_term_by( 'slug', $slug_brands, 'brands' );
   $term_id_brands = $term_brands->term_id;
 ?>
+<div id="copy"> 
 <div class="brand-header">
   <?php $logo = get_field('brand_logo', $term_brands );
           if (!empty($logo)){?>
@@ -27,7 +26,6 @@ get_header();
           </div>
            <p><?php echo $term_brands->description; ?></p>
 </div>
-<div id="copy"> 
 
   <ul class="blocks section">
     <span>
