@@ -156,31 +156,24 @@ function cpt_archive_items_limit( $query ) {
 
 // exclude any content from search results that use specific page templates
 function exclude_page_templates_from_search($query) {
+
     global $wp_the_query;
     if ( ($wp_the_query === $query) && (is_search()) && ( ! is_admin()) ) {
-        $query->set(
+
+            $query->set(
                 'meta_query',
                 array(
-// set OR, default is AND
-                'relation' => 'OR',
-// remove pages with foo.php template from results
-                array(
-                    'key' => '_wp_page_template',
-                    'value' => 'single-products.php',
-                    'compare' => '!='
-                ),
-// show all entries that do not have a key '_wp_page_template'
-                array(
-                    'key' => '_wp_page_template',
-                    'value' => 'single-brand_cat_desc.php',
-                    'compare' => 'NOT EXISTS'
-                )
+          array(
+              'key' => '_wp_page_template',
+              'value' => 'single-products.php',
+              'compare' => '!='
               )
-            );
+          )
+      );
     }
+
 }
 add_filter('pre_get_posts','exclude_page_templates_from_search');
-
 
 
 //make tax's checkbox Brands
