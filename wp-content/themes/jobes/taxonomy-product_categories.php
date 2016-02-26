@@ -13,7 +13,7 @@ get_header();
   $term_id_pcats = $term_pcats->term_id;
 ?>
   <div id="copy"> 
-  
+
     <h1 class="page-title"><?php echo $term_pcats->name; ?></h1>
     <p><?php echo $term_pcats->description; ?></p>
   <ul class="section">
@@ -72,7 +72,7 @@ get_header();
                           <div class="logo-circle">
                             <span>
                               <h1><?php echo $term; ?></h1>
-                              <img src="<?php echo the_field('brand_logo', 'brands_'.$termID); ;?>" alt="<?php echo $term;?>">
+                              <img src="<?php echo the_field('brand_logo', 'brands_'.$termID);?>" alt="<?php echo $term;?>">
                             </span>
                           </div>
                           <div class="brand-desc">

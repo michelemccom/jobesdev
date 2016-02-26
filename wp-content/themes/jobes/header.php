@@ -39,17 +39,17 @@ filter: none;
 <body <?php body_class(); ?> 
     <?php $classes = get_body_class();
 if (in_array('tax-brands',$classes)) {
-    $terms = get_the_terms( get_the_ID(), 'brands');
-    if( $terms ){
-    $term = array_pop($terms);
+    global $post;
+    $term_id = get_queried_object_id();
+    
 
-        $image = get_field('brand_background', $term );
+        $image = the_field('brand_background', 'brands_'.$termID);
         if (!empty($image)){ ?> 
             style="background-image: url('<?php echo $image; ?>')" 
         <?php } else {  ?> 
             style="background-image: url(<?php echo get_bloginfo('template_url')?>/images/jobes_bg.png);"
         <?php } 
-    }
+
 } else {  ?> 
     style="background-image: url(<?php echo get_bloginfo('template_url')?>/images/jobes_bg.png);" 
 <?php } ?>
