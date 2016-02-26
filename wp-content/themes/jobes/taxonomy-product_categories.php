@@ -73,7 +73,7 @@ get_header();
                       $termID = $term_ID->term_id;
                   
                   
-                      $logo = get_field('brand_logo', $termID );
+                     $logo = get_field('brand_logo', $term );
                       var_dump($logo);
                       
                         if (!empty($logo)){?>
