@@ -78,7 +78,6 @@ get_header();
                             </span>
                           </div>
                           <div class="brand-desc">
-                            <h3 class="page-title"><a href="<?php echo get_option('home'); ?>/brands/<?php echo $termtwo; ?>"><?php echo $term;?> </a></h3>
                             <?php $args = array(
                               'post_type' => 'brand_cat_desc',
                               'posts_per_page' => -1,
