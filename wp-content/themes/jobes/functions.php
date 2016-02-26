@@ -161,13 +161,13 @@ add_filter('pre_get_posts','searchfilter');
 // remove old meta box
 add_action( 'admin_menu', 'gpj_remove_meta_box');
 function gpj_remove_meta_box() {
-   remove_meta_box('tagsdiv-brands', 'product', 'normal');
+   remove_meta_box('tagsdiv-brands', 'products', 'normal');
 } 
 
 
 add_action( 'add_meta_boxes', 'gpj_change_meta_box');
     function gpj_change_meta_box() {
-    remove_meta_box('tagsdiv-brands', 'product', 'normal');
+    remove_meta_box('tagsdiv-brands', 'products', 'normal');
     add_meta_box( 'gpj-brands', 'Brands','gpj_mytaxonomy_metabox','product' ,'side','core');
 }  
 
