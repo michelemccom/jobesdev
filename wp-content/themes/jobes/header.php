@@ -38,6 +38,8 @@ filter: none;
 <?php 
 $url = $_SERVER["REQUEST_URI"];
 $parts = parse_url($url);
+
+echo $parts; 
 parse_str($parts['query'], $query);
 $pbrand = $query['brands'];
 $pcat = $query['product_categories'];
