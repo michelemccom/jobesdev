@@ -6,6 +6,7 @@
 
 get_header();
 $url = $_SERVER["REQUEST_URI"];
+echo $url;
 $parts = parse_url($url);
 parse_str($parts['query'], $query);
 $pbrand = $query['brands'];
