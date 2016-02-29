@@ -54,6 +54,7 @@ $ptitle =  str_replace('-', ' ', $ptitle ); ?>
     	the_content();
 
     endwhile; endif;wp_reset_postdata();?>
+    <div class="btn"><a href="/where-to-buy/?brand=<?php echo $pbrand; ?>">Where to Buy</a></div>
 	</div>
 	  	<ul class="blocks section">
 		<?php while (have_posts()) : the_post(); ?>

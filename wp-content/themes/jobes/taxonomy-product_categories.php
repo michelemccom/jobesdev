@@ -122,7 +122,7 @@ get_header();
                         $thumb_url = wp_get_attachment_image_src($thumb_id,'block', true);?>
                           <?php if (!empty($thumb_url[0])) { ?>
                             <div class="round">
-                              <a href="<?php the_permalink(); ?>"><img src="<?php echo $thumb_url[0];?>"> </a>
+                              <img src="<?php echo $thumb_url[0];?>">
                             </div>
                           <?php }
                         } ?>
