@@ -57,6 +57,7 @@ $ptitle =  str_replace('-', ' ', $ptitle ); ?>
     <div class="btn"><a href="/where-to-buy/?brand=<?php echo $pbrand; ?>">Where to Buy</a></div>
 	</div>
 	  	<ul class="blocks section">
+	  		<span>
 		<?php while (have_posts()) : the_post(); ?>
 		<li class="block"> 
 	      	<?php if ( has_post_thumbnail() ) {
@@ -71,7 +72,7 @@ $ptitle =  str_replace('-', ' ', $ptitle ); ?>
 		     <h4><?php the_title();?></h4>
       	</li>
 		<?php endwhile; ?>
-
+		</span>
 	</ul>
 	<div class="blognav">
 			<div class="alignleft"><?php next_posts_link('&laquo; More Products') ?></div>
