@@ -204,8 +204,8 @@ body {
   background-color: #40502b;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100%;
   height: 100vh;
+  height: 100%;
   width: 100%;
   background-position: center top;
 
