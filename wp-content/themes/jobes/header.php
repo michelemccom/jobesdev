@@ -35,15 +35,7 @@ filter: none;
 
 <?php wp_head(); ?>
 </head>
-<?php 
-$url = $_SERVER["REQUEST_URI"];
-$parts = parse_url($url);
-parse_str($parts['query'], $query);
-$pbrand = $query['brands'];
-$pcat = $query['product_categories'];
 
-$term_ID_ = get_term_by( 'slug', $pbrand, 'brands' );
-$termID_ = $term_ID_->term_id; ?>
 ?>
 <body <?php body_class(); ?> 
     <?php $classes = get_body_class();
