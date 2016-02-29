@@ -671,7 +671,7 @@ min-height: 100%;
   color: #fff; 
   text-transform: uppercase;
 }
-
+.post-type-archive-products .btn {display: block; width: 115px; padding: 0; text-align: center; margin-bottom: 0 auto;}
 }
 /* ================================ Responsive ================================ */
 /* All Mobile Sizes (devices and browser) */
