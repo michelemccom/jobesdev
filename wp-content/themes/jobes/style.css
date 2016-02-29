@@ -671,7 +671,7 @@ min-height: 100%;
   color: #fff; 
   text-transform: uppercase;
 }
-.post-type-archive-products .btn {display: block; width: 115px;text-align: center; margin: 0 auto;}
+.post-type-archive-products .btn, .tax-brand .btn {display: block; width: 115px;text-align: center; margin: 0 auto;}
 
 /* ================================ Responsive ================================ */
 /* All Mobile Sizes (devices and browser) */
