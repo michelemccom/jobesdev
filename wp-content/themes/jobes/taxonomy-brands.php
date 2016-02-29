@@ -9,7 +9,7 @@ get_header();
   $slug_brands = get_query_var( 'term' );
   $term_brands = get_term_by( 'slug', $slug_brands, 'brands' );
   $term_id_brands = $term_brands->term_id;
-  $term_slug_brands = $term_brands->slug;
+  $ = $term_brands->slug;
 ?>
 <div id="copy"> 
 <div class="brand-header">
@@ -25,7 +25,10 @@ get_header();
           <div class="brand-tagline">
             <h2><?php echo get_field('brand_tagline', $term_brands );?></h2>
           </div>
-           <p><?php echo $term_brands->description; ?></p>
+          <p><?php echo $term_brands->description; ?></p>
+          <?php if (($term_slug_brands == 'landmaster') || ($term_slug_brands == 'weedblock') || ($term_slug_brands == 'easy-gardener')) { ?>
+            <div class="btn"><a href="/where-to-buy/?brand=<?php echo $term_slug_brands; ?>">Where to Buy</a></div>
+          <?php } ?>
 </div>
  
   <ul class="blocks section">
