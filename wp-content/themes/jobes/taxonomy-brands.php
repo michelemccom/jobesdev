@@ -9,7 +9,7 @@ get_header();
   $slug_brands = get_query_var( 'term' );
   $term_brands = get_term_by( 'slug', $slug_brands, 'brands' );
   $term_id_brands = $term_brands->term_id;
-  $ = $term_brands->slug;
+  $term_slug_brands = $term_brands->slug;
 ?>
 <div id="copy"> 
 <div class="brand-header">
