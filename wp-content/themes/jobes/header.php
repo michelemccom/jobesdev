@@ -51,6 +51,7 @@ if (in_array('tax-brands',$classes)) {
     global $post;
     $term_id = get_queried_object_id();
         $image = get_field('brand_background', 'brands_'.$term_id);
+        var_dump($image);
         if (!empty($image)){ ?> 
             style="background-image: url('<?php echo $image; ?>')" 
         <?php } else {  ?> 
