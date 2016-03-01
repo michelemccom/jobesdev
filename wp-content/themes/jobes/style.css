@@ -585,6 +585,32 @@ box-shadow: -1px -1px 30px 2px rgba(0,0,0,0.5);
 .tax-product_categories .brand-header {margin-bottom: 50px;}
 .tax-product_categories ul.section .divider:last-child {display: none;}
 .tax-product_categories .brand-header .brand-desc {display: table-cell; vertical-align: middle;}
+
+/* ================================ Where ================================ */   
+#copy .blocks .logo-circle { 
+  border-radius: 50%;
+  overflow: hidden;
+  width: 240px;
+  height: 240px;
+  margin: 0 auto 15px;
+  background: #fff;
+  display: table;
+  float: left;
+  margin-right: 3%;
+  -webkit-box-shadow: -1px -1px 30px 2px rgba(0,0,0,0.5);
+-moz-box-shadow: -1px -1px 30px 2px rgba(0,0,0,0.5);
+box-shadow: -1px -1px 30px 2px rgba(0,0,0,0.5);
+}
+#copy .blocks .logo-circle span{ display: table-cell; vertical-align: middle; width: 100%; height: 100%; text-align: center;}
+#copy .blocks .logo-circle img {
+  display: block;
+  max-width: 180px;
+  max-height: 100px;
+  display: table-cell;
+  vertical-align: middle;
+  margin: -5px auto 0;
+}
+
 /* ================================ Contact ================================ */ 
 .wpcf7 {float: left;width: 50%; margin-right: 3%;}
 
