@@ -22,7 +22,6 @@ $pbrand = $query['brand'];?>
 	        'order' => 'ASC',
 	        'orderby' => 'title',
 	         'tax_query' => array(
-           
 	             array(
 	            'taxonomy'      => 'brands', 
 	            'terms'         => $pbrand,
