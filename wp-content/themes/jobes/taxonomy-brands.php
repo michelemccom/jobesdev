@@ -33,7 +33,7 @@ get_header();
  
   <ul class="blocks section">
     <span>
-        <?php if (($term_slug_brands == 'landmaster') || ($term_slug_brands == 'weedblock') || ($term_slug_brands == 'easy-gardener') || ($term_slug_brands == 'jobes')) {
+        <?php if (($term_slug_brands == 'landmaster')) {
           $args=array(
             'post_type' => 'products',
             'parent'        => 0,             
