@@ -43,7 +43,7 @@ $pbrand = $query['brand'];?>
 					</div>
 					<?php }
 				} ?>      	
-				<h4><a href="<?php the_permalink(); ?>"><?php the_title();?></a></h4>
+				<h4><?php the_title();?></h4>
 
 	      	</li>
 	    <?php endwhile; endif;wp_reset_postdata();?>
