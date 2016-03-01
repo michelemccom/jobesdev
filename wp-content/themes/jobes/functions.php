@@ -81,7 +81,7 @@ add_action( 'admin_menu', 'remove_post_boxes' );
 add_theme_support( 'post-thumbnails' ); 
 
 if ( function_exists( 'add_image_size' ) ) { 
-	add_image_size( 'block', 280, 280, true );
+	add_image_size( 'block', 240, 240, true );
   add_image_size( 'logo', 280, 90 );
 }
 
