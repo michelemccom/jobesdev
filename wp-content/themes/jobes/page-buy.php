@@ -36,8 +36,10 @@ $pbrand = $query['brand'];?>
 			    $thumb_id = get_post_thumbnail_id();
 				$thumb_url = wp_get_attachment_image_src($thumb_id,'where');?>
 			      	<?php if (!empty($thumb_url)) { ?>
-			      	<div class="round">
-						<a href="<?php the_permalink(); ?>"><img src="<?php echo $thumb_url[0];?>">	</a>
+			      	<div class="logo-circle"> 
+			      		<span>
+						<img src="<?php echo $thumb_url[0];?>">	
+					</span>
 					</div>
 					<?php }
 				} ?>      	
