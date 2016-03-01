@@ -82,7 +82,7 @@ add_theme_support( 'post-thumbnails' );
 
 if ( function_exists( 'add_image_size' ) ) { 
 	add_image_size( 'block', 280, 280, true );
-  add_image_size( 'where', 220, 220, true );
+  add_image_size( 'where', 180, 180 );
   add_image_size( 'logo', 280, 90 );
 }
 
