@@ -14,7 +14,7 @@ $pbrand = $query['brand'];?>
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 		<h1 class="page-title"><?php the_title(); ?></h1>
 		<?php the_content(); ?>
-		<ul class="section">
+	<ul class="blocks section">
 		<?php 
 	    $args = array(
 	        'post_type' => 'where',
@@ -32,8 +32,20 @@ $pbrand = $query['brand'];?>
 	        );
 	    $the_query = new WP_Query($args);
 	    if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->the_post();?>
-	    <li><?php the_title(); ?></li>
+	      <li class="block"> 
+	      	 <?php if ( has_post_thumbnail() ) {
+			    $thumb_id = get_post_thumbnail_id();
+				$thumb_url = wp_get_attachment_image_src($thumb_id,'block', true);?>
+			      	<?php if (!empty($thumb_url[0])) { ?>
+			      	<div class="round">
+						<a href="<?php the_permalink(); ?>"><img src="<?php echo $thumb_url[0];?>">	</a>
+					</div>
+					<?php }
+				} ?>      	
+				<h4><a href="<?php the_permalink(); ?>"><?php the_title();?></a></h4>
+
+	      	</li>
 	    <?php endwhile; endif;wp_reset_postdata();?>
-	</ul>
+		</ul>	
 	<?php endwhile; endif; ?>   
 <?php get_footer(); ?>
