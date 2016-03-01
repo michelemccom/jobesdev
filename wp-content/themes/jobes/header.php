@@ -44,9 +44,9 @@ if (in_array('tax-brands',$classes)) {
         $image = get_field('brand_background', 'brands_'.$term_id);
         var_dump($image);
         if (!empty($image)){ ?> 
-            style="background-image: url(<?php echo $image; ?>)" 
+            style="background-image: url(<?php echo $image; ?>);" 
         <?php } else {  ?> 
-            style="background-image: url(<?php echo get_bloginfo('template_url')?>/images/jobes_bg.png);"
+            style="background-image: url(<?php echo get_bloginfo('template_url')?>/images/jobes_bg.jpg); background-repeat:repeat-y; background-size:contain; "
         <?php } 
 
 } elseif ( is_post_type_archive('products') ) {
@@ -62,11 +62,11 @@ if (in_array('tax-brands',$classes)) {
     if (!empty($image)){ ?> 
         style="background-image: url(<?php echo $image; ?>)" 
     <?php } else {  ?> 
-        style="background-image: url(<?php echo get_bloginfo('template_url')?>/images/jobes_bg.png);"
+        style="background-image: url(<?php echo get_bloginfo('template_url')?>/images/jobes_bg.jpg);background-repeat:repeat-y; background-size:contain; "
     <?php } 
 
 } else {  ?> 
-    style="background-image: url(<?php echo get_bloginfo('template_url')?>/images/jobes_bg.png);" 
+    style="background-image: url(<?php echo get_bloginfo('template_url')?>/images/jobes_bg.jpg); background-repeat:repeat-y; background-size:contain; " 
 <?php } ?>
 ><!--closing body tag-->
 
