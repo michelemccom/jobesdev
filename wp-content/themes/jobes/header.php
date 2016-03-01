@@ -50,7 +50,7 @@ if (in_array('tax-brands',$classes)) {
         <?php } 
 
 } elseif (in_array('term-landscape-fabrics',$classes)) { ?>      
-    style="background-image: url(<?php echo get_bloginfo('template_url')?>/images/jobes_bg.jpg); background-repeat:repeat-y; background-size:contain; " 
+    style="background-image: url(<?php echo get_bloginfo('template_url')?>/images/landmaster_bg.png);" 
     <?php
 } elseif ( is_post_type_archive('products') ) {
     $url = $_SERVER["REQUEST_URI"];
