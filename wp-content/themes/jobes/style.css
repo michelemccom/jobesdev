@@ -542,7 +542,7 @@ input[type="submit"] {
 /* ================================ Brands/Categories ================================ */    
 
 .brand-header {position: relative; width: 94%; padding: 0 3%; margin-bottom:50px; }
-.logo-circle { 
+.brand-header .logo-circle { 
   border-radius: 50%;
   overflow: hidden;
   width: 240px;
@@ -556,8 +556,8 @@ input[type="submit"] {
 -moz-box-shadow: -1px -1px 30px 2px rgba(0,0,0,0.5);
 box-shadow: -1px -1px 30px 2px rgba(0,0,0,0.5);
 }
-.logo-circle span{ display: table-cell; vertical-align: middle; width: 100%; height: 100%; text-align: center;}
-.logo-circle img {
+.brand-header .logo-circle span{ display: table-cell; vertical-align: middle; width: 100%; height: 100%; text-align: center;}
+.brand-header .logo-circle img {
   display: block;
   max-width: 180px;
   max-height: 100px;
