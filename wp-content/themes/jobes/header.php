@@ -82,9 +82,9 @@ if (in_array('tax-brands',$classes)) {
                 <?php } else { ?>        
             <div id="logo"><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?><span></span></a></div>
             <?php } ?>    
-            <div class="search">
-                <?php get_search_form(); ?>
-            </div> 
+              <!--<div class="search">
+              <?php get_search_form(); ?> 
+            </div> -->
             <div class="nav">     
     		<?php wp_nav_menu( array( 'theme_location' => 'navigation' ) ); ?>  
             </div>     
