@@ -49,6 +49,9 @@ if (in_array('tax-brands',$classes)) {
             style="background-image: url(<?php echo get_bloginfo('template_url')?>/images/jobes_bg.jpg); background-repeat:repeat-y; background-size:contain; "
         <?php } 
 
+} elseif (in_array('term-landscape-fabrics',$classes)) { ?>      
+    style="background-image: url(<?php echo get_bloginfo('template_url')?>/images/jobes_bg.jpg); background-repeat:repeat-y; background-size:contain; " 
+    <?php
 } elseif ( is_post_type_archive('products') ) {
     $url = $_SERVER["REQUEST_URI"];
     $parts = parse_url($url);
