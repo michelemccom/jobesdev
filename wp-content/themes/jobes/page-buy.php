@@ -35,8 +35,8 @@ $pbrand = $query['brand'];?>
 	      <li class="block"> 
 	      	 <?php if ( has_post_thumbnail() ) {
 			    $thumb_id = get_post_thumbnail_id();
-				$thumb_url[] = wp_get_attachment_image_src($thumb_id,'block');?>
-			      	<?php if (!empty($thumb_url[0])) { ?>
+				$thumb_url = wp_get_attachment_image_src($thumb_id,'block');?>
+			      	<?php if (!empty($thumb_url)) { ?>
 			      	<div class="round">
 						<a href="<?php the_permalink(); ?>"><img src="<?php echo $thumb_url[0];?>">	</a>
 					</div>
