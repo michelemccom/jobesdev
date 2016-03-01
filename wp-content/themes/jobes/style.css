@@ -374,7 +374,7 @@ h5 { font-size:14px; margin: 0 0 8px 0;}
 #logo a { margin: 0 0 0 0; padding: 0; position:relative; width:173px; height:145px;  overflow:hidden; text-indent:-10000px; display:block; cursor:pointer; text-align: left }
 #logo a span { display:block; position:absolute; left:0; top:0; z-index:1;width:173px; height:145px; margin:0; padding:0; background:url(images/jobescompanies.png) top left no-repeat; cursor:pointer; }
 
-#header .nav { position: relative; margin: 8px 0 0 145px; float: left; z-index: 1001;}
+#header .nav { position: relative; margin: 8px 0 0 145px; float: left; z-index: 1001; width: 100%; box-sizing:border-box; }
 #header .nav ul { list-style-type:none; margin: 0; padding: 0; text-align: left; }	
 #header .nav ul li { display:inline-block; margin-right:26px; position: relative; float: left;}	
 #header .nav ul li:last-child {margin: 0;}
