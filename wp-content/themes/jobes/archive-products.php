@@ -14,12 +14,25 @@ if (($pbrand == "jobes") || ($pbrand == "jobes-organics")) {
 	$pbrand = substr_replace($pbrand, "'", 4, 0);;
 }
 $ptitle = $pbrand.'-'.$pcat;
-$ptitle =  str_replace('-', ' ', $ptitle ); ?>
+$ptitleS =  str_replace('-', ' ', $ptitle ); ?>
 	<?php if (have_posts()) : ?>
 <div id="copy"> 
 	<div class="brand-header">
+
+     <?php
+      $term_ID = get_term_by( 'slug', $ptitle, 'brands' );
+      $termID = $term_ID->term_id; ?>
+          <div class="logo-circle">
+            <span>
+              <h1><?php echo $term; ?></h1>
+              <img src="<?php echo the_field('brand_logo', 'brands_'.$termID);?>" alt="<?php echo $term;?>">
+            </span>
+          </div>
+          <div class="brand-desc">
+            <span>
+                           
 	<?php if (!empty($pbrand)) { ?>
-	<h1 class="page-title"><?php echo $ptitle; ?></h1>
+	<h1 class="page-title"><?php echo $ptitleS; ?></h1>
 	<?php } else {
 		 $post = $posts[0]; // Hack. Set $post so that the_date() works. ?>
  	  <?php /* If this is a category archive */ if (is_category()) { ?>
@@ -40,6 +53,7 @@ $ptitle =  str_replace('-', ' ', $ptitle ); ?>
  	  $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'product_categories' ) );
  	  	?>
  	  	<h1 class="page-title"><?php echo $term->name;?></h1>
+
  	 <?php }
 	}
 	$args = array(
@@ -55,6 +69,7 @@ $ptitle =  str_replace('-', ' ', $ptitle ); ?>
 
     endwhile; endif;wp_reset_postdata();?>
     <div class="btn"><a href="/where-to-buy/?brand=<?php echo $pbrand; ?>">Where to Buy</a></div>
+</span>
 	</div>
 	  	<ul class="blocks section">
 	  		<span>
