@@ -734,6 +734,13 @@ min-height: 100%;
   .block:nth-child(2n) {
       margin-right: 0 !important;
   }
+
+  #footer .footer-nav ul li {
+    float: left;
+    margin-right: 2%;
+    width: 48%;
+    margin-bottom: 15px;
+  }
 }
 
 
@@ -745,6 +752,7 @@ min-height: 100%;
 
 
   img.alignright, img.alignleft {max-width: 100%;}
+  #footer .footer-nav, .company-info, .social {float: none; width: 100%; margin: 0 auto 30px;}
 
 }
 @media only screen and (max-width: 440px){
