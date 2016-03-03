@@ -719,11 +719,10 @@ min-height: 100%;
   }
   #header .nav:after{clear: both; content: ''; height: 0; display: block; visibility: hidden;}
   #header .nav {margin: 0 auto; width: 150px; display: block;}
-  .mobile-nav {display: block;}
-  .menu-icon, .menu-icon a {display: block;}
-  #menu-primary-navigation-1 {display: none;} 
-  .mobile-nav #menu-primary-navigation-1.closed {display: none;}
-  .mobile-nav #menu-primary-navigation-1.open {display: block;}
+  .mobile-nav {display: none;}
+  .mobile-nav.closed {display: none;}
+  .mobile-nav.open {display: block;}
+   .menu-icon, .menu-icon a {display: block;}
 
   #copy .blocks span {
     width: 600px
