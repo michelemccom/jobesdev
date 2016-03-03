@@ -32,6 +32,9 @@ filter: none;
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
 
+<?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
+
+<?php wp_head(); ?>
 <script type="text/javascript">
     jQuery( document ).ready(function() {
         jQuery('.menu-icon').click( function(event){
@@ -51,9 +54,6 @@ filter: none;
 
 
 </script>
-<?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
-
-<?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?> 
