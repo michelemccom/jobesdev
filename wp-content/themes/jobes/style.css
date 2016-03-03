@@ -753,6 +753,9 @@ min-height: 100%;
   .blocks .image-text {height: auto; margin-bottom: 10px;}
   .blocks .image-text img, .home .blocks .image-text h5, .home .blocks .image-text span {display: block; max-height: 100px; }
 
+  .brand-header .logo-circle {float: none; margin: 0 auto 20px;}
+  .brand-header .brand-tagline {height: auto; display: block; text-align: center;}
+
   img.alignright, img.alignleft {max-width: 100%;}
   #footer .footer-nav {display: none;}
   #footer .footer-nav:after {clear: both; height: 0; display: block; content: ''; visibility: hidden;}
