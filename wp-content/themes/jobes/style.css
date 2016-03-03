@@ -712,6 +712,7 @@ min-height: 100%;
 /* ================================ Responsive ================================ */
 @media only screen and (max-width: 768px) {
   h1 {font-size: 36px;}
+  #logo {left: 5px;}
   .nav {
     display: none !important;
   }
@@ -719,36 +720,34 @@ min-height: 100%;
   #header .nav {margin: 0 auto; width: 150px; display: block;}
   .mobile-nav {display: block;}
   .menu-icon, .menu-icon a {display: block;}
-   #menu-primary-navigation-1 {display: none;} 
+  #menu-primary-navigation-1 {display: none;} 
   .mobile-nav #menu-primary-navigation-1.closed {display: none;}
   .mobile-nav #menu-primary-navigation-1.open {display: block;}
-  #logo {text-align: center; float: none;} 
-  .header-btns {float: none;margin: 10px auto; width: 462px;}
-  .time {width: auto;}
 
-  .slick-dots {width: 80%;}
+  #copy .blocks span {
+    width: 600px
+  }
+  .block:nth-child(2n) {
+      margin-right: 0;
+  }
+  .block:nth-child(3n) {
+     margin-right: 30px;
+  }
 }
 
 
 @media only screen and (max-width: 667px){
-  .block, #feed #cff .cff-item, #events #cff .cff-item {float: none;} 
+  .block {float: none; margin-right: 0;}
+  .block:nth-child(3n) {
+     margin-right: 0;
+  } 
 
-  .block.half, .block.third, #feed #cff .cff-item, #events #cff .cff-item  {
-      width: 100%; 
-      margin-right: 0;
-      margin-bottom: 20px;
-  }
+
   img.alignright, img.alignleft {max-width: 100%;}
-  .header-btns {width: 330px;}
-  #header #top .btn {font-size: 14px; padding: 0 7px;}
-  #header .newsletter, #header .social {margin-right: 12px;}
 
 }
 @media only screen and (max-width: 440px){
   img.alignright, img.alignleft {float: none; margin: 20px auto; display: block;}
-   #header #top .btn {font-size: 13px; padding: 0 7px;}
-   #header .newsletter, #header .social {margin-right: 8px;}
-   .header-btns {width: 303px;}
-   .ability-description p {font-size: 13px;}
+  
 }
 
