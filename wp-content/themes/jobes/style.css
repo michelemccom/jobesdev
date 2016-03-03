@@ -746,6 +746,7 @@ min-height: 100%;
 
 @media only screen and (max-width: 667px){
   .block {float: none; margin-right: 0; width: 100%;}
+  #copy .blocks > span {width: 100%:;}
   .block:nth-child(3n) {
      margin-right: 0;
   } 
