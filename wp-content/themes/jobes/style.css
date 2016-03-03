@@ -711,6 +711,7 @@ min-height: 100%;
 
 /* ================================ Responsive ================================ */
 @media only screen and (max-width: 768px) {
+  body {background-image: none !important}
   h1 {font-size: 36px;}
   #logo {left: 5px;}
   .nav {
