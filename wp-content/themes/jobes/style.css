@@ -745,15 +745,17 @@ min-height: 100%;
 
 
 @media only screen and (max-width: 667px){
-  .block {float: none; margin-right: 0;}
+  .block {float: none; margin-right: 0; width: 100%;}
   .block:nth-child(3n) {
      margin-right: 0;
   } 
-
+  .blocks .image-text {height: auto; margin-bottom: 10px;}
+  .blocks .image-text img, .home .blocks .image-text h5, .home .blocks .image-text span {display: block; max-height: 100px; }
 
   img.alignright, img.alignleft {max-width: 100%;}
   #footer .footer-nav, .company-info, .social {float: none; width: 100%; margin: 0 auto 30px;}
-
+  .company-info {width: 300px; text-align: center;}
+  .social {width: 120px;}
 }
 @media only screen and (max-width: 440px){
   img.alignright, img.alignleft {float: none; margin: 20px auto; display: block;}
