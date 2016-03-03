@@ -724,7 +724,7 @@ min-height: 100%;
   .mobile-nav.open {display: block;}
    .menu-icon, .menu-icon a {display: block;}
 
-  #copy .blocks span {
+  #copy .blocks > span {
     width: 600px
   }
 
@@ -753,8 +753,9 @@ min-height: 100%;
   .blocks .image-text img, .home .blocks .image-text h5, .home .blocks .image-text span {display: block; max-height: 100px; }
 
   img.alignright, img.alignleft {max-width: 100%;}
+  #footer .footer-nav {display: none;}
   #footer .footer-nav:after {clear: both; height: 0; display: block; content: ''; visibility: hidden;}
-  #footer .footer-nav, .company-info, .social {float: none; width: 100%; margin: 0 auto 30px;}
+  .company-info, .social {float: none; width: 100%; margin: 0 auto 30px;}
   .company-info {width: 250px; text-align: center;}
   .social {width: 120px; text-align: center;}
 }
