@@ -46,11 +46,11 @@ if (in_array('tax-brands',$classes)) {
         if (!empty($image)){ ?> 
             style="background-image: url(<?php echo $image; ?>);" 
         <?php } else {  ?> 
-            style="background-image: url(<?php echo get_bloginfo('template_url')?>/images/jobes_bg.jpg); background-repeat:repeat-y; background-size:contain; "
+            style="background-image: url(<?php echo get_bloginfo('template_url')?>/images/jobes_bg.jpg); background-repeat:repeat-y;  "
         <?php } 
 
 } elseif (in_array('term-landscape-fabrics',$classes)) { ?>      
-    style="background-image: url(<?php echo get_bloginfo('template_url')?>/images/landscapefabric_bg.jpg); background-repeat:repeat-x;" 
+    style="background-image: url(<?php echo get_bloginfo('template_url')?>/images/landscapefabric_bg.jpg); background-size:contain; background-repeat:repeat-x;" 
     <?php
 } elseif ( is_post_type_archive('products') ) {
     $url = $_SERVER["REQUEST_URI"];
