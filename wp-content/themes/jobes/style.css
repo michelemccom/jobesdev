@@ -383,13 +383,13 @@ h5 { font-size:14px; margin: 0 0 8px 0;}
 #header .nav ul li ul li {background: #fff; padding: 8px; width: 100%; box-sizing:border-box; margin: 0;}
 #header .nav ul li:hover ul {display: block; position: absolute; top: 17px; }
 #header .nav ul li:hover ul:before {background: url(images/arrow-down.png) no-repeat center; width: 22px; height: 20px; display: block; content: ''; position: absolute; top: 13px;}
-#header .nav ul li a:hover, #header nav ul li.current_page_item a { text-decoration:none; color: #df002b; }
+#header .nav ul li a:hover, #header nav ul li.current_page_item a, .mobile-nav ul li a:hover, .mobile-nav ul li.current_page_item a { text-decoration:none; color: #df002b; }
 #header .search {float: right;}
 
 
 .menu-icon {display: none; float: right; margin: 2px 20px 0 0; background: url(images/icon/icon-menu.png)no-repeat top left; width: 26px; height: 26px; }
-.mobile-nav {display: none;  z-index: 2000;  position: absolute; top: 35px;  width: 100%}
-.mobile-nav ul {background: #fff; width: 200%; text-align: center;list-style: none; padding: 0; margin: 0;}
+.mobile-nav {display: none;  z-index: 2000;  position: absolute; top: 108px;  width: 100%}
+.mobile-nav ul {background: #fff; width: 100%; text-align: center;list-style: none; padding: 0; margin: 0;}
 .mobile-nav ul li { margin: 0; padding: 0; display: block;}
 .mobile-nav ul li a {text-transform: uppercase; font-weight: 700; display: block; padding: 8px 15px;  text-decoration: none; }
 
