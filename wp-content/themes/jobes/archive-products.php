@@ -19,14 +19,13 @@ $ptitle =  str_replace('-', ' ', $ptitle ); ?>
 	<?php if (have_posts()) : ?>
 <div id="copy"> 
 	<div class="brand-header">
-  <?php $logo = get_field('brand_logo', $brandslug );
-          if (!empty($logo)){?>
-            <div class="logo-circle">
-              <span>
-           
-                <img src="<?php echo $logo;?>" alt="<?php echo $term->name;?>">
-              </span>
-            </div>
+   	<?php $term_ID = get_term_by( 'slug', $brandslug, 'brands' );
+	  	$termID = $term_ID->term_id; ?>
+	      <div class="logo-circle">
+	        <span>
+	          <img src="<?php echo the_field('brand_logo', 'brands_'.$termID);?>" alt="<?php echo $term;?>">
+	        </span>
+	      </div>
           <?php } ?>
      
 	<?php if (!empty($pbrand)) { ?>
