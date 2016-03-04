@@ -23,7 +23,7 @@ $ptitle =  str_replace('-', ' ', $ptitle ); ?>
           if (!empty($logo)){?>
             <div class="logo-circle">
               <span>
-                <h1><?php echo $term_brands->name; ?></h1>
+                
                 <img src="<?php echo $logo;?>" alt="<?php echo $term->name;?>">
               </span>
             </div>
