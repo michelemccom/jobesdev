@@ -29,7 +29,7 @@ $ptitle =  str_replace('-', ' ', $ptitle ); ?>
 
      
 	<?php if (!empty($pbrand)) { ?>
-	<h1 class="page-title"><?php echo $ptitle; ?></h1>
+	  <div class="brand-tagline"><h2><?php echo $ptitle; ?></h2>
 	<?php } else {
 		 $post = $posts[0]; // Hack. Set $post so that the_date() works. ?>
  	  <?php /* If this is a category archive */ if (is_category()) { ?>
@@ -49,10 +49,11 @@ $ptitle =  str_replace('-', ' ', $ptitle ); ?>
  	  <?php } elseif (is_tax()) {
  	  $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'product_categories' ) );
  	  	?>
- 	  	<h1 class="page-title"><?php echo $term->name;?></h1>
+ 	  	<h2><?php echo $term->name;?></h2>
  	 <?php }
-	}
-	$args = array(
+	} ?>
+	</div>
+	<?php $args = array(
         'post_type' => 'brand_cat_desc',
         'posts_per_page' => -1,
         'order' => 'ASC',
