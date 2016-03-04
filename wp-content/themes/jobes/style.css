@@ -769,6 +769,7 @@ min-height: 100%;
 }
 @media only screen and (max-width: 440px){
   img.alignright, img.alignleft {float: none; margin: 20px auto; display: block;}
-  
+  h1.page-title {font-size: 42px}
+  .brand-header .brand-tagline h2 {font-size: 42px;}
 }
 
