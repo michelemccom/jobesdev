@@ -742,7 +742,7 @@ min-height: 100%;
 
 
 @media only screen and (max-width: 667px){
-  #copy,h3.page-title {text-align: center;}
+  #copy{text-align: center;}
   .block {float: none; margin-right: 0; width: 100%; margin-bottom: 50px;}
   #copy .blocks > span {width: 100%;}
   .block:nth-child(3n) {
@@ -760,6 +760,7 @@ min-height: 100%;
     text-align: center;
 }
 
+  h3.page-title {width: auto;text-align: center;}
   img.alignright, img.alignleft {max-width: 100%; float: none; margin: 0 auto;display: block;}
   #footer .footer-nav {display: none;}
   #footer .footer-nav:after {clear: both; height: 0; display: block; content: ''; visibility: hidden;}
