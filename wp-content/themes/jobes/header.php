@@ -88,8 +88,9 @@ if (in_array('tax-brands',$classes)) {
             <div class="nav">     
     		<?php wp_nav_menu( array( 'theme_location' => 'navigation' ) ); ?>  
             </div>    
-            <div class="menu-icon"></div> 
-           <?php shiftnav_toggle( 'shiftnav-main' ); ?>
+        
+           <?php shiftnav_toggle( 'shiftnav-main' , 'Hello' ); ?>
+
         </div>      
     </div> <!-- /header -->
     	<div id="content"> 
