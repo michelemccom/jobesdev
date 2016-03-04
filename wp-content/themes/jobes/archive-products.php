@@ -28,9 +28,7 @@ $ptitle =  str_replace('-', ' ', $ptitle ); ?>
               </span>
             </div>
           <?php } ?>
-          <div class="brand-tagline">
-            <h2><?php echo get_field('brand_tagline', $term_brands );?></h2>
-          </div>
+     
 	<?php if (!empty($pbrand)) { ?>
 	<h1 class="page-title"><?php echo $ptitle; ?></h1>
 	<?php } else {
