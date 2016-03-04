@@ -719,10 +719,7 @@ min-height: 100%;
   }
   #header .nav:after{clear: both; content: ''; height: 0; display: block; visibility: hidden;}
   #header .nav {margin: 0 auto; width: 150px; display: block;}
-  .mobile-nav {display: none;}
-  .mobile-nav.closed {display: none;}
-  .mobile-nav.open {display: block;}
-   .menu-icon, .menu-icon a {display: block;}
+   .shiftnav-toggle{display: block;}
 
   #copy .blocks > span {
     width: 600px
