@@ -35,25 +35,6 @@ filter: none;
 <?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
 
 <?php wp_head(); ?>
-<script type="text/javascript">
-    jQuery( document ).ready(function() {
-        jQuery('.menu-icon').click( function(event){
-            event.preventDefault();
-            if (jQuery('.mobile-nav').hasClass("open") ) {
-                jQuery('.mobile-nav').removeClass("open");
-                jQuery('.mobile-nav').addClass("closed");
-            } else {    
-                jQuery('.mobile-nav').removeClass("closed");
-                jQuery('.mobile-nav').addClass("open");
-            }
-            return false;
-        });
-    });
-
- 
-
-
-</script>
 </head>
 
 <body <?php body_class(); ?> 
@@ -108,10 +89,7 @@ if (in_array('tax-brands',$classes)) {
     		<?php wp_nav_menu( array( 'theme_location' => 'navigation' ) ); ?>  
             </div>    
             <div class="menu-icon"></div> 
-            <div class="mobile-nav">
-            
-                <?php wp_nav_menu( array( 'theme_location' => 'navigation' ) ); ?> 
-            </div>
+           <?php shiftnav_toggle( 'shiftnav-main' ); ?>
         </div>      
     </div> <!-- /header -->
     	<div id="content"> 
