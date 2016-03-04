@@ -9,6 +9,7 @@ $url = $_SERVER["REQUEST_URI"];
 $parts = parse_url($url);
 parse_str($parts['query'], $query);
 $pbrand = $query['brands'];
+$brandslug = $query['brands'];
 $pcat = $query['product_categories'];
 if (($pbrand == "jobes") || ($pbrand == "jobes-organics")) { 
 	$pbrand = substr_replace($pbrand, "'", 4, 0);;
@@ -18,6 +19,18 @@ $ptitle =  str_replace('-', ' ', $ptitle ); ?>
 	<?php if (have_posts()) : ?>
 <div id="copy"> 
 	<div class="brand-header">
+  <?php $logo = get_field('brand_logo', $brandslug );
+          if (!empty($logo)){?>
+            <div class="logo-circle">
+              <span>
+                <h1><?php echo $term_brands->name; ?></h1>
+                <img src="<?php echo $logo;?>" alt="<?php echo $term->name;?>">
+              </span>
+            </div>
+          <?php } ?>
+          <div class="brand-tagline">
+            <h2><?php echo get_field('brand_tagline', $term_brands );?></h2>
+          </div>
 	<?php if (!empty($pbrand)) { ?>
 	<h1 class="page-title"><?php echo $ptitle; ?></h1>
 	<?php } else {
