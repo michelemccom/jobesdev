@@ -26,7 +26,7 @@ $ptitle =  str_replace('-', ' ', $ptitle ); ?>
 	          <img src="<?php echo the_field('brand_logo', 'brands_'.$termID);?>" alt="<?php echo $term;?>">
 	        </span>
 	      </div>
-          <?php } ?>
+
      
 	<?php if (!empty($pbrand)) { ?>
 	<h1 class="page-title"><?php echo $ptitle; ?></h1>
