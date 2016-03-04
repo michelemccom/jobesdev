@@ -742,6 +742,7 @@ min-height: 100%;
 
 
 @media only screen and (max-width: 667px){
+  #copy,h3.page-title {text-align: center;}
   .block {float: none; margin-right: 0; width: 100%; margin-bottom: 50px;}
   #copy .blocks > span {width: 100%;}
   .block:nth-child(3n) {
