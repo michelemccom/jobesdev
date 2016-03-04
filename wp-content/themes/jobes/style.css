@@ -201,7 +201,7 @@ body {
   font-size: 14px;
   line-height: 1.4em;
   color: #444;
-  background-color: #40502b;
+  background-color: rgba(0,132,87,.7);
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
