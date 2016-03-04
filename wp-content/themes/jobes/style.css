@@ -758,7 +758,7 @@ min-height: 100%;
   
     height: auto;
     text-align: center;
-}
+  }
 
   h3.page-title {width: auto;text-align: center;}
   img.alignright, img.alignleft {max-width: 100%; float: none; margin: 0 auto;display: block;}
@@ -774,5 +774,7 @@ min-height: 100%;
   h1.page-title {font-size: 42px}
   .brand-header .brand-tagline h2 {font-size: 42px;}
   h3.page-title {font-size: 34px;}
+  .banner h3 {font-size: 30px; width: 250px; margin-left: auto; margin-right: auto;}
+  .banner h2 {font-size: 50px;}
 }
 
