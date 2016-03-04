@@ -750,8 +750,14 @@ min-height: 100%;
   .blocks .image-text {height: auto; margin-bottom: 10px;}
   .blocks .image-text img, .home .blocks .image-text h5, .home .blocks .image-text span {display: block; max-height: 100px; }
 
-  .brand-header .logo-circle {float: none; margin: 0 auto 20px;}
+  .brand-header .logo-circle, #copy .where .logo-circle {float: none; margin: 0 auto 20px;}
   .brand-header .brand-tagline {height: auto; display: block; text-align: center;}
+  .where .block h4 {
+    display: block;
+  
+    height: auto;
+    text-align: center;
+}
 
   img.alignright, img.alignleft {max-width: 100%; float: none; margin: 0 auto;display: block;}
   #footer .footer-nav {display: none;}
