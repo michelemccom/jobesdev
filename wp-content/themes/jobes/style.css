@@ -617,7 +617,7 @@ box-shadow: -1px -1px 30px 2px rgba(0,0,0,0.5);
 }
 .where .block h4 {height: auto;}
 /* ================================ Contact ================================ */ 
-.wpcf7 {float: left;width: 50%; margin-right: 3%;}
+#copy div.wpcf7 {float: left;width: 50%; margin-right: 3%;}
 
 /* ================================ BioZome ================================ */    
 .biozome-quotes blockquote {width: 30%;padding: 10px 1.5%; float: left; margin: 0;}
@@ -759,6 +759,7 @@ min-height: 100%;
   .company-info, .social {float: none; width: 100%; margin: 0 auto 30px;}
   .company-info {width: 250px; text-align: center;}
   .social {width: 120px; text-align: center;}
+  #copy div.wpcf7 {float: none; margin: 0 auto 50px; width: 98%;}
 }
 @media only screen and (max-width: 440px){
   img.alignright, img.alignleft {float: none; margin: 20px auto; display: block;}
