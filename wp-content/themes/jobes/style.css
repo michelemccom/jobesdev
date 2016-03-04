@@ -753,7 +753,7 @@ min-height: 100%;
 
   .brand-header .logo-circle, #copy .where .logo-circle {float: none; margin: 0 auto 20px;}
   .brand-header .brand-tagline {height: auto; display: block; text-align: center;}
-  .where .block h4 {
+  .where .block h4, .tax-product_categories .brand-header .brand-desc {
     display: block;
   
     height: auto;
