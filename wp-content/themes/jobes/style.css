@@ -770,6 +770,7 @@ min-height: 100%;
   #copy div.wpcf7 {float: none; margin: 0 auto 50px; width: 98%;}
 }
 @media only screen and (max-width: 440px){
+  #logo a span {background-size: contain; width: 160px; height: auto;}
   img.alignright, img.alignleft {float: none; margin: 20px auto; display: block;}
   h1.page-title {font-size: 42px}
   .brand-header .brand-tagline h2 {font-size: 42px;}
