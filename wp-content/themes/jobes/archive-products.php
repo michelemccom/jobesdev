@@ -96,7 +96,8 @@ $ptitle =  str_replace('-', ' ', $ptitle ); ?>
 			<div class="alignright"><?php previous_posts_link('More Products &raquo;') ?></div>
 		</div>
 	<?php endif;?>
-	
+	<h5>A NOTE ABOUT THIS SITE:</h5>
+<p>Welcome to the new JobesCompany.com website. As we continue to expand this site in the coming weeks, we'll add more details about each of our products and how you can find them in stores nearby.</p>
 </div>
 
 
