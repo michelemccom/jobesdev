@@ -501,6 +501,7 @@ h3.page-title a {color: #fff;}
 #copy img {max-width: 100%; height: auto;}
 
 #copy p a {text-decoration: underline; font-weight: bold; font-style: italic;}
+.breadcrumbs {margin-bottom: 30px;}
 /* ================================ Search ================================ */		
 
 body.search .post { margin-bottom:3.0em; }	
