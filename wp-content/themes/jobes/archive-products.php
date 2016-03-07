@@ -18,6 +18,12 @@ $ptitle = $pbrand.'-'.$pcat;
 $ptitle =  str_replace('-', ' ', $ptitle ); ?>
 	<?php if (have_posts()) : ?>
 <div id="copy"> 
+	<div class="breadcrumbs" typeof="BreadcrumbList" vocab="http://schema.org/">
+    <?php if(function_exists('bcn_display'))
+    {
+        bcn_display();
+    }?>
+</div>
 	<div class="brand-header">
    	<?php $term_ID = get_term_by( 'slug', $brandslug, 'brands' );
 	  	$termID = $term_ID->term_id; ?>

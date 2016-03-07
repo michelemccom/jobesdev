@@ -12,6 +12,12 @@ get_header();
   $term_slug_brands = $term_brands->slug;
 ?>
 <div id="copy"> 
+  <div class="breadcrumbs" typeof="BreadcrumbList" vocab="http://schema.org/">
+    <?php if(function_exists('bcn_display'))
+    {
+        bcn_display();
+    }?>
+</div>
 <div class="brand-header">
   <?php $logo = get_field('brand_logo', $term_brands );
           if (!empty($logo)){?>
