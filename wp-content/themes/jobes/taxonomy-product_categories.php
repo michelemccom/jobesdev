@@ -12,13 +12,7 @@ get_header();
   $term_pcats = get_term_by( 'slug', $slug_pcats, 'product_categories' );
   $term_id_pcats = $term_pcats->term_id;
 ?>
-  <div id="copy"> 
-    <div class="breadcrumbs" typeof="BreadcrumbList" vocab="http://schema.org/">
-    <?php if(function_exists('bcn_display'))
-    {
-        bcn_display();
-    }?>
-</div>
+  
     <h1 class="page-title"><?php echo $term_pcats->name; ?></h1>
     <p><?php echo $term_pcats->description; ?></p>
   <ul class="section">
