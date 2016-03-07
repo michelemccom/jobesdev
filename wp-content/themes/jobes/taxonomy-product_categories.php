@@ -140,6 +140,7 @@ get_header();
           } ?>
         </span> 
   </ul>
-
+<h5>A NOTE ABOUT THIS SITE:</h5>
+<p>Welcome to the new JobesCompany.com website. As we continue to expand this site in the coming weeks, we'll add more details about each of our products and how you can find them in stores nearby.</p>
 </div> <!-- end copy -->
 <?php get_footer(); ?>
