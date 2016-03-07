@@ -707,13 +707,21 @@ min-height: 100%;
 .post-type-archive-products .btn, .tax-brands .btn {display: block; width: 115px;text-align: center; margin: 0 auto;}
 
 /* ================================ Responsive ================================ */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1170px) {
+   #logo {left: 5px;}
+   #header .nav {margin-left: 205px;}
+   #header .nav ul li {margin-right: 9%}
+}
+@media only screen and (max-width: 1170px) {
+  #header .nav ul li {margin-right: 6%}
+}
+@media only screen and (max-width: 940px) {
   body {background-image: none !important}
   .home #content > .shell  {
     background: rgba(255,255,255,0.9);
   }
   h1 {font-size: 36px;}
-  #logo {left: 5px;}
+ 
   .nav {
     display: none !important;
   }
