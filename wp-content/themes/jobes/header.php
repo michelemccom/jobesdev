@@ -46,7 +46,7 @@ if (in_array('tax-brands',$classes)) {
         if (!empty($image)){ ?> 
             style="background-image: url(<?php echo $image; ?>);" 
         <?php } else {  ?> 
-            style="background-image: url(<?php echo get_bloginfo('template_url')?>/images/jobes_bg.jpg); background-repeat:repeat-y;  "
+            style="background-image: url(<?php echo get_bloginfo('template_url')?>/images/jobes_bg.jpg); background-repeat:repeat;  "
         <?php } 
 
 } elseif (in_array('term-landscape-fabrics',$classes)) { ?>      
