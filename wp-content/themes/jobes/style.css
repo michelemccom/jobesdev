@@ -632,7 +632,7 @@ box-shadow: -1px -1px 30px 2px rgba(0,0,0,0.5);
 .error404 p {color: #205131;}
 .error404 p.red {color:#df002b; margin-bottom: 5px; }
 .error404 #copy img {max-width: 313px; width: 40%; margin-right: 2%; float: left;}
-.error404 .right-copy {display: table;vertical-align: middle;}
+.error404 .right-copy {display: table-cell;vertical-align: middle; height: 400px;}
 /* ================================ Misc ================================ */		
 .banner  > *{
   font-size: 30px;
@@ -768,7 +768,8 @@ min-height: 100%;
     height: auto;
     text-align: center;
   }
-
+.error404 #copy img {display: none;}
+.error404 .right-copy {display: block; height: auto;}
   h3.page-title {width: auto;text-align: center;}
   img.alignright, img.alignleft {max-width: 100%; float: none; margin: 0 auto;display: block;}
   #footer .footer-nav {display: none;}
