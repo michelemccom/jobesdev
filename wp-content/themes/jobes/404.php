@@ -12,7 +12,7 @@ get_header();
 	<div class="right-copy">
 		<p class="red">404 (Page Not Found) Error</p>	
 	    <h2>Whoops,</h2>
-	    <h5>Looks like you're in the weeds</h5>
+	    <h5>Looks like you're in the weeds.</h5>
 		<p>Find what you're looking for at <a href="/">home</a>.</p>
 	</div>
 
