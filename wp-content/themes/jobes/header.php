@@ -65,11 +65,11 @@ if (in_array('tax-brands',$classes)) {
     if (!empty($image)){ ?> 
         style="background-image: url(<?php echo $image; ?>)" 
     <?php } else {  ?> 
-        style="background-image: url(<?php echo get_bloginfo('template_url')?>/images/jobes_bg.jpg);background-repeat:repeat-y; background-size:contain; "
+        style="background-image: url(<?php echo get_bloginfo('template_url')?>/images/jobes_bg.jpg);background-repeat:repeat; background-size:contain; "
     <?php } 
 
 } else {  ?> 
-    style="background-image: url(<?php echo get_bloginfo('template_url')?>/images/jobes_bg.jpg); background-repeat:repeat-y; background-size:contain; " 
+    style="background-image: url(<?php echo get_bloginfo('template_url')?>/images/jobes_bg.jpg); background-repeat:repeat; background-size:contain; " 
 <?php } ?>
 ><!--closing body tag-->
 
