@@ -106,7 +106,7 @@ get_header();
                   $terms = array_unique($all_terms);
                   $termstwo = array_unique($all_termstwo);
                     foreach (array_combine($terms, $termstwo) as $term => $termtwo) {
-                    $term_ID = get_term_by( 'slug', $termtwo, 'brands' );
+                    $term_ID = get_term_by( 'slug', $termtwo, 'product_categories' );
                     $termID = $term_ID->term_id; ?>
 
                         <li class="block">
