@@ -105,10 +105,15 @@ get_header();
                   if (!empty($all_terms[0])) {
                   $terms = array_unique($all_terms);
                   $termstwo = array_unique($all_termstwo);
-                    foreach (array_combine($terms, $termstwo) as $term => $termtwo) { ?>
+                    foreach (array_combine($terms, $termstwo) as $term => $termtwo) {
+                    $term_ID = get_term_by( 'slug', $termtwo, 'brands' );
+                    $termID = $term_ID->term_id; ?>
+
                         <li class="block">
                          <div class="round">
-                             <a href="<?php echo get_option('home'); ?>/products/?brands=<?php echo $term_brands->slug;?>&product_categories=<?php echo $termtwo; ?>"><img src="<?php echo get_bloginfo('template_url')?>/images/<?php echo $term_brands->slug;?>-<?php echo $termtwo; ?>.jpg"> </a>
+                             <a href="<?php echo get_option('home'); ?>/products/?brands=<?php echo $term_brands->slug;?>&product_categories=<?php echo $termtwo; ?>">
+                              <img src="<?php echo the_field('category_image', 'product_categories_'.$termID);?>">
+                               </a>
                           </div>
                            <h4><a href="<?php echo get_option('home'); ?>/products/?brands=<?php echo $term_brands->slug;?>&product_categories=<?php echo $termtwo; ?>"><?php echo $term;?> </a></h4>
                         </li>       

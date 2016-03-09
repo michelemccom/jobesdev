@@ -539,7 +539,7 @@ input[type="submit"] {
   opacity: 1 !important;
   color: #205131;
 }
-
+#hidden {display: none;}
 /* ================================ Home ================================ */    
 .home .blocks h5 {
   font-size: 32px;
