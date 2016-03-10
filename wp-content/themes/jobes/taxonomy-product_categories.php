@@ -23,7 +23,7 @@ get_header();
       'post_type' => 'products',
       'parent'        => 0,   
       'orderby' => 'date', 
-      'order' => 'DESC'         
+      'order' => 'DESC',        
       'tax_query' => array(
            array(
           'taxonomy'      => 'product_categories',    
