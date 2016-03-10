@@ -22,7 +22,8 @@ get_header();
     $args=array(
       'post_type' => 'products',
       'parent'        => 0,   
-      'orderby' => 'date',          
+      'orderby' => 'date', 
+      'order' => 'DESC'         
       'tax_query' => array(
            array(
           'taxonomy'      => 'product_categories',    
