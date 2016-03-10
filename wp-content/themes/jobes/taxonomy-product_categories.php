@@ -22,8 +22,16 @@ get_header();
     $args=array(
       'post_type' => 'products',
       'parent'        => 0,   
-      'orderby' => 'date', 
-      'order' => 'DESC',        
+      'meta_key'   => 'brands',
+      'orderby'    => 'meta_value_num',
+      'order'      => 'ASC',
+      'meta_query' => array(
+        array(
+          'key'     => 'brands',
+          'value'   => array( 25, 35, 36 ),
+          'compare' => 'IN',
+        ),
+      ),       
       'tax_query' => array(
            array(
           'taxonomy'      => 'product_categories',    
