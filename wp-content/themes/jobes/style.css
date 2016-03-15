@@ -778,6 +778,9 @@ min-height: 100%;
   .company-info {width: 250px; text-align: center;}
   .social {width: 120px; text-align: center;}
   #copy div.wpcf7 {float: none; margin: 0 auto 50px; width: 98%;}
+  .biozome-quotes blockquote.big-quote {font-size: 14px;}
+  .biozome-quotes blockquote {width: 100%; margin-bottom: 15px; background: #fff;}
+  .biozome-quotes blockquote footer {text-align: right;}
 }
 @media only screen and (max-width: 440px){
   #logo a span {background:url(images/jobescompanies.png) no-repeat left top/contain; width: 160px;}
@@ -787,9 +790,7 @@ min-height: 100%;
   h3.page-title {font-size: 34px;}
   .banner h3 {font-size: 30px; width: 250px; margin-left: auto; margin-right: auto;}
   .banner h2 {font-size: 50px;}
-  .biozome-quotes blockquote.big-quote {font-size: 14px;}
-  .biozome-quotes blockquote {width: 100%;}
-  .biozome-quotes blockquote footer {text-align: left;}
+
 }
 
 
