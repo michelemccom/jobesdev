@@ -779,7 +779,7 @@ min-height: 100%;
   .social {width: 120px; text-align: center;}
   #copy div.wpcf7 {float: none; margin: 0 auto 50px; width: 98%;}
   .biozome-quotes blockquote.big-quote {font-size: 14px;}
-  .biozome-quotes blockquote {width: 100%; margin-bottom: 15px; background: #fff;}
+  .biozome-quotes blockquote {width: 97%; margin-bottom: 15px; background: #fff;}
   .biozome-quotes blockquote footer {text-align: right;}
 }
 @media only screen and (max-width: 440px){
